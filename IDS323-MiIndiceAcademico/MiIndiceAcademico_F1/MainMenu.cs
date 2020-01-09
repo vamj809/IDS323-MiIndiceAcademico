@@ -29,20 +29,6 @@ namespace MiIndiceAcademico_F1
             _Estudiantes.Show();
         }
 
-        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Consultas _consultas = new Consultas();
-            _consultas.MdiParent = this;
-            _consultas.Show();
-        }
-
-        private void estudiantesToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Eliminar_Estudiantes _Estudiantes = new Eliminar_Estudiantes();
-            _Estudiantes.MdiParent = this;
-            _Estudiantes.Show();
-        }
-
         private void calificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Registro_Calificaciones _Calificaciones = new Registro_Calificaciones();
@@ -62,6 +48,20 @@ namespace MiIndiceAcademico_F1
             Registro_Profesores _Profesores = new Registro_Profesores();
             _Profesores.MdiParent = this;
             _Profesores.Show();
+        }
+
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas _consultas = new Consultas();
+            _consultas.MdiParent = this;
+            _consultas.Show();
+        }
+
+        private void estudiantesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Eliminar_Estudiantes _Estudiantes = new Eliminar_Estudiantes();
+            _Estudiantes.MdiParent = this;
+            _Estudiantes.Show();
         }
     }
 }
