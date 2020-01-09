@@ -11,11 +11,16 @@ namespace MiIndiceAcademico_F1.Consulta
 {
     public class MetodosConsulta
     {
+        public readonly string path_calificaciones = "NotasV2.txt";
+        public readonly string path_estudiantes = "Estudiantes.txt";
+        public readonly string path_asignaturas = "Asignaturas.txt";
+        public readonly string path_profesores = "Profesores.txt";
+
         public List<Calificacion> ReadAndLoadScores(DataGridView myDataGrid = null) {
             List<Calificacion> Notas = new List<Calificacion>();
-            FileInfo file = new FileInfo("NotasV2.txt");
-            if (!File.Exists("NotasV2.txt"))
-                File.WriteAllText("NotasV2.txt", "");
+            FileInfo file = new FileInfo(path_calificaciones);
+            if (!File.Exists(path_calificaciones))
+                File.WriteAllText(path_calificaciones, "");
             //string fileText = File.ReadAllText(file.FullName);
             foreach (string _ in File.ReadLines(file.FullName)) {
                 string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
@@ -37,9 +42,9 @@ namespace MiIndiceAcademico_F1.Consulta
         public List<Estudiante> ReadAndLoadStudents(DataGridView myDataGrid = null)
         {
             List<Estudiante> estudiantes = new List<Estudiante>();
-            if (!File.Exists("Estudiantes.txt"))
-                File.WriteAllText("Estudiantes.txt", "");
-            foreach (string _ in File.ReadLines("Estudiantes.txt")) {
+            if (!File.Exists(path_estudiantes))
+                File.WriteAllText(path_estudiantes, "");
+            foreach (string _ in File.ReadLines(path_estudiantes)) {
                 string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
                 Estudiante student = new Estudiante {
                     ID_Estudiante = int.Parse(cell[0]),
@@ -58,9 +63,9 @@ namespace MiIndiceAcademico_F1.Consulta
         public List<Asignatura> ReadAndLoadSubjects(DataGridView myDataGrid = null)
         {
             List<Asignatura> asignaturas = new List<Asignatura>();
-            if (!File.Exists("Asignaturas.txt"))
-                File.WriteAllText("Asignaturas.txt", "");
-            foreach (string _ in File.ReadLines("Asignaturas.txt")) {
+            if (!File.Exists(path_asignaturas))
+                File.WriteAllText(path_asignaturas, "");
+            foreach (string _ in File.ReadLines(path_asignaturas)) {
                 string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
                 Asignatura subject = new Asignatura {
                     Clave_Materia = cell[0].Trim(),
@@ -79,9 +84,9 @@ namespace MiIndiceAcademico_F1.Consulta
         public List<Profesor> ReadAndLoadTeachers(DataGridView myDataGrid = null)
         {
             List<Profesor> profesores = new List<Profesor>();
-            if (!File.Exists("Profesores.txt"))
-                File.WriteAllText("Profesores.txt", "");
-            foreach (string _ in File.ReadLines("Profesores.txt")) {
+            if (!File.Exists(path_profesores))
+                File.WriteAllText(path_profesores, "");
+            foreach (string _ in File.ReadLines(path_profesores)) {
                 string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
                 Profesor teacher = new Profesor {
                     ID_Profesor = int.Parse(cell[0]),

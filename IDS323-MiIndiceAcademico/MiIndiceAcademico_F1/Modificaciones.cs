@@ -14,11 +14,13 @@ namespace MiIndiceAcademico_F1
 {
     public partial class Modificaciones : Form
     {
+        readonly MetodosConsulta MC;
+
         static bool safeToClose = true;
         public Modificaciones()
         {
             InitializeComponent();
-            MetodosConsulta MC = new MetodosConsulta();
+            MC = new MetodosConsulta();
             MC.ReadAndLoadScores(C_dataGrid);
             MC.ReadAndLoadStudents(E_dataGrid);
             MC.ReadAndLoadSubjects(A_dataGrid);
@@ -32,15 +34,15 @@ namespace MiIndiceAcademico_F1
                 MessageBox.Show("No se han detectado cambios.", "Listo", MessageBoxButtons.OK);
                 this.Close();return;
             }
-            if (File.Exists("NotasV2.txt")) {
-                string[] text = File.ReadAllLines("NotasV2.txt");
+            if (File.Exists(MC.path_calificaciones)) {
+                string[] text = File.ReadAllLines(MC.path_calificaciones);
                 //for each line in text.
                 for (int i = 0; i < text.Length && i < C_dataGrid.RowCount; i++) {
                     string[] tmp = text[i].Split(',');
                     tmp[3] = C_dataGrid.Rows[i].Cells[3].Value.ToString();
                     text[i] = String.Join(",", tmp);
                 }
-                File.WriteAllLines("NotasV2.txt", text);
+                File.WriteAllLines(MC.path_calificaciones, text);
                 MessageBox.Show("Cambios guardados satisfactoriamente", "Listo", MessageBoxButtons.OK);
                 safeToClose = true;
                 this.Close();
@@ -60,8 +62,8 @@ namespace MiIndiceAcademico_F1
                 MessageBox.Show("No se han detectado cambios.", "Listo", MessageBoxButtons.OK);
                 this.Close(); return;
             }
-            if (File.Exists("Estudiantes.txt")) {
-                string[] text = File.ReadAllLines("Estudiantes.txt");
+            if (File.Exists(MC.path_estudiantes)) {
+                string[] text = File.ReadAllLines(MC.path_estudiantes);
                 //for each line in text.
                 for (int i = 0; i < text.Length && i < E_dataGrid.RowCount; i++) {
                     string[] tmp = text[i].Split(',');
@@ -69,7 +71,7 @@ namespace MiIndiceAcademico_F1
                     tmp[2] = E_dataGrid.Rows[i].Cells[2].Value.ToString();
                     text[i] = String.Join(",", tmp);
                 }
-                File.WriteAllLines("Estudiantes.txt", text);
+                File.WriteAllLines(MC.path_estudiantes, text);
                 MessageBox.Show("Cambios guardados satisfactoriamente", "Listo", MessageBoxButtons.OK);
                 safeToClose = true;
                 this.Close();
@@ -90,8 +92,8 @@ namespace MiIndiceAcademico_F1
                 MessageBox.Show("No se han detectado cambios.", "Listo", MessageBoxButtons.OK);
                 this.Close(); return;
             }
-            if (File.Exists("Asignaturas.txt")) {
-                string[] text = File.ReadAllLines("Asignaturas.txt");
+            if (File.Exists(MC.path_asignaturas)) {
+                string[] text = File.ReadAllLines(MC.path_asignaturas);
                 //for each line in text.
                 for (int i = 0; i < text.Length && i < A_dataGrid.RowCount; i++) {
                     string[] tmp = text[i].Split(',');
@@ -99,7 +101,7 @@ namespace MiIndiceAcademico_F1
                     tmp[2] = A_dataGrid.Rows[i].Cells[2].Value.ToString();
                     text[i] = String.Join(",", tmp);
                 }
-                File.WriteAllLines("Asignaturas.txt", text);
+                File.WriteAllLines(MC.path_asignaturas, text);
                 MessageBox.Show("Cambios guardados satisfactoriamente", "Listo", MessageBoxButtons.OK);
                 safeToClose = true;
                 this.Close();
@@ -120,15 +122,15 @@ namespace MiIndiceAcademico_F1
                 MessageBox.Show("No se han detectado cambios.", "Listo", MessageBoxButtons.OK);
                 this.Close(); return;
             }
-            if (File.Exists("Profesores.txt")) {
-                string[] text = File.ReadAllLines("Profesores.txt");
+            if (File.Exists(MC.path_profesores)) {
+                string[] text = File.ReadAllLines(MC.path_profesores);
                 //for each line in text.
                 for (int i = 0; i < text.Length && i < T_dataGrid.RowCount; i++) {
                     string[] tmp = text[i].Split(',');
                     tmp[1] = T_dataGrid.Rows[i].Cells[1].Value.ToString();
                     text[i] = String.Join(",", tmp);
                 }
-                File.WriteAllLines("Profesores.txt", text);
+                File.WriteAllLines(MC.path_profesores, text);
                 MessageBox.Show("Cambios guardados satisfactoriamente", "Listo", MessageBoxButtons.OK);
                 safeToClose = true;
                 this.Close();
