@@ -34,5 +34,12 @@ namespace MiIndiceAcademico_F1
             _consultas.MdiParent = this;
             _consultas.Show();
         }
+
+        private void estudiantesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Eliminar_Estudiantes _Estudiantes = new Eliminar_Estudiantes();
+            _Estudiantes.MdiParent = this;
+            _Estudiantes.Show();
+        }
     }
 }

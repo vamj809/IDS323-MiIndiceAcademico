@@ -22,12 +22,20 @@ namespace MiIndiceAcademico_F1
             ReadScores();
         }
 
+        private void ReadStudents()
+        {
+            foreach(string _ in File.ReadLines("Estudiantes.txt")) {
+                string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
+
+            }
+        }
+
         private void ReadScores()
         {
             FileInfo file = new FileInfo("NotasV2.txt");
             string fileText = File.ReadAllText(file.FullName);
             foreach (string _ in File.ReadLines(file.FullName)) {
-                string[] cell = fileText.Split(new char[] { ',', '\n' },StringSplitOptions.RemoveEmptyEntries);
+                string[] cell = _.Split(new char[] { ',', '\n' },StringSplitOptions.None);
 
                 score = new Calificacion {
                     ID_Estudiante = int.Parse(cell[0]),
@@ -37,7 +45,8 @@ namespace MiIndiceAcademico_F1
                 };
                 Notas.Add(score);
             }
-            Console.WriteLine("HUh?");
+            C_dataGrid.DataSource = Notas;
+            C_dataGrid.Refresh();
         }
 
         private void C_ID_comboBox_TextChanged(object sender, EventArgs e)

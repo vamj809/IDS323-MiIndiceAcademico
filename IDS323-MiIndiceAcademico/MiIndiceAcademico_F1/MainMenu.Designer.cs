@@ -35,6 +35,7 @@
             this.eliminaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.currentUserLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.estudiantesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             // estudiantesToolStripMenuItem
             // 
             this.estudiantesToolStripMenuItem.Name = "estudiantesToolStripMenuItem";
-            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.estudiantesToolStripMenuItem.Text = "Estudiantes";
             this.estudiantesToolStripMenuItem.Click += new System.EventHandler(this.estudiantesToolStripMenuItem_Click);
             // 
@@ -83,6 +84,8 @@
             // 
             // eliminaciónToolStripMenuItem
             // 
+            this.eliminaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.estudiantesToolStripMenuItem1});
             this.eliminaciónToolStripMenuItem.Name = "eliminaciónToolStripMenuItem";
             this.eliminaciónToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.eliminaciónToolStripMenuItem.Text = "Eliminación";
@@ -104,6 +107,13 @@
             this.currentUserLabel.Name = "currentUserLabel";
             this.currentUserLabel.Size = new System.Drawing.Size(40, 20);
             this.currentUserLabel.Text = "Listo";
+            // 
+            // estudiantesToolStripMenuItem1
+            // 
+            this.estudiantesToolStripMenuItem1.Name = "estudiantesToolStripMenuItem1";
+            this.estudiantesToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.estudiantesToolStripMenuItem1.Text = "Estudiantes";
+            this.estudiantesToolStripMenuItem1.Click += new System.EventHandler(this.estudiantesToolStripMenuItem1_Click);
             // 
             // MainMenu
             // 
@@ -136,6 +146,7 @@
         private System.Windows.Forms.ToolStripMenuItem eliminaciónToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel currentUserLabel;
+        private System.Windows.Forms.ToolStripMenuItem estudiantesToolStripMenuItem1;
     }
 }
 
