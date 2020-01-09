@@ -50,8 +50,14 @@ namespace MiIndiceAcademico_F1.Registro
                             if (File.Exists("Calificaciones.txt"))
                             {
                                 guardarNota = File.AppendText("Calificaciones.txt");
-                                string contenido = textBox1.Text + ",\n";
+                                string contenido = textBox1.Text + ",";
+                                string contenido2 = textBox3.Text + ",";
+                                string contenido3 = textBox4.Text + ",";
+                                string contenido4 = textBox2.Text + ",\n";
                                 guardarNota.Write(contenido);
+                                guardarNota.Write(contenido2);
+                                guardarNota.Write(contenido3);
+                                guardarNota.Write(contenido4);
                                 guardarNota.Flush();
                                 guardarNota.Close();
                                 MessageBox.Show("El registro se completo exitosamente!", "Message", MessageBoxButtons.OK);
@@ -60,8 +66,14 @@ namespace MiIndiceAcademico_F1.Registro
                             else
                             {
                                 guardarNota = File.CreateText("Calificaciones.txt");
-                                string contenido = textBox1.Text + ",\n";
+                                string contenido = textBox1.Text + ",";
+                                string contenido2 = textBox3.Text + ",";
+                                string contenido3 = textBox4.Text + ",";
+                                string contenido4 = textBox2.Text + ",\n";
                                 guardarNota.Write(contenido);
+                                guardarNota.Write(contenido2);
+                                guardarNota.Write(contenido3);
+                                guardarNota.Write(contenido4);
                                 guardarNota.Flush();
                                 guardarNota.Close();
                                 MessageBox.Show("El registro se completo exitosamente!", "Message", MessageBoxButtons.OK);
@@ -102,6 +114,11 @@ namespace MiIndiceAcademico_F1.Registro
             }
 
 
-        }        
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

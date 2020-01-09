@@ -61,7 +61,7 @@ namespace MiIndiceAcademico_F1
                     guardar = File.CreateText("Registro.txt");
                     string contenido = textBox1.Text + ",";
                     string contenido2 = textname.Text + ",";
-                    string contenido3 = textBox2.Text + ",";
+                    string contenido3 = textBox2.Text + ",\n";
                     guardar.Write(contenido);
                     guardar.Write(contenido2);
                     guardar.Write(contenido3);
