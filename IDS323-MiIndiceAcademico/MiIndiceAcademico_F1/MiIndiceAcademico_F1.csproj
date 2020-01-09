@@ -52,10 +52,28 @@
     <Compile Include="Consultas.Designer.cs">
       <DependentUpon>Consultas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Eliminar_Estudiantes.cs">
+    <Compile Include="Eliminar\Eliminar_Asignaturas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Eliminar_Estudiantes.Designer.cs">
+    <Compile Include="Eliminar\Eliminar_Asignaturas.Designer.cs">
+      <DependentUpon>Eliminar_Asignaturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar\Eliminar_Calificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar\Eliminar_Calificaciones.Designer.cs">
+      <DependentUpon>Eliminar_Calificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar\Eliminar_Profesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar\Eliminar_Profesores.Designer.cs">
+      <DependentUpon>Eliminar_Profesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar\Eliminar_Estudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar\Eliminar_Estudiantes.Designer.cs">
       <DependentUpon>Eliminar_Estudiantes.cs</DependentUpon>
     </Compile>
     <Compile Include="LogIn.cs">

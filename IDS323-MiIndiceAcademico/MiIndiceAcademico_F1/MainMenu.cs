@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiIndiceAcademico_F1.Eliminar;
 using MiIndiceAcademico_F1.Registro;
 
 namespace MiIndiceAcademico_F1
@@ -22,6 +23,7 @@ namespace MiIndiceAcademico_F1
             }
         }
 
+        /*** Registro ***/
         private void estudiantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Registro_Estudiantes _Estudiantes = new Registro_Estudiantes();
@@ -50,6 +52,7 @@ namespace MiIndiceAcademico_F1
             _Profesores.Show();
         }
 
+        /*** Consultas ***/
         private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Consultas _consultas = new Consultas();
@@ -57,11 +60,33 @@ namespace MiIndiceAcademico_F1
             _consultas.Show();
         }
 
+        /*** Eliminar ***/
         private void estudiantesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Eliminar_Estudiantes _Estudiantes = new Eliminar_Estudiantes();
             _Estudiantes.MdiParent = this;
             _Estudiantes.Show();
+        }
+
+        private void calificacionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Eliminar_Calificaciones _Calificaciones = new Eliminar_Calificaciones();
+            _Calificaciones.MdiParent = this;
+            _Calificaciones.Show();
+        }
+
+        private void asignaturasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Eliminar_Asignaturas _Asignaturas = new Eliminar_Asignaturas();
+            _Asignaturas.MdiParent = this;
+            _Asignaturas.Show();
+        }
+
+        private void profesoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Eliminar_Profesores _Profesores = new Eliminar_Profesores();
+            _Profesores.MdiParent = this;
+            _Profesores.Show();
         }
     }
 }

@@ -32,6 +32,18 @@ namespace MiIndiceAcademico_F1
             ReadStudents();
             ReadSubjects();
             ReadTeachers();
+            loadFinalScores();
+        }
+        private void loadFinalScores()
+        {
+            foreach (Calificacion item in Notas) {
+                if(item.ID_Estudiante.ToString() == ID_comboBox.Text) {
+
+                }
+            }
+            object Detalles_Calificacion = new { mike = "", ok = "" };
+            C_dataGrid.DataSource = Notas;
+            C_dataGrid.Refresh();
         }
         private void ReadScores()
         {
@@ -51,8 +63,6 @@ namespace MiIndiceAcademico_F1
                     };
                     Notas.Add(score);
                 }
-                C_dataGrid.DataSource = Notas;
-                C_dataGrid.Refresh();
             }
         }
         private void ReadStudents()
@@ -110,7 +120,7 @@ namespace MiIndiceAcademico_F1
             }
         }
 
-        private void C_ID_comboBox_TextChanged(object sender, EventArgs e)
+        private void ID_comboBox_TextChanged(object sender, EventArgs e)
         {
             C_dataGrid.Refresh();
         }

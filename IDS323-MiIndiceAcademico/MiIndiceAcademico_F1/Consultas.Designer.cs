@@ -38,7 +38,7 @@
             this.C_por_VN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PuntosDeHonor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDLabel = new System.Windows.Forms.Label();
-            this.C_ID_comboBox = new System.Windows.Forms.ComboBox();
+            this.ID_comboBox = new System.Windows.Forms.ComboBox();
             this.tabEstudiantes = new System.Windows.Forms.TabPage();
             this.tabAsignaturas = new System.Windows.Forms.TabPage();
             this.tabProfesores = new System.Windows.Forms.TabPage();
@@ -75,7 +75,7 @@
             this.tabCalificaciones.Controls.Add(this.C_GPA_);
             this.tabCalificaciones.Controls.Add(this.C_dataGrid);
             this.tabCalificaciones.Controls.Add(this.IDLabel);
-            this.tabCalificaciones.Controls.Add(this.C_ID_comboBox);
+            this.tabCalificaciones.Controls.Add(this.ID_comboBox);
             this.tabCalificaciones.Location = new System.Drawing.Point(4, 25);
             this.tabCalificaciones.Name = "tabCalificaciones";
             this.tabCalificaciones.Padding = new System.Windows.Forms.Padding(3);
@@ -107,12 +107,12 @@
             this.ValorDeLaNota,
             this.C_por_VN,
             this.PuntosDeHonor});
-            this.C_dataGrid.Location = new System.Drawing.Point(29, 64);
+            this.C_dataGrid.Location = new System.Drawing.Point(8, 62);
             this.C_dataGrid.Name = "C_dataGrid";
             this.C_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.C_dataGrid.RowHeadersWidth = 51;
             this.C_dataGrid.RowTemplate.Height = 24;
-            this.C_dataGrid.Size = new System.Drawing.Size(848, 314);
+            this.C_dataGrid.Size = new System.Drawing.Size(890, 314);
             this.C_dataGrid.TabIndex = 2;
             // 
             // Asignatura
@@ -168,22 +168,22 @@
             this.IDLabel.TabIndex = 1;
             this.IDLabel.Text = "ID (Matrícula):";
             // 
-            // C_ID_comboBox
+            // ID_comboBox
             // 
-            this.C_ID_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.C_ID_comboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.C_ID_comboBox.FormattingEnabled = true;
-            this.C_ID_comboBox.Items.AddRange(new object[] {
+            this.ID_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ID_comboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ID_comboBox.FormattingEnabled = true;
+            this.ID_comboBox.Items.AddRange(new object[] {
             "1067196",
             "1089090",
             "1075050",
             "1043020",
             "1091337"});
-            this.C_ID_comboBox.Location = new System.Drawing.Point(143, 21);
-            this.C_ID_comboBox.Name = "C_ID_comboBox";
-            this.C_ID_comboBox.Size = new System.Drawing.Size(122, 24);
-            this.C_ID_comboBox.TabIndex = 0;
-            this.C_ID_comboBox.TextChanged += new System.EventHandler(this.C_ID_comboBox_TextChanged);
+            this.ID_comboBox.Location = new System.Drawing.Point(148, 21);
+            this.ID_comboBox.Name = "ID_comboBox";
+            this.ID_comboBox.Size = new System.Drawing.Size(122, 24);
+            this.ID_comboBox.TabIndex = 0;
+            this.ID_comboBox.TextChanged += new System.EventHandler(this.ID_comboBox_TextChanged);
             // 
             // tabEstudiantes
             // 
@@ -285,7 +285,7 @@
         private System.Windows.Forms.TabControl tabsConsultas;
         private System.Windows.Forms.TabPage tabCalificaciones;
         private System.Windows.Forms.TabPage tabEstudiantes;
-        private System.Windows.Forms.ComboBox C_ID_comboBox;
+        private System.Windows.Forms.ComboBox ID_comboBox;
         private System.Windows.Forms.TabPage tabAsignaturas;
         private System.Windows.Forms.TabPage tabProfesores;
         private System.Windows.Forms.Label IDLabel;
