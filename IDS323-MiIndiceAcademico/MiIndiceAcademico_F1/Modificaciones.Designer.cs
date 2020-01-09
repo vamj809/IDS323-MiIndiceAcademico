@@ -27,6 +27,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabsModificaciones = new System.Windows.Forms.TabControl();
             this.tabCalificaciones = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -104,9 +110,9 @@
             this.panel1.Controls.Add(this.btn_C_Cancel);
             this.panel1.Controls.Add(this.btn_C_SaveChanges);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 374);
+            this.panel1.Location = new System.Drawing.Point(0, 377);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(786, 44);
+            this.panel1.Size = new System.Drawing.Size(792, 44);
             this.panel1.TabIndex = 2;
             // 
             // btn_C_Cancel
@@ -141,12 +147,12 @@
             this.Materia,
             this.Nota});
             this.C_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.C_dataGrid.Location = new System.Drawing.Point(3, 3);
+            this.C_dataGrid.Location = new System.Drawing.Point(0, 0);
             this.C_dataGrid.Name = "C_dataGrid";
             this.C_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.C_dataGrid.RowHeadersWidth = 20;
             this.C_dataGrid.RowTemplate.Height = 24;
-            this.C_dataGrid.Size = new System.Drawing.Size(786, 415);
+            this.C_dataGrid.Size = new System.Drawing.Size(792, 421);
             this.C_dataGrid.TabIndex = 2;
             this.C_dataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataChanged);
             // 
@@ -329,6 +335,8 @@
             // Nota_ID_Estudiante
             // 
             this.Nota_ID_Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Nota_ID_Estudiante.DefaultCellStyle = dataGridViewCellStyle1;
             this.Nota_ID_Estudiante.HeaderText = "Matricula Estudiante";
             this.Nota_ID_Estudiante.MinimumWidth = 6;
             this.Nota_ID_Estudiante.Name = "Nota_ID_Estudiante";
@@ -337,6 +345,8 @@
             // Nota_ID_Profesor
             // 
             this.Nota_ID_Profesor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Nota_ID_Profesor.DefaultCellStyle = dataGridViewCellStyle2;
             this.Nota_ID_Profesor.HeaderText = "Profesor";
             this.Nota_ID_Profesor.MinimumWidth = 6;
             this.Nota_ID_Profesor.Name = "Nota_ID_Profesor";
@@ -345,6 +355,8 @@
             // Materia
             // 
             this.Materia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Materia.DefaultCellStyle = dataGridViewCellStyle3;
             this.Materia.HeaderText = "Materia";
             this.Materia.MinimumWidth = 6;
             this.Materia.Name = "Materia";
@@ -360,6 +372,8 @@
             // ID_Estudiante
             // 
             this.ID_Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ID_Estudiante.DefaultCellStyle = dataGridViewCellStyle4;
             this.ID_Estudiante.HeaderText = "Matricula";
             this.ID_Estudiante.MinimumWidth = 6;
             this.ID_Estudiante.Name = "ID_Estudiante";
@@ -383,6 +397,8 @@
             // 
             // Clave_Materia
             // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Clave_Materia.DefaultCellStyle = dataGridViewCellStyle5;
             this.Clave_Materia.HeaderText = "Codigo";
             this.Clave_Materia.MinimumWidth = 6;
             this.Clave_Materia.Name = "Clave_Materia";
@@ -405,6 +421,8 @@
             // 
             // ID_Profesor
             // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ID_Profesor.DefaultCellStyle = dataGridViewCellStyle6;
             this.ID_Profesor.HeaderText = "Matricula";
             this.ID_Profesor.MinimumWidth = 6;
             this.ID_Profesor.Name = "ID_Profesor";

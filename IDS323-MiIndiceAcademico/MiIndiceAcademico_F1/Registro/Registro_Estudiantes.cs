@@ -30,15 +30,18 @@ namespace MiIndiceAcademico_F1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             if(contraseña.Text != cContraseña.Text)
             {
                 MessageBox.Show("La contraseña no coincide con la confirmacion favor intentar de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-            else
-            {
-                
-                StreamWriter guardar = null;
+            else {
+
+
+            }*/
+
+            StreamWriter guardar = null;
                 if (File.Exists("Registro.txt"))
                 {
                     guardar = File.AppendText("Registro.txt");
@@ -68,9 +71,6 @@ namespace MiIndiceAcademico_F1
                     this.Close();
 
                 }
-
-                
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)

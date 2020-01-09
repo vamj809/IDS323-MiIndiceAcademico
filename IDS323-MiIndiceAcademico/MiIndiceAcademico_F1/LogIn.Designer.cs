@@ -133,7 +133,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "LogIn";
-            this.Text = "Mi Indice Academico";
+            this.Text = "MIA 2020";
             this.ResumeLayout(false);
             this.PerformLayout();
 
