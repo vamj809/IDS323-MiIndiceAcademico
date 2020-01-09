@@ -42,9 +42,9 @@ namespace MiIndiceAcademico_F1
             }*/
 
             StreamWriter guardar = null;
-                if (File.Exists("Registro.txt"))
+                if (File.Exists("Estudiantes.txt"))
                 {
-                    guardar = File.AppendText("Registro.txt");
+                    guardar = File.AppendText("Estudiantes.txt");
                     string contenido = textBox1.Text + ",";
                     string contenido2 = textname.Text + ",";
                     string contenido3 = textBox2.Text + ",\n";
@@ -58,7 +58,7 @@ namespace MiIndiceAcademico_F1
                 }
                 else
                 {
-                    guardar = File.CreateText("Registro.txt");
+                    guardar = File.CreateText("Estudiantes.txt");
                     string contenido = textBox1.Text + ",";
                     string contenido2 = textname.Text + ",";
                     string contenido3 = textBox2.Text + ",\n";

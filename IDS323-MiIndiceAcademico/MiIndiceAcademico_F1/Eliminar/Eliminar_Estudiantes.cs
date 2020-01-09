@@ -29,7 +29,7 @@ namespace MiIndiceAcademico_F1
             escribir = File.CreateText("copia.txt");
             try
             {
-                Lector = File.OpenText("Registro.txt");
+                Lector = File.OpenText("Estudiantes.txt");
 
                 string id = textBox1.Text;
                 Cadenas = Lector.ReadLine();
@@ -64,8 +64,8 @@ namespace MiIndiceAcademico_F1
                 Lector.Close();
                 escribir.Close();
 
-                File.Delete("Registro.txt");
-                File.Move("copia.txt", "Registro.txt");
+                File.Delete("Estudiantes.txt");
+                File.Move("copia.txt", "Estudiantes.txt");
             }
             catch 
             {

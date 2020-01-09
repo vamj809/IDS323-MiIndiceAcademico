@@ -11,7 +11,7 @@ namespace MiIndiceAcademico_F1.Consulta
 {
     public class MetodosConsulta
     {
-        public readonly string path_calificaciones = "NotasV2.txt";
+        public readonly string path_calificaciones = "Calificaciones.txt";
         public readonly string path_estudiantes = "Estudiantes.txt";
         public readonly string path_asignaturas = "Asignaturas.txt";
         public readonly string path_profesores = "Profesores.txt";

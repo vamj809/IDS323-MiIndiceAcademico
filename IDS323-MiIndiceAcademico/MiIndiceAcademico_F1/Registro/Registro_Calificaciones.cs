@@ -30,13 +30,46 @@ namespace MiIndiceAcademico_F1.Registro
             String Cadenas;
             try
             {
-                Lector = File.OpenText("Registro.txt");
+                Lector = File.OpenText("Estudiantes.txt");
 
                 string id = textBox1.Text;
                 string idP = textBox3.Text;
                 string clave = textBox4.Text;
                 Cadenas = Lector.ReadLine();
 
+                StreamWriter guardarNota = null;
+                if (File.Exists("Calificaciones.txt")) {
+                    guardarNota = File.AppendText("Calificaciones.txt");
+                    string contenido = textBox1.Text + ",";
+                    string contenido2 = textBox3.Text + ",";
+                    string contenido3 = textBox4.Text + ",";
+                    string contenido4 = textBox2.Text + ",\n";
+                    guardarNota.Write(contenido);
+                    guardarNota.Write(contenido2);
+                    guardarNota.Write(contenido3);
+                    guardarNota.Write(contenido4);
+                    guardarNota.Flush();
+                    guardarNota.Close();
+                    MessageBox.Show("El registro se completo exitosamente!", "Message", MessageBoxButtons.OK);
+                    this.Close();
+                }
+                else {
+                    guardarNota = File.CreateText("Calificaciones.txt");
+                    string contenido = textBox1.Text + ",";
+                    string contenido2 = textBox3.Text + ",";
+                    string contenido3 = textBox4.Text + ",";
+                    string contenido4 = textBox2.Text + ",\n";
+                    guardarNota.Write(contenido);
+                    guardarNota.Write(contenido2);
+                    guardarNota.Write(contenido3);
+                    guardarNota.Write(contenido4);
+                    guardarNota.Flush();
+                    guardarNota.Close();
+                    MessageBox.Show("El registro se completo exitosamente!", "Message", MessageBoxButtons.OK);
+                    this.Close();
+
+                }
+                /*
                 longitud = Cadenas.Split(',');
                 if (longitud[0].Trim().Equals(id))
                 {
@@ -104,7 +137,7 @@ namespace MiIndiceAcademico_F1.Registro
                     MessageBox.Show("El valor digitado no se encuentra registrado favor intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     this.Close();
 
-                }
+                }*/
             }
             catch
             {

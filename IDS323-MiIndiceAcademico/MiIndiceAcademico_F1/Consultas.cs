@@ -114,9 +114,9 @@ namespace MiIndiceAcademico_F1
         private void ReadScores()
         {
             if (Notas.Count < 1) {
-                FileInfo file = new FileInfo("NotasV2.txt");
-                if (!File.Exists("NotasV2.txt"))
-                    File.WriteAllText("NotasV2.txt", "");
+                FileInfo file = new FileInfo("Calificaciones.txt");
+                if (!File.Exists("Calificaciones.txt"))
+                    File.WriteAllText("Calificaciones.txt", "");
                 //string fileText = File.ReadAllText(file.FullName);
                 foreach (string _ in File.ReadLines(file.FullName)) {
                     string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
