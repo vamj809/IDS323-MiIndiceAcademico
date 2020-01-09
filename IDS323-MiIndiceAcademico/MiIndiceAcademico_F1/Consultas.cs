@@ -26,15 +26,18 @@ namespace MiIndiceAcademico_F1
         {
             FileInfo file = new FileInfo("NotasV2.txt");
             string fileText = File.ReadAllText(file.FullName);
-            foreach (string line in File.ReadLines(file.FullName)) {
-                string[] cell = fileText.Split(new char[] { ',', '\n' });
-                score = new Calificacion();
-                score.ID_Estudiante = int.Parse(cell[0]);
-                score.ID_Profesor = int.Parse(cell[1]);
-                score.Clave_Materia = cell[2];
-                score.Nota = int.Parse(cell[3]);
+            foreach (string _ in File.ReadLines(file.FullName)) {
+                string[] cell = fileText.Split(new char[] { ',', '\n' },StringSplitOptions.RemoveEmptyEntries);
+
+                score = new Calificacion {
+                    ID_Estudiante = int.Parse(cell[0]),
+                    ID_Profesor = int.Parse(cell[1]),
+                    Clave_Materia = cell[2].Trim(),
+                    Nota = int.Parse(cell[3])
+                };
                 Notas.Add(score);
             }
+            Console.WriteLine("HUh?");
         }
 
         private void C_ID_comboBox_TextChanged(object sender, EventArgs e)
