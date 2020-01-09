@@ -53,15 +53,6 @@ namespace MiIndiceAcademico_F1
         }
         #endregion
 
-
-        /*** Consultas ***/
-        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Consultas _consultas = new Consultas();
-            _consultas.MdiParent = this;
-            _consultas.Show();
-        }
-
         #region Eliminar
         private void estudiantesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -91,5 +82,20 @@ namespace MiIndiceAcademico_F1
             _Profesores.Show();
         }
         #endregion
+        
+        /*** Consultas ***/
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas _consultas = new Consultas();
+            _consultas.MdiParent = this;
+            _consultas.Show();
+        }
+        /*** Modificacion ***/
+        private void modificaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modificaciones _modificaciones = new Modificaciones();
+            _modificaciones.MdiParent = this;
+            _modificaciones.Show();
+        }
     }
 }
