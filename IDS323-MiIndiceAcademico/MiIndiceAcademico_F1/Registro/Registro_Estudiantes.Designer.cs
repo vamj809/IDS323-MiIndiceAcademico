@@ -62,7 +62,7 @@
             // 
             // textname
             // 
-            this.textname.Location = new System.Drawing.Point(261, 97);
+            this.textname.Location = new System.Drawing.Point(261, 83);
             this.textname.Name = "textname";
             this.textname.Size = new System.Drawing.Size(323, 22);
             this.textname.TabIndex = 2;
@@ -74,12 +74,11 @@
             this.textapellido.Name = "textapellido";
             this.textapellido.Size = new System.Drawing.Size(323, 22);
             this.textapellido.TabIndex = 3;
-            this.textapellido.Visible = false;
             this.textapellido.TextChanged += new System.EventHandler(this.textapellido_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(231, 257);
+            this.button1.Location = new System.Drawing.Point(230, 337);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 31);
             this.button1.TabIndex = 8;
@@ -89,7 +88,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(424, 257);
+            this.button2.Location = new System.Drawing.Point(423, 337);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 31);
             this.button2.TabIndex = 9;
@@ -100,7 +99,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(163, 97);
+            this.label1.Location = new System.Drawing.Point(163, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 17);
             this.label1.TabIndex = 11;
@@ -114,7 +113,6 @@
             this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "Apellido:";
-            this.label2.Visible = false;
             // 
             // label3
             // 
@@ -124,7 +122,6 @@
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 13;
             this.label3.Text = "Email:";
-            this.label3.Visible = false;
             // 
             // textEmail
             // 
@@ -132,7 +129,6 @@
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(323, 22);
             this.textEmail.TabIndex = 5;
-            this.textEmail.Visible = false;
             this.textEmail.TextChanged += new System.EventHandler(this.textEmail_TextChanged);
             // 
             // label4
@@ -143,7 +139,6 @@
             this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 15;
             this.label4.Text = "Contraseña:";
-            this.label4.Visible = false;
             // 
             // label5
             // 
@@ -153,7 +148,6 @@
             this.label5.Size = new System.Drawing.Size(150, 17);
             this.label5.TabIndex = 16;
             this.label5.Text = "Confirmar Contraseña:";
-            this.label5.Visible = false;
             // 
             // contraseña
             // 
@@ -161,7 +155,6 @@
             this.contraseña.Name = "contraseña";
             this.contraseña.Size = new System.Drawing.Size(323, 22);
             this.contraseña.TabIndex = 6;
-            this.contraseña.Visible = false;
             // 
             // cContraseña
             // 
@@ -169,7 +162,6 @@
             this.cContraseña.Name = "cContraseña";
             this.cContraseña.Size = new System.Drawing.Size(323, 22);
             this.cContraseña.TabIndex = 7;
-            this.cContraseña.Visible = false;
             // 
             // label6
             // 
@@ -208,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 344);
+            this.ClientSize = new System.Drawing.Size(693, 419);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox1);
