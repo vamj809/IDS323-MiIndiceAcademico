@@ -16,7 +16,7 @@ namespace MiIndiceAcademico_F1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            Application.Run(new LogIn());
         }
     }
 }

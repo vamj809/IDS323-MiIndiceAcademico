@@ -16,5 +16,12 @@ namespace MiIndiceAcademico_F1
         {
             InitializeComponent();
         }
+
+        private void estudiantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro_Estudiantes _Estudiantes = new Registro_Estudiantes();
+            _Estudiantes.MdiParent = this;
+            _Estudiantes.Show();
+        }
     }
 }
