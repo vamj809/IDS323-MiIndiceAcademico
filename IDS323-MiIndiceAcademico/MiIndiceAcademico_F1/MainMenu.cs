@@ -27,5 +27,12 @@ namespace MiIndiceAcademico_F1
             _Estudiantes.MdiParent = this;
             _Estudiantes.Show();
         }
+
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas _consultas = new Consultas();
+            _consultas.MdiParent = this;
+            _consultas.Show();
+        }
     }
 }
