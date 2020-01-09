@@ -43,12 +43,15 @@
             this.tabAsignaturas = new System.Windows.Forms.TabPage();
             this.tabProfesores = new System.Windows.Forms.TabPage();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.E_dataGrid = new System.Windows.Forms.DataGridView();
+            this.T_dataGrid = new System.Windows.Forms.DataGridView();
             this.tabsConsultas.SuspendLayout();
             this.tabCalificaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.C_dataGrid)).BeginInit();
             this.tabEstudiantes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabAsignaturas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // tabsConsultas
@@ -181,7 +184,7 @@
             // 
             // tabEstudiantes
             // 
-            this.tabEstudiantes.Controls.Add(this.dataGridView1);
+            this.tabEstudiantes.Controls.Add(this.E_dataGrid);
             this.tabEstudiantes.Location = new System.Drawing.Point(4, 25);
             this.tabEstudiantes.Name = "tabEstudiantes";
             this.tabEstudiantes.Padding = new System.Windows.Forms.Padding(3);
@@ -192,6 +195,7 @@
             // 
             // tabAsignaturas
             // 
+            this.tabAsignaturas.Controls.Add(this.T_dataGrid);
             this.tabAsignaturas.Location = new System.Drawing.Point(4, 25);
             this.tabAsignaturas.Name = "tabAsignaturas";
             this.tabAsignaturas.Size = new System.Drawing.Size(906, 455);
@@ -208,19 +212,33 @@
             this.tabProfesores.Text = "Profesores";
             this.tabProfesores.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // E_dataGrid
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(900, 449);
-            this.dataGridView1.TabIndex = 0;
+            this.E_dataGrid.AllowUserToAddRows = false;
+            this.E_dataGrid.AllowUserToDeleteRows = false;
+            this.E_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.E_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.E_dataGrid.Location = new System.Drawing.Point(3, 3);
+            this.E_dataGrid.Name = "E_dataGrid";
+            this.E_dataGrid.ReadOnly = true;
+            this.E_dataGrid.RowHeadersWidth = 51;
+            this.E_dataGrid.RowTemplate.Height = 24;
+            this.E_dataGrid.Size = new System.Drawing.Size(900, 449);
+            this.E_dataGrid.TabIndex = 0;
+            // 
+            // T_dataGrid
+            // 
+            this.T_dataGrid.AllowUserToAddRows = false;
+            this.T_dataGrid.AllowUserToDeleteRows = false;
+            this.T_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.T_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.T_dataGrid.Location = new System.Drawing.Point(0, 0);
+            this.T_dataGrid.Name = "T_dataGrid";
+            this.T_dataGrid.ReadOnly = true;
+            this.T_dataGrid.RowHeadersWidth = 51;
+            this.T_dataGrid.RowTemplate.Height = 24;
+            this.T_dataGrid.Size = new System.Drawing.Size(906, 455);
+            this.T_dataGrid.TabIndex = 1;
             // 
             // Consultas
             // 
@@ -235,7 +253,9 @@
             this.tabCalificaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.C_dataGrid)).EndInit();
             this.tabEstudiantes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabAsignaturas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T_dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,6 +278,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PuntosDeHonor;
         private System.Windows.Forms.Label C_GPA_;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView E_dataGrid;
+        private System.Windows.Forms.DataGridView T_dataGrid;
     }
 }
