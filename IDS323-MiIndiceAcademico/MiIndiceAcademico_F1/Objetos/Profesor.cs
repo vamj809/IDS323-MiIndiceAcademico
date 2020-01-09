@@ -3,6 +3,6 @@
     class Profesor
     {
         public int ID_Profesor { get; set; }
-        public string Nombre { get; set; }
+        public string Nombre_Profesor { get; set; }
     }
 }

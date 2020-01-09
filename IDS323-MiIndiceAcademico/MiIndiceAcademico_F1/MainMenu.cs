@@ -23,7 +23,7 @@ namespace MiIndiceAcademico_F1
             }
         }
 
-        /*** Registro ***/
+        #region Registro
         private void estudiantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Registro_Estudiantes _Estudiantes = new Registro_Estudiantes();
@@ -51,6 +51,8 @@ namespace MiIndiceAcademico_F1
             _Profesores.MdiParent = this;
             _Profesores.Show();
         }
+        #endregion
+
 
         /*** Consultas ***/
         private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,7 +62,7 @@ namespace MiIndiceAcademico_F1
             _consultas.Show();
         }
 
-        /*** Eliminar ***/
+        #region Eliminar
         private void estudiantesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Eliminar_Estudiantes _Estudiantes = new Eliminar_Estudiantes();
@@ -88,5 +90,6 @@ namespace MiIndiceAcademico_F1
             _Profesores.MdiParent = this;
             _Profesores.Show();
         }
+        #endregion
     }
 }
