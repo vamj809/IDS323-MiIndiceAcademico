@@ -65,7 +65,7 @@
             this.textname.Location = new System.Drawing.Point(261, 83);
             this.textname.Name = "textname";
             this.textname.Size = new System.Drawing.Size(323, 22);
-            this.textname.TabIndex = 2;
+            this.textname.TabIndex = 3;
             this.textname.TextChanged += new System.EventHandler(this.textname_TextChanged);
             // 
             // textapellido
@@ -73,7 +73,7 @@
             this.textapellido.Location = new System.Drawing.Point(261, 125);
             this.textapellido.Name = "textapellido";
             this.textapellido.Size = new System.Drawing.Size(323, 22);
-            this.textapellido.TabIndex = 3;
+            this.textapellido.TabIndex = 4;
             this.textapellido.TextChanged += new System.EventHandler(this.textapellido_TextChanged);
             // 
             // button1
@@ -128,7 +128,7 @@
             this.textEmail.Location = new System.Drawing.Point(261, 203);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(323, 22);
-            this.textEmail.TabIndex = 5;
+            this.textEmail.TabIndex = 14;
             this.textEmail.TextChanged += new System.EventHandler(this.textEmail_TextChanged);
             // 
             // label4
@@ -154,14 +154,14 @@
             this.contraseña.Location = new System.Drawing.Point(261, 241);
             this.contraseña.Name = "contraseña";
             this.contraseña.Size = new System.Drawing.Size(323, 22);
-            this.contraseña.TabIndex = 6;
+            this.contraseña.TabIndex = 17;
             // 
             // cContraseña
             // 
             this.cContraseña.Location = new System.Drawing.Point(261, 279);
             this.cContraseña.Name = "cContraseña";
             this.cContraseña.Size = new System.Drawing.Size(323, 22);
-            this.cContraseña.TabIndex = 7;
+            this.cContraseña.TabIndex = 18;
             // 
             // label6
             // 
@@ -177,7 +177,7 @@
             this.textBox1.Location = new System.Drawing.Point(261, 42);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(323, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 20;
             // 
             // label7
             // 
@@ -193,7 +193,7 @@
             this.textBox2.Location = new System.Drawing.Point(261, 167);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(323, 22);
-            this.textBox2.TabIndex = 4;
+            this.textBox2.TabIndex = 22;
             // 
             // Registro_Estudiantes
             // 

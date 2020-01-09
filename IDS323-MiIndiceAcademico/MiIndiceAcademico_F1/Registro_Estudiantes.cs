@@ -37,18 +37,39 @@ namespace MiIndiceAcademico_F1
             }
             else
             {
+                
                 StreamWriter guardar = null;
-                guardar = File.CreateText("Registro.txt");
-                string contenido = textBox1.Text + ",";
-                string contenido2 = textname.Text + ",";
-                string contenido3 = textBox2.Text + ",";
-                guardar.Write(contenido);
-                guardar.Write(contenido2);
-                guardar.Write(contenido3);
-                guardar.Flush();
-                guardar.Close();
-                MessageBox.Show("El registro se completo exitosamente!", "Message", MessageBoxButtons.OK);
-                this.Close();
+                if (File.Exists("Registro.txt"))
+                {
+                    guardar = File.AppendText("Registro.txt");
+                    string contenido = textBox1.Text + ",";
+                    string contenido2 = textname.Text + ",";
+                    string contenido3 = textBox2.Text + ",";
+                    guardar.Write(contenido);
+                    guardar.Write(contenido2);
+                    guardar.Write(contenido3);
+                    guardar.Flush();
+                    guardar.Close();
+                    MessageBox.Show("El registro se completo exitosamente!", "Message", MessageBoxButtons.OK);
+                    this.Close();
+                }
+                else
+                {
+                    guardar = File.CreateText("Registro.txt");
+                    string contenido = textBox1.Text + ",";
+                    string contenido2 = textname.Text + ",";
+                    string contenido3 = textBox2.Text + ",";
+                    guardar.Write(contenido);
+                    guardar.Write(contenido2);
+                    guardar.Write(contenido3);
+                    guardar.Flush();
+                    guardar.Close();
+                    MessageBox.Show("El registro se completo exitosamente!", "Message", MessageBoxButtons.OK);
+                    this.Close();
+
+                }
+
+                
             }
         }
 
