@@ -12,9 +12,13 @@ namespace MiIndiceAcademico_F1
 {
     public partial class MainMenu : Form
     {
-        public MainMenu()
+        public MainMenu(string userName = null)
         {
             InitializeComponent();
+
+            if (userName != null) {
+                currentUserLabel.Text = $"Bienvenido/a {userName}";
+            }
         }
 
         private void estudiantesToolStripMenuItem_Click(object sender, EventArgs e)

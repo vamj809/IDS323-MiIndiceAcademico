@@ -21,7 +21,7 @@ namespace MiIndiceAcademico_F1
         {
             if(userTXT.Text == pwdTXT.Text && userTXT.Text == "admin") {
                 this.Hide();
-                new MainMenu().ShowDialog(this);
+                new MainMenu(userTXT.Text).ShowDialog(this);
                 this.Close();
             } else {
                 MessageBox.Show("Usuario y/o contraseña inválidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);

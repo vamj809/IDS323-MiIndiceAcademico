@@ -58,6 +58,7 @@
             // 
             // Cancel
             // 
+            this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel.Location = new System.Drawing.Point(221, 207);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(75, 23);
@@ -127,7 +128,7 @@
             this.Controls.Add(this.OK);
             this.Controls.Add(this.userLabel);
             this.Name = "LogIn";
-            this.Text = "Inicio de Sesión";
+            this.Text = "Mi Indice Academico";
             this.ResumeLayout(false);
             this.PerformLayout();
 
