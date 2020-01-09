@@ -16,5 +16,10 @@ namespace MiIndiceAcademico_F1
         {
             InitializeComponent();
         }
+
+        private void C_ID_comboBox_TextChanged(object sender, EventArgs e)
+        {
+            C_dataGrid.Refresh();
+        }
     }
 }
