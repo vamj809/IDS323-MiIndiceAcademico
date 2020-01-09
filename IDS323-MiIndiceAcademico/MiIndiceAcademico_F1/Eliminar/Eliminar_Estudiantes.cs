@@ -67,10 +67,10 @@ namespace MiIndiceAcademico_F1
                 File.Delete("Registro.txt");
                 File.Move("copia.txt", "Registro.txt");
             }
-            catch (FileNotFoundException fe)
+            catch 
             {
-                Console.WriteLine("Error!!" + fe.Message);
-
+                MessageBox.Show("Error masivo en el sistema favor intentar nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
             }
 
             this.Close();
