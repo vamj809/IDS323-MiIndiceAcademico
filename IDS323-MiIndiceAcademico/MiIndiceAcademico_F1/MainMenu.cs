@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiIndiceAcademico_F1.Registro;
 
 namespace MiIndiceAcademico_F1
 {
@@ -40,6 +41,27 @@ namespace MiIndiceAcademico_F1
             Eliminar_Estudiantes _Estudiantes = new Eliminar_Estudiantes();
             _Estudiantes.MdiParent = this;
             _Estudiantes.Show();
+        }
+
+        private void calificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro_Calificaciones _Calificaciones = new Registro_Calificaciones();
+            _Calificaciones.MdiParent = this;
+            _Calificaciones.Show();
+        }
+
+        private void asignaturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro_Asignaturas _Asignaturas = new Registro_Asignaturas();
+            _Asignaturas.MdiParent = this;
+            _Asignaturas.Show();
+        }
+
+        private void profesoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro_Profesores _Profesores = new Registro_Profesores();
+            _Profesores.MdiParent = this;
+            _Profesores.Show();
         }
     }
 }
