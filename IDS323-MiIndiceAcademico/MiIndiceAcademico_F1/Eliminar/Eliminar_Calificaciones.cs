@@ -32,22 +32,41 @@ namespace MiIndiceAcademico_F1.Eliminar
                 Lector = File.OpenText("Calificaciones.txt");
 
                 string Nota = textBox1.Text;
+                string IDE = textBox2.Text;
+                string IDP = textBox3.Text;
+                string Clave = textBox4.Text;
                 Cadenas = Lector.ReadLine();
                 while (Cadenas != null)
                 {
 
                     longitud = Cadenas.Split(',');
-                    if (longitud[0].Trim().Equals(Nota))
+                    if (longitud[0].Trim().Equals(IDE))
                     {
-                        Console.WriteLine("Nombre: " + longitud[0].Trim());
-                        encontrar = true;
+                        if (longitud[1].Trim().Equals(IDP))
+                        {
+                            if (longitud[2].Trim().Equals(Clave))
+                            {
+                                if (longitud[3].Trim().Equals(Nota))
+                                {
+
+                                    encontrar = true;
+
+                                }
+                                else
+                                {
+                                    escribir.WriteLine(Cadenas);
+
+                                }
+                                
+
+                            }
+                            
+
+                        }
+                        
 
                     }
-                    else
-                    {
-                        escribir.WriteLine(Cadenas);
-
-                    }
+                   
                     Cadenas = Lector.ReadLine();
 
                 }
@@ -59,13 +78,13 @@ namespace MiIndiceAcademico_F1.Eliminar
                 else
                 {
                     MessageBox.Show("La Eliminacion se completo exitosamente!", "Message", MessageBoxButtons.OK);
+                    Lector.Close();
+                    escribir.Close();
 
+                    File.Delete("Calificaciones.txt");
+                    File.Move("copia.txt", "Calificaciones.txt");
                 }
-                Lector.Close();
-                escribir.Close();
-
-                File.Delete("Calificaciones.txt");
-                File.Move("copia.txt", "Calificaciones.txt");
+               
             }
             catch
             {
