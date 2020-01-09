@@ -52,6 +52,7 @@
     <Compile Include="Consultas.Designer.cs">
       <DependentUpon>Consultas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\MetodosConsulta.cs" />
     <Compile Include="Eliminar\Eliminar_Asignaturas.cs">
       <SubType>Form</SubType>
     </Compile>

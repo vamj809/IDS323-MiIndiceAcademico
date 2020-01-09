@@ -9,29 +9,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MiIndiceAcademico_F1.Objetos;
+using MiIndiceAcademico_F1.Consulta;
 
 namespace MiIndiceAcademico_F1
 {
     public partial class Consultas : Form
     {
-        List<Calificacion> Notas = new List<Calificacion>();
-        Calificacion score = new Calificacion();
+        List<Calificacion> notas = new List<Calificacion>();
+        //Calificacion score = new Calificacion();
 
         List<Estudiante> estudiantes = new List<Estudiante>();
-        Estudiante student = new Estudiante();
+        //Estudiante student = new Estudiante();
 
         List<Profesor> profesores = new List<Profesor>();
-        Profesor teacher = new Profesor();
+        //Profesor teacher = new Profesor();
 
         List<Asignatura> asignaturas = new List<Asignatura>();
-        Asignatura subject = new Asignatura();
+        //Asignatura subject = new Asignatura();
         public Consultas()
         {
             InitializeComponent();
-            ReadScores();
-            ReadStudents();
-            ReadSubjects();
-            ReadTeachers();
+            MetodosConsulta MC = new MetodosConsulta();
+            notas = MC.ReadAndLoadScores();
+            estudiantes = MC.ReadAndLoadStudents(E_dataGrid);
+            asignaturas = MC.ReadAndLoadSubjects(A_dataGrid);
+            profesores = MC.ReadAndLoadTeachers(T_dataGrid);
+            //ReadScores();
+            //ReadStudents();
+            //ReadSubjects();
+            //ReadTeachers();
             loadFinalScores();
             loadStudents();
         }
@@ -73,7 +79,7 @@ namespace MiIndiceAcademico_F1
         {
             C_dataGrid.Rows.Clear();
             int total_credito = 0, total_honor = 0;
-            foreach (Calificacion item in Notas) {
+            foreach (Calificacion item in notas) {
                 if (item.ID_Estudiante.ToString() == ID_comboBox.Text) {
                     foreach (Asignatura materia in asignaturas) {
                         if(item.Clave_Materia == materia.Clave_Materia) {
@@ -103,6 +109,8 @@ namespace MiIndiceAcademico_F1
             }
             //C_dataGrid.Refresh();
         }
+
+        /*
         private void ReadScores()
         {
             if (Notas.Count < 1) {
@@ -178,7 +186,7 @@ namespace MiIndiceAcademico_F1
                 T_dataGrid.Refresh();
             }
         }
-
+        */
         private void ID_comboBox_TextChanged(object sender, EventArgs e)
         {
             loadFinalScores();

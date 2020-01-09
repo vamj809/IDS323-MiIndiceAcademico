@@ -33,32 +33,31 @@
             this.btn_C_Cancel = new System.Windows.Forms.Button();
             this.btn_C_SaveChanges = new System.Windows.Forms.Button();
             this.C_dataGrid = new System.Windows.Forms.DataGridView();
-            this.Nota_ID_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota_ID_Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota_Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabEstudiantes = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_E_Cancel = new System.Windows.Forms.Button();
             this.btn_E_SaveChanges = new System.Windows.Forms.Button();
             this.E_dataGrid = new System.Windows.Forms.DataGridView();
-            this.ID_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Carrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabAsignaturas = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_A_Cancel = new System.Windows.Forms.Button();
             this.btn_A_SaveChanges = new System.Windows.Forms.Button();
             this.A_dataGrid = new System.Windows.Forms.DataGridView();
-            this.Clave_Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_Asignatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Credito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabProfesores = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_P_Cancel = new System.Windows.Forms.Button();
             this.btn_P_SaveChanges = new System.Windows.Forms.Button();
             this.T_dataGrid = new System.Windows.Forms.DataGridView();
+            this.Nota_ID_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota_ID_Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Carrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Clave_Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_Asignatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Credito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabsModificaciones.SuspendLayout();
@@ -95,7 +94,6 @@
             this.tabCalificaciones.Controls.Add(this.C_dataGrid);
             this.tabCalificaciones.Location = new System.Drawing.Point(4, 25);
             this.tabCalificaciones.Name = "tabCalificaciones";
-            this.tabCalificaciones.Padding = new System.Windows.Forms.Padding(3);
             this.tabCalificaciones.Size = new System.Drawing.Size(792, 421);
             this.tabCalificaciones.TabIndex = 0;
             this.tabCalificaciones.Text = "Calificaciones";
@@ -140,58 +138,17 @@
             this.C_dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nota_ID_Estudiante,
             this.Nota_ID_Profesor,
-            this.Nota_Codigo,
-            this.Nota_Materia,
+            this.Materia,
             this.Nota});
             this.C_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.C_dataGrid.Location = new System.Drawing.Point(3, 3);
             this.C_dataGrid.Name = "C_dataGrid";
-            this.C_dataGrid.ReadOnly = true;
             this.C_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.C_dataGrid.RowHeadersWidth = 20;
             this.C_dataGrid.RowTemplate.Height = 24;
             this.C_dataGrid.Size = new System.Drawing.Size(786, 415);
             this.C_dataGrid.TabIndex = 2;
-            // 
-            // Nota_ID_Estudiante
-            // 
-            this.Nota_ID_Estudiante.HeaderText = "Matricula Estudiante";
-            this.Nota_ID_Estudiante.MinimumWidth = 6;
-            this.Nota_ID_Estudiante.Name = "Nota_ID_Estudiante";
-            this.Nota_ID_Estudiante.ReadOnly = true;
-            this.Nota_ID_Estudiante.Width = 80;
-            // 
-            // Nota_ID_Profesor
-            // 
-            this.Nota_ID_Profesor.HeaderText = "Profesor";
-            this.Nota_ID_Profesor.MinimumWidth = 6;
-            this.Nota_ID_Profesor.Name = "Nota_ID_Profesor";
-            this.Nota_ID_Profesor.ReadOnly = true;
-            this.Nota_ID_Profesor.Width = 125;
-            // 
-            // Nota_Codigo
-            // 
-            this.Nota_Codigo.HeaderText = "Codigo";
-            this.Nota_Codigo.MinimumWidth = 6;
-            this.Nota_Codigo.Name = "Nota_Codigo";
-            this.Nota_Codigo.ReadOnly = true;
-            this.Nota_Codigo.Width = 125;
-            // 
-            // Nota_Materia
-            // 
-            this.Nota_Materia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nota_Materia.HeaderText = "Materia";
-            this.Nota_Materia.MinimumWidth = 6;
-            this.Nota_Materia.Name = "Nota_Materia";
-            this.Nota_Materia.ReadOnly = true;
-            // 
-            // Nota
-            // 
-            this.Nota.HeaderText = "Nota";
-            this.Nota.MinimumWidth = 6;
-            this.Nota.Name = "Nota";
-            this.Nota.ReadOnly = true;
-            this.Nota.Width = 125;
+            this.C_dataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataChanged);
             // 
             // tabEstudiantes
             // 
@@ -246,37 +203,11 @@
             this.E_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.E_dataGrid.Location = new System.Drawing.Point(0, 0);
             this.E_dataGrid.Name = "E_dataGrid";
-            this.E_dataGrid.ReadOnly = true;
             this.E_dataGrid.RowHeadersWidth = 51;
             this.E_dataGrid.RowTemplate.Height = 24;
             this.E_dataGrid.Size = new System.Drawing.Size(792, 421);
             this.E_dataGrid.TabIndex = 0;
-            // 
-            // ID_Estudiante
-            // 
-            this.ID_Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ID_Estudiante.HeaderText = "Matricula";
-            this.ID_Estudiante.MinimumWidth = 6;
-            this.ID_Estudiante.Name = "ID_Estudiante";
-            this.ID_Estudiante.ReadOnly = true;
-            this.ID_Estudiante.Width = 94;
-            // 
-            // Nombre_Estudiante
-            // 
-            this.Nombre_Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre_Estudiante.HeaderText = "Nombre Completo";
-            this.Nombre_Estudiante.MinimumWidth = 6;
-            this.Nombre_Estudiante.Name = "Nombre_Estudiante";
-            this.Nombre_Estudiante.ReadOnly = true;
-            // 
-            // Carrera
-            // 
-            this.Carrera.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Carrera.HeaderText = "Carrera";
-            this.Carrera.MinimumWidth = 6;
-            this.Carrera.Name = "Carrera";
-            this.Carrera.ReadOnly = true;
-            this.Carrera.Width = 85;
+            this.E_dataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataChanged);
             // 
             // tabAsignaturas
             // 
@@ -331,35 +262,11 @@
             this.A_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.A_dataGrid.Location = new System.Drawing.Point(0, 0);
             this.A_dataGrid.Name = "A_dataGrid";
-            this.A_dataGrid.ReadOnly = true;
             this.A_dataGrid.RowHeadersWidth = 51;
             this.A_dataGrid.RowTemplate.Height = 24;
             this.A_dataGrid.Size = new System.Drawing.Size(792, 421);
             this.A_dataGrid.TabIndex = 3;
-            // 
-            // Clave_Materia
-            // 
-            this.Clave_Materia.HeaderText = "Codigo";
-            this.Clave_Materia.MinimumWidth = 6;
-            this.Clave_Materia.Name = "Clave_Materia";
-            this.Clave_Materia.ReadOnly = true;
-            this.Clave_Materia.Width = 125;
-            // 
-            // Nombre_Asignatura
-            // 
-            this.Nombre_Asignatura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre_Asignatura.HeaderText = "Nombre";
-            this.Nombre_Asignatura.MinimumWidth = 6;
-            this.Nombre_Asignatura.Name = "Nombre_Asignatura";
-            this.Nombre_Asignatura.ReadOnly = true;
-            // 
-            // Credito
-            // 
-            this.Credito.HeaderText = "Credito";
-            this.Credito.MinimumWidth = 6;
-            this.Credito.Name = "Credito";
-            this.Credito.ReadOnly = true;
-            this.Credito.Width = 125;
+            this.A_dataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataChanged);
             // 
             // tabProfesores
             // 
@@ -413,11 +320,88 @@
             this.T_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.T_dataGrid.Location = new System.Drawing.Point(0, 0);
             this.T_dataGrid.Name = "T_dataGrid";
-            this.T_dataGrid.ReadOnly = true;
             this.T_dataGrid.RowHeadersWidth = 51;
             this.T_dataGrid.RowTemplate.Height = 24;
             this.T_dataGrid.Size = new System.Drawing.Size(792, 421);
             this.T_dataGrid.TabIndex = 2;
+            this.T_dataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataChanged);
+            // 
+            // Nota_ID_Estudiante
+            // 
+            this.Nota_ID_Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nota_ID_Estudiante.HeaderText = "Matricula Estudiante";
+            this.Nota_ID_Estudiante.MinimumWidth = 6;
+            this.Nota_ID_Estudiante.Name = "Nota_ID_Estudiante";
+            this.Nota_ID_Estudiante.ReadOnly = true;
+            // 
+            // Nota_ID_Profesor
+            // 
+            this.Nota_ID_Profesor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nota_ID_Profesor.HeaderText = "Profesor";
+            this.Nota_ID_Profesor.MinimumWidth = 6;
+            this.Nota_ID_Profesor.Name = "Nota_ID_Profesor";
+            this.Nota_ID_Profesor.ReadOnly = true;
+            // 
+            // Materia
+            // 
+            this.Materia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Materia.HeaderText = "Materia";
+            this.Materia.MinimumWidth = 6;
+            this.Materia.Name = "Materia";
+            this.Materia.ReadOnly = true;
+            // 
+            // Nota
+            // 
+            this.Nota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nota.HeaderText = "Nota";
+            this.Nota.MinimumWidth = 6;
+            this.Nota.Name = "Nota";
+            // 
+            // ID_Estudiante
+            // 
+            this.ID_Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ID_Estudiante.HeaderText = "Matricula";
+            this.ID_Estudiante.MinimumWidth = 6;
+            this.ID_Estudiante.Name = "ID_Estudiante";
+            this.ID_Estudiante.ReadOnly = true;
+            this.ID_Estudiante.Width = 94;
+            // 
+            // Nombre_Estudiante
+            // 
+            this.Nombre_Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre_Estudiante.HeaderText = "Nombre Completo";
+            this.Nombre_Estudiante.MinimumWidth = 6;
+            this.Nombre_Estudiante.Name = "Nombre_Estudiante";
+            // 
+            // Carrera
+            // 
+            this.Carrera.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Carrera.HeaderText = "Carrera";
+            this.Carrera.MinimumWidth = 6;
+            this.Carrera.Name = "Carrera";
+            this.Carrera.Width = 85;
+            // 
+            // Clave_Materia
+            // 
+            this.Clave_Materia.HeaderText = "Codigo";
+            this.Clave_Materia.MinimumWidth = 6;
+            this.Clave_Materia.Name = "Clave_Materia";
+            this.Clave_Materia.ReadOnly = true;
+            this.Clave_Materia.Width = 125;
+            // 
+            // Nombre_Asignatura
+            // 
+            this.Nombre_Asignatura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre_Asignatura.HeaderText = "Nombre";
+            this.Nombre_Asignatura.MinimumWidth = 6;
+            this.Nombre_Asignatura.Name = "Nombre_Asignatura";
+            // 
+            // Credito
+            // 
+            this.Credito.HeaderText = "Credito";
+            this.Credito.MinimumWidth = 6;
+            this.Credito.Name = "Credito";
+            this.Credito.Width = 125;
             // 
             // ID_Profesor
             // 
@@ -433,7 +417,6 @@
             this.Nombre_Profesor.HeaderText = "Nombre Completo";
             this.Nombre_Profesor.MinimumWidth = 6;
             this.Nombre_Profesor.Name = "Nombre_Profesor";
-            this.Nombre_Profesor.ReadOnly = true;
             // 
             // Modificaciones
             // 
@@ -468,26 +451,13 @@
         private System.Windows.Forms.DataGridView C_dataGrid;
         private System.Windows.Forms.TabPage tabEstudiantes;
         private System.Windows.Forms.DataGridView E_dataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Estudiante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Estudiante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Carrera;
         private System.Windows.Forms.TabPage tabAsignaturas;
         private System.Windows.Forms.DataGridView A_dataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clave_Materia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Asignatura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Credito;
         private System.Windows.Forms.TabPage tabProfesores;
         private System.Windows.Forms.DataGridView T_dataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Profesor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Profesor;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_C_Cancel;
         private System.Windows.Forms.Button btn_C_SaveChanges;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nota_ID_Estudiante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nota_ID_Profesor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nota_Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nota_Materia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_E_Cancel;
         private System.Windows.Forms.Button btn_E_SaveChanges;
@@ -497,5 +467,17 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_P_Cancel;
         private System.Windows.Forms.Button btn_P_SaveChanges;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nota_ID_Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nota_ID_Profesor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Materia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Carrera;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clave_Materia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Asignatura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Credito;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Profesor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Profesor;
     }
 }
