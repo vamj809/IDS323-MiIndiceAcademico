@@ -33,7 +33,9 @@ namespace MiIndiceAcademico_F1
         private void ReadStudents()
         {
             if(estudiantes.Count < 1) {
-                foreach(string _ in File.ReadLines("Estudiantes.txt")) {
+                if (!File.Exists("Estudiantes.txt"))
+                    File.WriteAllText("Estudiantes.txt", "");
+                foreach (string _ in File.ReadLines("Estudiantes.txt")) {
                     string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
                     student = new Estudiante {
                         ID_Estudiante = int.Parse(cell[0]),
@@ -50,6 +52,8 @@ namespace MiIndiceAcademico_F1
         private void ReadTeachers()
         {
             if (profesores.Count < 1) {
+                if (!File.Exists("Profesores.txt"))
+                    File.WriteAllText("Profesores.txt", "");
                 foreach (string _ in File.ReadLines("Profesores.txt")) {
                     string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
                     teacher = new Profesor {
@@ -67,6 +71,8 @@ namespace MiIndiceAcademico_F1
         {
             if(Notas.Count < 1) {
                 FileInfo file = new FileInfo("NotasV2.txt");
+                if(!File.Exists("NotasV2.txt"))
+                    File.WriteAllText("NotasV2.txt", "");
                 //string fileText = File.ReadAllText(file.FullName);
                 foreach (string _ in File.ReadLines(file.FullName)) {
                     string[] cell = _.Split(new char[] { ',', '\n' },StringSplitOptions.None);

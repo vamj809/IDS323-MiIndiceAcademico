@@ -49,7 +49,7 @@
             this.tabCalificaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.C_dataGrid)).BeginInit();
             this.tabEstudiantes.SuspendLayout();
-            this.tabAsignaturas.SuspendLayout();
+            this.tabProfesores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.T_dataGrid)).BeginInit();
             this.SuspendLayout();
@@ -195,7 +195,6 @@
             // 
             // tabAsignaturas
             // 
-            this.tabAsignaturas.Controls.Add(this.T_dataGrid);
             this.tabAsignaturas.Location = new System.Drawing.Point(4, 25);
             this.tabAsignaturas.Name = "tabAsignaturas";
             this.tabAsignaturas.Size = new System.Drawing.Size(906, 455);
@@ -205,6 +204,7 @@
             // 
             // tabProfesores
             // 
+            this.tabProfesores.Controls.Add(this.T_dataGrid);
             this.tabProfesores.Location = new System.Drawing.Point(4, 25);
             this.tabProfesores.Name = "tabProfesores";
             this.tabProfesores.Size = new System.Drawing.Size(906, 455);
@@ -238,7 +238,7 @@
             this.T_dataGrid.RowHeadersWidth = 51;
             this.T_dataGrid.RowTemplate.Height = 24;
             this.T_dataGrid.Size = new System.Drawing.Size(906, 455);
-            this.T_dataGrid.TabIndex = 1;
+            this.T_dataGrid.TabIndex = 2;
             // 
             // Consultas
             // 
@@ -253,7 +253,7 @@
             this.tabCalificaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.C_dataGrid)).EndInit();
             this.tabEstudiantes.ResumeLayout(false);
-            this.tabAsignaturas.ResumeLayout(false);
+            this.tabProfesores.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.T_dataGrid)).EndInit();
             this.ResumeLayout(false);
