@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,49 +68,52 @@
             this.calificacionesToolStripMenuItem,
             this.asignaturasToolStripMenuItem,
             this.profesoresToolStripMenuItem});
+            this.registroToolStripMenuItem.Image = global::MiIndiceAcademico_F1.Properties.Resources.add;
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
-            this.registroToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.registroToolStripMenuItem.Text = "Registro";
             // 
             // estudiantesToolStripMenuItem
             // 
             this.estudiantesToolStripMenuItem.Name = "estudiantesToolStripMenuItem";
-            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.estudiantesToolStripMenuItem.Text = "Estudiantes";
             this.estudiantesToolStripMenuItem.Click += new System.EventHandler(this.estudiantesToolStripMenuItem_Click);
             // 
             // calificacionesToolStripMenuItem
             // 
             this.calificacionesToolStripMenuItem.Name = "calificacionesToolStripMenuItem";
-            this.calificacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.calificacionesToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.calificacionesToolStripMenuItem.Text = "Calificaciones";
             this.calificacionesToolStripMenuItem.Click += new System.EventHandler(this.calificacionesToolStripMenuItem_Click);
             // 
             // asignaturasToolStripMenuItem
             // 
             this.asignaturasToolStripMenuItem.Name = "asignaturasToolStripMenuItem";
-            this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.asignaturasToolStripMenuItem.Text = "Asignaturas";
             this.asignaturasToolStripMenuItem.Click += new System.EventHandler(this.asignaturasToolStripMenuItem_Click);
             // 
             // profesoresToolStripMenuItem
             // 
             this.profesoresToolStripMenuItem.Name = "profesoresToolStripMenuItem";
-            this.profesoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.profesoresToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.profesoresToolStripMenuItem.Text = "Profesores";
             this.profesoresToolStripMenuItem.Click += new System.EventHandler(this.profesoresToolStripMenuItem_Click);
             // 
             // modificaciónToolStripMenuItem
             // 
+            this.modificaciónToolStripMenuItem.Image = global::MiIndiceAcademico_F1.Properties.Resources.edit;
             this.modificaciónToolStripMenuItem.Name = "modificaciónToolStripMenuItem";
-            this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.modificaciónToolStripMenuItem.Text = "Modificación";
             this.modificaciónToolStripMenuItem.Click += new System.EventHandler(this.modificaciónToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
+            this.consultasToolStripMenuItem.Image = global::MiIndiceAcademico_F1.Properties.Resources.search;
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.consultasToolStripMenuItem.Text = "Consultas";
             this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
@@ -120,35 +124,36 @@
             this.calificacionesToolStripMenuItem1,
             this.asignaturasToolStripMenuItem1,
             this.profesoresToolStripMenuItem1});
+            this.eliminaciónToolStripMenuItem.Image = global::MiIndiceAcademico_F1.Properties.Resources.delete;
             this.eliminaciónToolStripMenuItem.Name = "eliminaciónToolStripMenuItem";
-            this.eliminaciónToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
+            this.eliminaciónToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
             this.eliminaciónToolStripMenuItem.Text = "Eliminación";
             // 
             // estudiantesToolStripMenuItem1
             // 
             this.estudiantesToolStripMenuItem1.Name = "estudiantesToolStripMenuItem1";
-            this.estudiantesToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.estudiantesToolStripMenuItem1.Size = new System.Drawing.Size(183, 26);
             this.estudiantesToolStripMenuItem1.Text = "Estudiantes";
             this.estudiantesToolStripMenuItem1.Click += new System.EventHandler(this.estudiantesToolStripMenuItem1_Click);
             // 
             // calificacionesToolStripMenuItem1
             // 
             this.calificacionesToolStripMenuItem1.Name = "calificacionesToolStripMenuItem1";
-            this.calificacionesToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.calificacionesToolStripMenuItem1.Size = new System.Drawing.Size(183, 26);
             this.calificacionesToolStripMenuItem1.Text = "Calificaciones";
             this.calificacionesToolStripMenuItem1.Click += new System.EventHandler(this.calificacionesToolStripMenuItem1_Click);
             // 
             // asignaturasToolStripMenuItem1
             // 
             this.asignaturasToolStripMenuItem1.Name = "asignaturasToolStripMenuItem1";
-            this.asignaturasToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.asignaturasToolStripMenuItem1.Size = new System.Drawing.Size(183, 26);
             this.asignaturasToolStripMenuItem1.Text = "Asignaturas";
             this.asignaturasToolStripMenuItem1.Click += new System.EventHandler(this.asignaturasToolStripMenuItem1_Click);
             // 
             // profesoresToolStripMenuItem1
             // 
             this.profesoresToolStripMenuItem1.Name = "profesoresToolStripMenuItem1";
-            this.profesoresToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.profesoresToolStripMenuItem1.Size = new System.Drawing.Size(183, 26);
             this.profesoresToolStripMenuItem1.Text = "Profesores";
             this.profesoresToolStripMenuItem1.Click += new System.EventHandler(this.profesoresToolStripMenuItem1_Click);
             // 
@@ -177,6 +182,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.mainMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "MainMenu";

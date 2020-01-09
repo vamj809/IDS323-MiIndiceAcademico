@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.userLabel = new System.Windows.Forms.Label();
             this.OK = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
@@ -50,7 +51,7 @@
             // 
             this.OK.Location = new System.Drawing.Point(12, 207);
             this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(119, 23);
+            this.OK.Size = new System.Drawing.Size(119, 28);
             this.OK.TabIndex = 1;
             this.OK.Text = "Iniciar Sesión";
             this.OK.UseVisualStyleBackColor = true;
@@ -59,12 +60,13 @@
             // Cancel
             // 
             this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancel.Location = new System.Drawing.Point(221, 207);
+            this.Cancel.Location = new System.Drawing.Point(233, 207);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.Size = new System.Drawing.Size(81, 28);
             this.Cancel.TabIndex = 2;
             this.Cancel.Text = "Cancelar";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // userTXT
             // 
@@ -127,6 +129,9 @@
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.userLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "LogIn";
             this.Text = "Mi Indice Academico";
             this.ResumeLayout(false);
