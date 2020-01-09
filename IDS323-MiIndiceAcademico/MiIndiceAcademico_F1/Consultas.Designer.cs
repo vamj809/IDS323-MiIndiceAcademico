@@ -45,13 +45,16 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.E_dataGrid = new System.Windows.Forms.DataGridView();
             this.T_dataGrid = new System.Windows.Forms.DataGridView();
+            this.A_dataGrid = new System.Windows.Forms.DataGridView();
             this.tabsConsultas.SuspendLayout();
             this.tabCalificaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.C_dataGrid)).BeginInit();
             this.tabEstudiantes.SuspendLayout();
+            this.tabAsignaturas.SuspendLayout();
             this.tabProfesores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.T_dataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // tabsConsultas
@@ -195,6 +198,7 @@
             // 
             // tabAsignaturas
             // 
+            this.tabAsignaturas.Controls.Add(this.A_dataGrid);
             this.tabAsignaturas.Location = new System.Drawing.Point(4, 25);
             this.tabAsignaturas.Name = "tabAsignaturas";
             this.tabAsignaturas.Size = new System.Drawing.Size(906, 455);
@@ -240,6 +244,20 @@
             this.T_dataGrid.Size = new System.Drawing.Size(906, 455);
             this.T_dataGrid.TabIndex = 2;
             // 
+            // A_dataGrid
+            // 
+            this.A_dataGrid.AllowUserToAddRows = false;
+            this.A_dataGrid.AllowUserToDeleteRows = false;
+            this.A_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.A_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_dataGrid.Location = new System.Drawing.Point(0, 0);
+            this.A_dataGrid.Name = "A_dataGrid";
+            this.A_dataGrid.ReadOnly = true;
+            this.A_dataGrid.RowHeadersWidth = 51;
+            this.A_dataGrid.RowTemplate.Height = 24;
+            this.A_dataGrid.Size = new System.Drawing.Size(906, 455);
+            this.A_dataGrid.TabIndex = 3;
+            // 
             // Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -253,9 +271,11 @@
             this.tabCalificaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.C_dataGrid)).EndInit();
             this.tabEstudiantes.ResumeLayout(false);
+            this.tabAsignaturas.ResumeLayout(false);
             this.tabProfesores.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.T_dataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A_dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,5 +300,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridView E_dataGrid;
         private System.Windows.Forms.DataGridView T_dataGrid;
+        private System.Windows.Forms.DataGridView A_dataGrid;
     }
 }

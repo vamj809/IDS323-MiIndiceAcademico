@@ -22,14 +22,39 @@ namespace MiIndiceAcademico_F1
 
         List<Profesor> profesores = new List<Profesor>();
         Profesor teacher = new Profesor();
+
+        List<Asignatura> asignaturas = new List<Asignatura>();
+        Asignatura subject = new Asignatura();
         public Consultas()
         {
             InitializeComponent();
             ReadScores();
             ReadStudents();
+            ReadSubjects();
             ReadTeachers();
         }
+        private void ReadScores()
+        {
+            if (Notas.Count < 1) {
+                FileInfo file = new FileInfo("NotasV2.txt");
+                if (!File.Exists("NotasV2.txt"))
+                    File.WriteAllText("NotasV2.txt", "");
+                //string fileText = File.ReadAllText(file.FullName);
+                foreach (string _ in File.ReadLines(file.FullName)) {
+                    string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
 
+                    score = new Calificacion {
+                        ID_Estudiante = int.Parse(cell[0]),
+                        ID_Profesor = int.Parse(cell[1]),
+                        Clave_Materia = cell[2].Trim(),
+                        Nota = int.Parse(cell[3])
+                    };
+                    Notas.Add(score);
+                }
+                C_dataGrid.DataSource = Notas;
+                C_dataGrid.Refresh();
+            }
+        }
         private void ReadStudents()
         {
             if(estudiantes.Count < 1) {
@@ -49,6 +74,24 @@ namespace MiIndiceAcademico_F1
             }
         }
 
+        private void ReadSubjects()
+        {
+            if (asignaturas.Count < 1) {
+                if (!File.Exists("Asignaturas.txt"))
+                    File.WriteAllText("Asignaturas.txt", "");
+                foreach (string _ in File.ReadLines("Asignaturas.txt")) {
+                    string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
+                    subject = new Asignatura {
+                        Clave_Materia = cell[0].Trim(),
+                        Nombre = cell[1].Trim(),
+                        Credito = int.Parse(cell[2])
+                    };
+                    asignaturas.Add(subject);
+                }
+                A_dataGrid.DataSource = asignaturas;
+                A_dataGrid.Refresh();
+            }
+        }
         private void ReadTeachers()
         {
             if (profesores.Count < 1) {
@@ -64,29 +107,6 @@ namespace MiIndiceAcademico_F1
                 }
                 T_dataGrid.DataSource = profesores;
                 T_dataGrid.Refresh();
-            }
-        }
-
-        private void ReadScores()
-        {
-            if(Notas.Count < 1) {
-                FileInfo file = new FileInfo("NotasV2.txt");
-                if(!File.Exists("NotasV2.txt"))
-                    File.WriteAllText("NotasV2.txt", "");
-                //string fileText = File.ReadAllText(file.FullName);
-                foreach (string _ in File.ReadLines(file.FullName)) {
-                    string[] cell = _.Split(new char[] { ',', '\n' },StringSplitOptions.None);
-
-                    score = new Calificacion {
-                        ID_Estudiante = int.Parse(cell[0]),
-                        ID_Profesor = int.Parse(cell[1]),
-                        Clave_Materia = cell[2].Trim(),
-                        Nota = int.Parse(cell[3])
-                    };
-                    Notas.Add(score);
-                }
-                C_dataGrid.DataSource = Notas;
-                C_dataGrid.Refresh();
             }
         }
 

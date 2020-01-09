@@ -71,6 +71,7 @@
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Objetos\Calificacion.cs" />
+    <Compile Include="Objetos\Asignatura.cs" />
     <Compile Include="Objetos\Profesor.cs" />
     <Compile Include="Objetos\Estudiante.cs" />
     <Compile Include="Program.cs" />
