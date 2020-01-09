@@ -44,7 +44,7 @@ namespace MiIndiceAcademico_F1
                     guardar = File.AppendText("Registro.txt");
                     string contenido = textBox1.Text + ",";
                     string contenido2 = textname.Text + ",";
-                    string contenido3 = textBox2.Text + ",";
+                    string contenido3 = textBox2.Text + ",\n";
                     guardar.Write(contenido);
                     guardar.Write(contenido2);
                     guardar.Write(contenido3);
@@ -84,6 +84,11 @@ namespace MiIndiceAcademico_F1
         }
 
         private void textEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
