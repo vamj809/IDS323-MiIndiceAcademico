@@ -16,16 +16,8 @@ namespace MiIndiceAcademico_F1
     public partial class Consultas : Form
     {
         List<Calificacion> notas = new List<Calificacion>();
-        //Calificacion score = new Calificacion();
-
         List<Estudiante> estudiantes = new List<Estudiante>();
-        //Estudiante student = new Estudiante();
-
-        List<Profesor> profesores = new List<Profesor>();
-        //Profesor teacher = new Profesor();
-
         List<Asignatura> asignaturas = new List<Asignatura>();
-        //Asignatura subject = new Asignatura();
         public Consultas()
         {
             InitializeComponent();
@@ -33,11 +25,7 @@ namespace MiIndiceAcademico_F1
             notas = MC.ReadAndLoadScores();
             estudiantes = MC.ReadAndLoadStudents(E_dataGrid);
             asignaturas = MC.ReadAndLoadSubjects(A_dataGrid);
-            profesores = MC.ReadAndLoadTeachers(T_dataGrid);
-            //ReadScores();
-            //ReadStudents();
-            //ReadSubjects();
-            //ReadTeachers();
+            MC.ReadAndLoadTeachers(T_dataGrid);
             loadFinalScores();
             loadStudents();
         }
@@ -107,86 +95,7 @@ namespace MiIndiceAcademico_F1
             } else {
                 C_GPA_Value.Text = "-";
             }
-            //C_dataGrid.Refresh();
         }
-
-        /*
-        private void ReadScores()
-        {
-            if (Notas.Count < 1) {
-                FileInfo file = new FileInfo("Calificaciones.txt");
-                if (!File.Exists("Calificaciones.txt"))
-                    File.WriteAllText("Calificaciones.txt", "");
-                //string fileText = File.ReadAllText(file.FullName);
-                foreach (string _ in File.ReadLines(file.FullName)) {
-                    string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
-
-                    score = new Calificacion {
-                        ID_Estudiante = int.Parse(cell[0]),
-                        ID_Profesor = int.Parse(cell[1]),
-                        Clave_Materia = cell[2].Trim(),
-                        Nota = int.Parse(cell[3])
-                    };
-                    Notas.Add(score);
-                }
-            }
-        }
-        private void ReadStudents()
-        {
-            if(estudiantes.Count < 1) {
-                if (!File.Exists("Estudiantes.txt"))
-                    File.WriteAllText("Estudiantes.txt", "");
-                foreach (string _ in File.ReadLines("Estudiantes.txt")) {
-                    string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
-                    student = new Estudiante {
-                        ID_Estudiante = int.Parse(cell[0]),
-                        Nombre_Estudiante = cell[1].Trim(),
-                        Carrera = cell[2].Trim()
-                    };
-                    estudiantes.Add(student);
-                    E_dataGrid.Rows.Add(cell[0], cell[1], cell[2]);
-                }
-                E_dataGrid.Refresh();
-            }
-        }
-
-        private void ReadSubjects()
-        {
-            if (asignaturas.Count < 1) {
-                if (!File.Exists("Asignaturas.txt"))
-                    File.WriteAllText("Asignaturas.txt", "");
-                foreach (string _ in File.ReadLines("Asignaturas.txt")) {
-                    string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
-                    subject = new Asignatura {
-                        Clave_Materia = cell[0].Trim(),
-                        Nombre_Asignatura = cell[1].Trim(),
-                        Credito = int.Parse(cell[2])
-                    };
-                    asignaturas.Add(subject);
-                    A_dataGrid.Rows.Add(cell[0], cell[1], cell[2]);
-                }
-                //A_dataGrid.DataSource = asignaturas;
-                A_dataGrid.Refresh();
-            }
-        }
-        private void ReadTeachers()
-        {
-            if (profesores.Count < 1) {
-                if (!File.Exists("Profesores.txt"))
-                    File.WriteAllText("Profesores.txt", "");
-                foreach (string _ in File.ReadLines("Profesores.txt")) {
-                    string[] cell = _.Split(new char[] { ',', '\n' }, StringSplitOptions.None);
-                    teacher = new Profesor {
-                        ID_Profesor = int.Parse(cell[0]),
-                        Nombre_Profesor = cell[1].Trim()
-                    };
-                    profesores.Add(teacher);
-                    T_dataGrid.Rows.Add(cell[0],cell[1]);
-                }
-                T_dataGrid.Refresh();
-            }
-        }
-        */
         private void ID_comboBox_TextChanged(object sender, EventArgs e)
         {
             loadFinalScores();
