@@ -28,8 +28,7 @@ namespace MiIndiceAcademico_F1.Registro
             StreamReader Lector;
             String[] longitud = new String[99];
             String Cadenas;
-            try
-            {
+            try {
                 Lector = File.OpenText("Estudiantes.txt");
 
                 string id = textBox1.Text;
@@ -69,9 +68,69 @@ namespace MiIndiceAcademico_F1.Registro
                     this.Close();
 
                 }
+                /*
+                longitud = Cadenas.Split(',');
+                if (longitud[0].Trim().Equals(id))
+                {
+                    Lector = File.OpenText("Profesores.txt");
+                    if (longitud[0].Trim().Equals(idP))
+                    {
+                        Lector = File.OpenText("Asignaturas.txt");
+                        if (longitud[0].Trim().Equals(clave))
+                        {
+                            StreamWriter guardarNota = null;
+                            if (File.Exists("Calificaciones.txt"))
+                            {
+                                guardarNota = File.AppendText("Calificaciones.txt");
+                                string contenido = textBox1.Text + ",";
+                                string contenido2 = textBox3.Text + ",";
+                                string contenido3 = textBox4.Text + ",";
+                                string contenido4 = textBox2.Text + ",\n";
+                                guardarNota.Write(contenido);
+                                guardarNota.Write(contenido2);
+                                guardarNota.Write(contenido3);
+                                guardarNota.Write(contenido4);
+                                guardarNota.Flush();
+                                guardarNota.Close();
+                                MessageBox.Show("El registro se completo exitosamente!", "Message", MessageBoxButtons.OK);
+                                this.Close();
+                            }
+                            else
+                            {
+                                guardarNota = File.CreateText("Calificaciones.txt");
+                                string contenido = textBox1.Text + ",";
+                                string contenido2 = textBox3.Text + ",";
+                                string contenido3 = textBox4.Text + ",";
+                                string contenido4 = textBox2.Text + ",\n";
+                                guardarNota.Write(contenido);
+                                guardarNota.Write(contenido2);
+                                guardarNota.Write(contenido3);
+                                guardarNota.Write(contenido4);
+                                guardarNota.Flush();
+                                guardarNota.Close();
+                                MessageBox.Show("El registro se completo exitosamente!", "Message", MessageBoxButtons.OK);
+                                this.Close();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("El valor digitado no se encuentra registrado favor intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El valor digitado no se encuentra registrado favor intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El valor digitado no se encuentra registrado favor intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Close();
+                }*/
             }
-            catch
-            {
+            catch {
                 MessageBox.Show("Error masivo en el sistema favor cerrar la aplicacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
 
