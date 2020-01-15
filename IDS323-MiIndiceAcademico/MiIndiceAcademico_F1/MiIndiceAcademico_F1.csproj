@@ -147,6 +147,9 @@
     <EmbeddedResource Include="Consultas.resx">
       <DependentUpon>Consultas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar\Eliminar_Calificaciones.resx">
+      <DependentUpon>Eliminar_Calificaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
