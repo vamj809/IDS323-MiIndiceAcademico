@@ -31,14 +31,14 @@
             this.CloseSystem = new System.Windows.Forms.Button();
             this.LogOffButton = new System.Windows.Forms.Button();
             this.RankingButton = new System.Windows.Forms.RadioButton();
-            this.MisCalificacionesButton = new System.Windows.Forms.RadioButton();
-            this.SeleccionButton = new System.Windows.Forms.RadioButton();
+            this.CalificacionesButton = new System.Windows.Forms.RadioButton();
+            this.AsignaturaButton = new System.Windows.Forms.RadioButton();
             this.MiCuentaButton = new System.Windows.Forms.RadioButton();
             this.TopFillPanel = new System.Windows.Forms.Panel();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.MiCuenta = new System.Windows.Forms.TabPage();
             this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
-            this.Seleccion = new System.Windows.Forms.TabPage();
+            this.Asignaturas = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.MisCalificaciones = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
-            this.Seleccion.SuspendLayout();
+            this.Asignaturas.SuspendLayout();
             this.MisCalificaciones.SuspendLayout();
             this.Ranking.SuspendLayout();
             this.SuspendLayout();
@@ -58,8 +58,8 @@
             this.SubMenuPanel.Controls.Add(this.CloseSystem);
             this.SubMenuPanel.Controls.Add(this.LogOffButton);
             this.SubMenuPanel.Controls.Add(this.RankingButton);
-            this.SubMenuPanel.Controls.Add(this.MisCalificacionesButton);
-            this.SubMenuPanel.Controls.Add(this.SeleccionButton);
+            this.SubMenuPanel.Controls.Add(this.CalificacionesButton);
+            this.SubMenuPanel.Controls.Add(this.AsignaturaButton);
             this.SubMenuPanel.Controls.Add(this.MiCuentaButton);
             this.SubMenuPanel.Controls.Add(this.TopFillPanel);
             this.SubMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -112,51 +112,51 @@
             this.RankingButton.UseVisualStyleBackColor = false;
             this.RankingButton.CheckedChanged += new System.EventHandler(this.RankingButton_CheckedChanged);
             // 
-            // MisCalificacionesButton
+            // CalificacionesButton
             // 
-            this.MisCalificacionesButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.MisCalificacionesButton.AutoEllipsis = true;
-            this.MisCalificacionesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MisCalificacionesButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MisCalificacionesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.MisCalificacionesButton.FlatAppearance.BorderSize = 0;
-            this.MisCalificacionesButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.MisCalificacionesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MisCalificacionesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MisCalificacionesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MisCalificacionesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.MisCalificacionesButton.Location = new System.Drawing.Point(0, 283);
-            this.MisCalificacionesButton.Margin = new System.Windows.Forms.Padding(4);
-            this.MisCalificacionesButton.Name = "MisCalificacionesButton";
-            this.MisCalificacionesButton.Size = new System.Drawing.Size(188, 60);
-            this.MisCalificacionesButton.TabIndex = 11;
-            this.MisCalificacionesButton.Text = "Mis Calificaciones";
-            this.MisCalificacionesButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.MisCalificacionesButton.UseVisualStyleBackColor = false;
-            this.MisCalificacionesButton.CheckedChanged += new System.EventHandler(this.MisCalificacionesButton_CheckedChanged);
+            this.CalificacionesButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.CalificacionesButton.AutoEllipsis = true;
+            this.CalificacionesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CalificacionesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CalificacionesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.CalificacionesButton.FlatAppearance.BorderSize = 0;
+            this.CalificacionesButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.CalificacionesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CalificacionesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CalificacionesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalificacionesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
+            this.CalificacionesButton.Location = new System.Drawing.Point(0, 283);
+            this.CalificacionesButton.Margin = new System.Windows.Forms.Padding(4);
+            this.CalificacionesButton.Name = "CalificacionesButton";
+            this.CalificacionesButton.Size = new System.Drawing.Size(188, 60);
+            this.CalificacionesButton.TabIndex = 11;
+            this.CalificacionesButton.Text = "Calificaciones";
+            this.CalificacionesButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CalificacionesButton.UseVisualStyleBackColor = false;
+            this.CalificacionesButton.CheckedChanged += new System.EventHandler(this.MisCalificacionesButton_CheckedChanged);
             // 
-            // SeleccionButton
+            // AsignaturaButton
             // 
-            this.SeleccionButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.SeleccionButton.AutoEllipsis = true;
-            this.SeleccionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SeleccionButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SeleccionButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.SeleccionButton.FlatAppearance.BorderSize = 0;
-            this.SeleccionButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.SeleccionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SeleccionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SeleccionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SeleccionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.SeleccionButton.Location = new System.Drawing.Point(0, 223);
-            this.SeleccionButton.Margin = new System.Windows.Forms.Padding(4);
-            this.SeleccionButton.Name = "SeleccionButton";
-            this.SeleccionButton.Size = new System.Drawing.Size(188, 60);
-            this.SeleccionButton.TabIndex = 10;
-            this.SeleccionButton.Text = "Selección";
-            this.SeleccionButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.SeleccionButton.UseVisualStyleBackColor = false;
-            this.SeleccionButton.CheckedChanged += new System.EventHandler(this.SeleccionButton_CheckedChanged);
+            this.AsignaturaButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AsignaturaButton.AutoEllipsis = true;
+            this.AsignaturaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AsignaturaButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AsignaturaButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.AsignaturaButton.FlatAppearance.BorderSize = 0;
+            this.AsignaturaButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.AsignaturaButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AsignaturaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AsignaturaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AsignaturaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
+            this.AsignaturaButton.Location = new System.Drawing.Point(0, 223);
+            this.AsignaturaButton.Margin = new System.Windows.Forms.Padding(4);
+            this.AsignaturaButton.Name = "AsignaturaButton";
+            this.AsignaturaButton.Size = new System.Drawing.Size(188, 60);
+            this.AsignaturaButton.TabIndex = 10;
+            this.AsignaturaButton.Text = "Asignaturas";
+            this.AsignaturaButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AsignaturaButton.UseVisualStyleBackColor = false;
+            this.AsignaturaButton.CheckedChanged += new System.EventHandler(this.SeleccionButton_CheckedChanged);
             // 
             // MiCuentaButton
             // 
@@ -197,7 +197,7 @@
             // TabControl
             // 
             this.TabControl.Controls.Add(this.MiCuenta);
-            this.TabControl.Controls.Add(this.Seleccion);
+            this.TabControl.Controls.Add(this.Asignaturas);
             this.TabControl.Controls.Add(this.MisCalificaciones);
             this.TabControl.Controls.Add(this.Ranking);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -231,16 +231,16 @@
             this.MiCuenta_TitleLabel.TabIndex = 13;
             this.MiCuenta_TitleLabel.Text = "Mi Cuenta";
             // 
-            // Seleccion
+            // Asignaturas
             // 
-            this.Seleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Seleccion.Controls.Add(this.label1);
-            this.Seleccion.Location = new System.Drawing.Point(4, 25);
-            this.Seleccion.Name = "Seleccion";
-            this.Seleccion.Padding = new System.Windows.Forms.Padding(3);
-            this.Seleccion.Size = new System.Drawing.Size(708, 484);
-            this.Seleccion.TabIndex = 1;
-            this.Seleccion.Text = "Selección";
+            this.Asignaturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Asignaturas.Controls.Add(this.label1);
+            this.Asignaturas.Location = new System.Drawing.Point(4, 25);
+            this.Asignaturas.Name = "Asignaturas";
+            this.Asignaturas.Padding = new System.Windows.Forms.Padding(3);
+            this.Asignaturas.Size = new System.Drawing.Size(708, 484);
+            this.Asignaturas.TabIndex = 1;
+            this.Asignaturas.Text = "Asignaturas";
             // 
             // label1
             // 
@@ -249,9 +249,9 @@
             this.label1.Location = new System.Drawing.Point(271, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 31);
+            this.label1.Size = new System.Drawing.Size(169, 31);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Selección";
+            this.label1.Text = "Asignaturas";
             // 
             // MisCalificaciones
             // 
@@ -309,8 +309,8 @@
             this.TabControl.ResumeLayout(false);
             this.MiCuenta.ResumeLayout(false);
             this.MiCuenta.PerformLayout();
-            this.Seleccion.ResumeLayout(false);
-            this.Seleccion.PerformLayout();
+            this.Asignaturas.ResumeLayout(false);
+            this.Asignaturas.PerformLayout();
             this.MisCalificaciones.ResumeLayout(false);
             this.MisCalificaciones.PerformLayout();
             this.Ranking.ResumeLayout(false);
@@ -324,13 +324,13 @@
         private System.Windows.Forms.Panel SubMenuPanel;
         private System.Windows.Forms.Button LogOffButton;
         private System.Windows.Forms.RadioButton RankingButton;
-        private System.Windows.Forms.RadioButton MisCalificacionesButton;
-        private System.Windows.Forms.RadioButton SeleccionButton;
+        private System.Windows.Forms.RadioButton CalificacionesButton;
+        private System.Windows.Forms.RadioButton AsignaturaButton;
         private System.Windows.Forms.RadioButton MiCuentaButton;
         private System.Windows.Forms.Panel TopFillPanel;
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage MiCuenta;
-        private System.Windows.Forms.TabPage Seleccion;
+        private System.Windows.Forms.TabPage Asignaturas;
         private System.Windows.Forms.TabPage MisCalificaciones;
         private System.Windows.Forms.TabPage Ranking;
         private System.Windows.Forms.Button CloseSystem;

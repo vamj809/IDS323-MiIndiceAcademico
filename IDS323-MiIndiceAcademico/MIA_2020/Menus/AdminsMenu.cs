@@ -45,14 +45,20 @@ namespace MIA_2020.Menus
         private void SeleccionButton_CheckedChanged(object sender, EventArgs e)
         {
             if(SeleccionButton.Checked) {
-                TabControl.SelectedTab = Seleccion;
+                TabControl.SelectedTab = Estudiantes;
             }
         }
 
         private void MisCalificacionesButton_CheckedChanged(object sender, EventArgs e)
         {
             if(MisCalificacionesButton.Checked) {
-                TabControl.SelectedTab = MisCalificaciones;
+                TabControl.SelectedTab = Asignaturas;
+            }
+        }
+        private void ProfesoresButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ProfesoresButton.Checked) {
+                TabControl.SelectedTab = Profesores;
             }
         }
 

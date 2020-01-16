@@ -44,14 +44,14 @@ namespace MIA_2020.Menus
 
         private void SeleccionButton_CheckedChanged(object sender, EventArgs e)
         {
-            if(SeleccionButton.Checked) {
-                TabControl.SelectedTab = Seleccion;
+            if(AsignaturaButton.Checked) {
+                TabControl.SelectedTab = Asignaturas;
             }
         }
 
         private void MisCalificacionesButton_CheckedChanged(object sender, EventArgs e)
         {
-            if(MisCalificacionesButton.Checked) {
+            if(CalificacionesButton.Checked) {
                 TabControl.SelectedTab = MisCalificaciones;
             }
         }
