@@ -22,7 +22,7 @@ namespace MIA_2020.Menus
             if (_datos == null)
                 _datos = new ColeccionCompleta();
             datosBin = _datos;
-            E_dataGrid.DataSource = datosBin.Estudiantes;
+            TablaEstudiantes.DataSource = datosBin.Estudiantes;
 
             //Aqui se carga la información del administrador para mostrarla:
             if (_administrador != null) {
@@ -31,6 +31,15 @@ namespace MIA_2020.Menus
             else {
                 AdministradorActual = new Administrador();
             }
+
+            //Aqui la lista de asignaturas
+            TablaAsignaturas.DataSource = datosBin.Asignaturas;
+
+            //Aqui la lista de estudiantes
+            TablaEstudiantes.DataSource = datosBin.Estudiantes;
+
+            //Aqui la lista de profesores
+            TablaProfesores.DataSource = datosBin.Profesores;
         }
 
         private void LogOffButton_Click(object sender, EventArgs e)
@@ -95,7 +104,26 @@ namespace MIA_2020.Menus
 
         private void NuevaAsignatura_Click(object sender, EventArgs e)
         {
+            NewSubject AddSubjectForm = new NewSubject(datosBin);
+            AddSubjectForm.ShowDialog();
+            datosBin.RecargarAsignaturas();
+            TablaAsignaturas.Refresh();
+        }
 
+        private void NuevoEstudiante_Click(object sender, EventArgs e)
+        {
+            NewStudent AddStudentForm = new NewStudent(datosBin);
+            AddStudentForm.ShowDialog();
+            datosBin.RecargarEstudiantes();
+            TablaEstudiantes.Refresh();
+        }
+
+        private void NuevoProfesor_Click(object sender, EventArgs e)
+        {
+            NewTeacher AddTeacherForm = new NewTeacher(datosBin);
+            AddTeacherForm.ShowDialog();
+            datosBin.RecargarProfesores();
+            TablaProfesores.Refresh();
         }
     }
 }

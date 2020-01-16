@@ -10,6 +10,8 @@ namespace MIA_2020.Menus
     {
         private ColeccionCompleta datosBin;
         private Profesor ProfesorActual;
+        private List<Asignatura> misMaterias;
+        private List<Calificacion> misCalificaciones;
         public TeachersMenu(ColeccionCompleta _datos = null, Profesor _profesor = null)
         {
             InitializeComponent();
@@ -30,6 +32,9 @@ namespace MIA_2020.Menus
             else {
                 ProfesorActual = new Profesor();
             }
+
+            misMaterias = datosBin.Asignaturas.FindAll(x => x.ID_Profesor == ProfesorActual.ID_Profesor);
+            misCalificaciones = new List<Calificacion>();
         }
 
         private void LogOffButton_Click(object sender, EventArgs e)
@@ -82,6 +87,25 @@ namespace MIA_2020.Menus
             else {
                 InfoLabel.Text = "";
             }
+
+            //Carga calificaciones
+            foreach (var item in datosBin.Calificaciones) {
+                foreach (var materia in misMaterias) {
+                    if (item.Clave_Materia == materia.Clave_Materia) {
+                        misCalificaciones.Add(item);
+                        break;
+                    }
+                }
+            }
+            TablaCalificaciones.DataSource = misCalificaciones;
+        }
+
+        private void NuevaAsignatura_Click(object sender, EventArgs e)
+        {
+            NewScore AddScoreForm = new NewScore(datosBin);
+            AddScoreForm.ShowDialog();
+            datosBin.RecargarProfesores();
+            TablaCalificaciones.Refresh();
         }
     }
 }

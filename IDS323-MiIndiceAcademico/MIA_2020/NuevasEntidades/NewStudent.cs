@@ -15,12 +15,15 @@ namespace MIA_2020
     {
         private int progressState = 0; //{0, no changes; -1, unsaved changes; 1, saved changes}
         private ColeccionCompleta CC;
-        public NewStudent(ColeccionCompleta _CC)
+        private bool IsLogin = false;
+        public NewStudent(ColeccionCompleta _CC, bool _isLogin = false)
         {
             if (_CC == null) {
                 _CC = new ColeccionCompleta();
             }
             CC = _CC;
+            if (_isLogin)
+                IsLogin = true;
             InitializeComponent();
             progressState = 0;
             if(CC.Estudiantes.Count() < 1) {
@@ -91,8 +94,10 @@ namespace MIA_2020
             else if (progressState == 1) {
                 Menu = new Login(textID.Text);
             }
-            this.Hide();
-            Menu.Show();
+            if (IsLogin) {
+                this.Hide();
+                Menu.Show();
+            }
         }
 
         private void NewStudent_KeyDown(object sender, KeyEventArgs e)

@@ -41,25 +41,29 @@
             this.InfoLabel = new System.Windows.Forms.Label();
             this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
             this.Estudiantes = new System.Windows.Forms.TabPage();
-            this.E_dataGrid = new System.Windows.Forms.DataGridView();
+            this.TablaEstudiantes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.Asignaturas = new System.Windows.Forms.TabPage();
+            this.NuevaAsignatura = new System.Windows.Forms.Button();
+            this.TablaAsignaturas = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.Profesores = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.Ranking = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NuevaAsignatura = new System.Windows.Forms.Button();
+            this.NuevoEstudiante = new System.Windows.Forms.Button();
+            this.NuevoProfesor = new System.Windows.Forms.Button();
+            this.TablaProfesores = new System.Windows.Forms.DataGridView();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
             this.Estudiantes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaEstudiantes)).BeginInit();
             this.Asignaturas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaAsignaturas)).BeginInit();
             this.Profesores.SuspendLayout();
             this.Ranking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaProfesores)).BeginInit();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -282,7 +286,8 @@
             // Estudiantes
             // 
             this.Estudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Estudiantes.Controls.Add(this.E_dataGrid);
+            this.Estudiantes.Controls.Add(this.NuevoEstudiante);
+            this.Estudiantes.Controls.Add(this.TablaEstudiantes);
             this.Estudiantes.Controls.Add(this.label1);
             this.Estudiantes.Location = new System.Drawing.Point(4, 25);
             this.Estudiantes.Name = "Estudiantes";
@@ -291,24 +296,24 @@
             this.Estudiantes.TabIndex = 1;
             this.Estudiantes.Text = "Estudiantes";
             // 
-            // E_dataGrid
+            // TablaEstudiantes
             // 
-            this.E_dataGrid.AllowUserToAddRows = false;
-            this.E_dataGrid.AllowUserToDeleteRows = false;
-            this.E_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.E_dataGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.E_dataGrid.Location = new System.Drawing.Point(3, 49);
-            this.E_dataGrid.Name = "E_dataGrid";
-            this.E_dataGrid.RowHeadersWidth = 51;
-            this.E_dataGrid.RowTemplate.Height = 24;
-            this.E_dataGrid.Size = new System.Drawing.Size(702, 432);
-            this.E_dataGrid.TabIndex = 16;
+            this.TablaEstudiantes.AllowUserToAddRows = false;
+            this.TablaEstudiantes.AllowUserToDeleteRows = false;
+            this.TablaEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaEstudiantes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaEstudiantes.Location = new System.Drawing.Point(3, 63);
+            this.TablaEstudiantes.Name = "TablaEstudiantes";
+            this.TablaEstudiantes.RowHeadersWidth = 51;
+            this.TablaEstudiantes.RowTemplate.Height = 24;
+            this.TablaEstudiantes.Size = new System.Drawing.Size(702, 418);
+            this.TablaEstudiantes.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(254, 10);
+            this.label1.Location = new System.Drawing.Point(259, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 31);
@@ -319,13 +324,34 @@
             // 
             this.Asignaturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Asignaturas.Controls.Add(this.NuevaAsignatura);
-            this.Asignaturas.Controls.Add(this.dataGridView1);
+            this.Asignaturas.Controls.Add(this.TablaAsignaturas);
             this.Asignaturas.Controls.Add(this.label2);
             this.Asignaturas.Location = new System.Drawing.Point(4, 25);
             this.Asignaturas.Name = "Asignaturas";
             this.Asignaturas.Size = new System.Drawing.Size(708, 484);
             this.Asignaturas.TabIndex = 2;
             this.Asignaturas.Text = "Asignaturas";
+            // 
+            // NuevaAsignatura
+            // 
+            this.NuevaAsignatura.Location = new System.Drawing.Point(577, 13);
+            this.NuevaAsignatura.Name = "NuevaAsignatura";
+            this.NuevaAsignatura.Size = new System.Drawing.Size(123, 46);
+            this.NuevaAsignatura.TabIndex = 17;
+            this.NuevaAsignatura.Text = "Crear Nueva";
+            this.NuevaAsignatura.UseVisualStyleBackColor = true;
+            this.NuevaAsignatura.Click += new System.EventHandler(this.NuevaAsignatura_Click);
+            // 
+            // TablaAsignaturas
+            // 
+            this.TablaAsignaturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaAsignaturas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaAsignaturas.Location = new System.Drawing.Point(0, 69);
+            this.TablaAsignaturas.Name = "TablaAsignaturas";
+            this.TablaAsignaturas.RowHeadersWidth = 51;
+            this.TablaAsignaturas.RowTemplate.Height = 24;
+            this.TablaAsignaturas.Size = new System.Drawing.Size(708, 415);
+            this.TablaAsignaturas.TabIndex = 17;
             // 
             // label2
             // 
@@ -341,6 +367,8 @@
             // Profesores
             // 
             this.Profesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Profesores.Controls.Add(this.NuevoProfesor);
+            this.Profesores.Controls.Add(this.TablaProfesores);
             this.Profesores.Controls.Add(this.label4);
             this.Profesores.Location = new System.Drawing.Point(4, 25);
             this.Profesores.Name = "Profesores";
@@ -381,26 +409,36 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
             // 
-            // dataGridView1
+            // NuevoEstudiante
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 415);
-            this.dataGridView1.TabIndex = 17;
+            this.NuevoEstudiante.Location = new System.Drawing.Point(568, 11);
+            this.NuevoEstudiante.Name = "NuevoEstudiante";
+            this.NuevoEstudiante.Size = new System.Drawing.Size(132, 46);
+            this.NuevoEstudiante.TabIndex = 18;
+            this.NuevoEstudiante.Text = "Crear Nuevo";
+            this.NuevoEstudiante.UseVisualStyleBackColor = true;
+            this.NuevoEstudiante.Click += new System.EventHandler(this.NuevoEstudiante_Click);
             // 
-            // NuevaAsignatura
+            // NuevoProfesor
             // 
-            this.NuevaAsignatura.Location = new System.Drawing.Point(641, 13);
-            this.NuevaAsignatura.Name = "NuevaAsignatura";
-            this.NuevaAsignatura.Size = new System.Drawing.Size(59, 46);
-            this.NuevaAsignatura.TabIndex = 17;
-            this.NuevaAsignatura.Text = "Crear Nueva";
-            this.NuevaAsignatura.UseVisualStyleBackColor = true;
-            this.NuevaAsignatura.Click += new System.EventHandler(this.NuevaAsignatura_Click);
+            this.NuevoProfesor.Location = new System.Drawing.Point(566, 8);
+            this.NuevoProfesor.Name = "NuevoProfesor";
+            this.NuevoProfesor.Size = new System.Drawing.Size(134, 46);
+            this.NuevoProfesor.TabIndex = 18;
+            this.NuevoProfesor.Text = "Crear Nuevo";
+            this.NuevoProfesor.UseVisualStyleBackColor = true;
+            this.NuevoProfesor.Click += new System.EventHandler(this.NuevoProfesor_Click);
+            // 
+            // TablaProfesores
+            // 
+            this.TablaProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaProfesores.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaProfesores.Location = new System.Drawing.Point(3, 66);
+            this.TablaProfesores.Name = "TablaProfesores";
+            this.TablaProfesores.RowHeadersWidth = 51;
+            this.TablaProfesores.RowTemplate.Height = 24;
+            this.TablaProfesores.Size = new System.Drawing.Size(702, 415);
+            this.TablaProfesores.TabIndex = 19;
             // 
             // AdminsMenu
             // 
@@ -419,14 +457,15 @@
             this.MiCuenta.PerformLayout();
             this.Estudiantes.ResumeLayout(false);
             this.Estudiantes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaEstudiantes)).EndInit();
             this.Asignaturas.ResumeLayout(false);
             this.Asignaturas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaAsignaturas)).EndInit();
             this.Profesores.ResumeLayout(false);
             this.Profesores.PerformLayout();
             this.Ranking.ResumeLayout(false);
             this.Ranking.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaProfesores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,10 +491,13 @@
         private System.Windows.Forms.RadioButton ProfesoresButton;
         private System.Windows.Forms.TabPage Profesores;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView E_dataGrid;
+        private System.Windows.Forms.DataGridView TablaEstudiantes;
         private System.Windows.Forms.Label InfoLabel;
         private System.Windows.Forms.Label MiCuenta_TitleLabel;
         private System.Windows.Forms.Button NuevaAsignatura;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TablaAsignaturas;
+        private System.Windows.Forms.Button NuevoEstudiante;
+        private System.Windows.Forms.Button NuevoProfesor;
+        private System.Windows.Forms.DataGridView TablaProfesores;
     }
 }

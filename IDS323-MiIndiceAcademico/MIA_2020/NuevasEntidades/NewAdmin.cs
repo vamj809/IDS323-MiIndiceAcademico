@@ -35,9 +35,7 @@ namespace MIA_2020
             //Registrar
             if(textNombre.Text == "") {
                 textNombre.Focus();
-            } else if (textCarrera.Text == "") {
-                textCarrera.Focus();
-            }
+            } 
             else if (textClave.Text == "") {
                 textClave.Focus();
             }
@@ -76,9 +74,8 @@ namespace MIA_2020
             progressState = -1;
         }
 
-        private void NewStudent_FormClosing(object sender, FormClosingEventArgs e)
+        private void NewAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Login Menu = new Login();
             //Verifica que si han habido cambios, preguntará para confirmar que quiere salir sin guardar.
             if (progressState == -1) {
                 DialogResult dr = MessageBox.Show("¿Seguro desea cerrar sin guardar los cambios?", "¿Está seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -87,18 +84,14 @@ namespace MIA_2020
                     return;
                 }
             }
-            else if (progressState == 1) {
-                Menu = new Login(textID.Text);
-            }
-            this.Hide();
-            Menu.Show();
         }
 
-        private void NewStudent_KeyDown(object sender, KeyEventArgs e)
+        private void NewAdmin_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter) {
                 button1.PerformClick();
-            } else if(e.KeyCode == Keys.Escape) {
+            }
+            else if (e.KeyCode == Keys.Escape) {
                 button2.PerformClick();
             }
         }

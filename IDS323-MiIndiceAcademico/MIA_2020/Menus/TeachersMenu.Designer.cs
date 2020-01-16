@@ -36,17 +36,20 @@
             this.TopFillPanel = new System.Windows.Forms.Panel();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.MiCuenta = new System.Windows.Forms.TabPage();
+            this.InfoLabel = new System.Windows.Forms.Label();
+            this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
             this.MisCalificaciones = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.Ranking = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.InfoLabel = new System.Windows.Forms.Label();
-            this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
+            this.TablaCalificaciones = new System.Windows.Forms.DataGridView();
+            this.NuevaAsignatura = new System.Windows.Forms.Button();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
             this.MisCalificaciones.SuspendLayout();
             this.Ranking.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -193,9 +196,33 @@
             this.MiCuenta.TabIndex = 0;
             this.MiCuenta.Text = "Mi Cuenta";
             // 
+            // InfoLabel
+            // 
+            this.InfoLabel.AutoEllipsis = true;
+            this.InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InfoLabel.Location = new System.Drawing.Point(139, 155);
+            this.InfoLabel.Name = "InfoLabel";
+            this.InfoLabel.Size = new System.Drawing.Size(431, 251);
+            this.InfoLabel.TabIndex = 16;
+            this.InfoLabel.Text = "ID:\r\nasdf\r\n\r\nNombre:\r\nasdf\r\n";
+            this.InfoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // MiCuenta_TitleLabel
+            // 
+            this.MiCuenta_TitleLabel.AutoSize = true;
+            this.MiCuenta_TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(281, 79);
+            this.MiCuenta_TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MiCuenta_TitleLabel.Name = "MiCuenta_TitleLabel";
+            this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(146, 31);
+            this.MiCuenta_TitleLabel.TabIndex = 15;
+            this.MiCuenta_TitleLabel.Text = "Mi Cuenta";
+            // 
             // MisCalificaciones
             // 
             this.MisCalificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.MisCalificaciones.Controls.Add(this.NuevaAsignatura);
+            this.MisCalificaciones.Controls.Add(this.TablaCalificaciones);
             this.MisCalificaciones.Controls.Add(this.label2);
             this.MisCalificaciones.Location = new System.Drawing.Point(4, 25);
             this.MisCalificaciones.Name = "MisCalificaciones";
@@ -207,7 +234,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(271, 15);
+            this.label2.Location = new System.Drawing.Point(255, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 31);
@@ -235,27 +262,29 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
             // 
-            // InfoLabel
+            // TablaCalificaciones
             // 
-            this.InfoLabel.AutoEllipsis = true;
-            this.InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.InfoLabel.Location = new System.Drawing.Point(139, 155);
-            this.InfoLabel.Name = "InfoLabel";
-            this.InfoLabel.Size = new System.Drawing.Size(431, 251);
-            this.InfoLabel.TabIndex = 16;
-            this.InfoLabel.Text = "ID:\r\nasdf\r\n\r\nNombre:\r\nasdf\r\n";
-            this.InfoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TablaCalificaciones.AllowUserToAddRows = false;
+            this.TablaCalificaciones.AllowUserToDeleteRows = false;
+            this.TablaCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaCalificaciones.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaCalificaciones.Location = new System.Drawing.Point(0, 66);
+            this.TablaCalificaciones.Name = "TablaCalificaciones";
+            this.TablaCalificaciones.ReadOnly = true;
+            this.TablaCalificaciones.RowHeadersWidth = 51;
+            this.TablaCalificaciones.RowTemplate.Height = 24;
+            this.TablaCalificaciones.Size = new System.Drawing.Size(708, 418);
+            this.TablaCalificaciones.TabIndex = 17;
             // 
-            // MiCuenta_TitleLabel
+            // NuevaAsignatura
             // 
-            this.MiCuenta_TitleLabel.AutoSize = true;
-            this.MiCuenta_TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(281, 79);
-            this.MiCuenta_TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.MiCuenta_TitleLabel.Name = "MiCuenta_TitleLabel";
-            this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(146, 31);
-            this.MiCuenta_TitleLabel.TabIndex = 15;
-            this.MiCuenta_TitleLabel.Text = "Mi Cuenta";
+            this.NuevaAsignatura.Location = new System.Drawing.Point(559, 14);
+            this.NuevaAsignatura.Name = "NuevaAsignatura";
+            this.NuevaAsignatura.Size = new System.Drawing.Size(141, 46);
+            this.NuevaAsignatura.TabIndex = 18;
+            this.NuevaAsignatura.Text = "Asignar Nueva";
+            this.NuevaAsignatura.UseVisualStyleBackColor = true;
+            this.NuevaAsignatura.Click += new System.EventHandler(this.NuevaAsignatura_Click);
             // 
             // TeachersMenu
             // 
@@ -276,6 +305,7 @@
             this.MisCalificaciones.PerformLayout();
             this.Ranking.ResumeLayout(false);
             this.Ranking.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,5 +327,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label InfoLabel;
         private System.Windows.Forms.Label MiCuenta_TitleLabel;
+        private System.Windows.Forms.DataGridView TablaCalificaciones;
+        private System.Windows.Forms.Button NuevaAsignatura;
     }
 }

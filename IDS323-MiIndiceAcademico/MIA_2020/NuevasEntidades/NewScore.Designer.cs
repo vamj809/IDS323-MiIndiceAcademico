@@ -1,6 +1,6 @@
 ﻿namespace MIA_2020
 {
-    partial class NewAdmin
+    partial class NewScore
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,17 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textID = new System.Windows.Forms.TextBox();
+            this.textClave = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textClave_2 = new System.Windows.Forms.TextBox();
-            this.textClave = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
+            this.textCreditos = new System.Windows.Forms.NumericUpDown();
+            this.textProfesor = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.textCreditos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,18 +46,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 17);
+            this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
+            this.label1.Text = "Clave:";
             // 
-            // textID
+            // textClave
             // 
-            this.textID.Location = new System.Drawing.Point(112, 71);
-            this.textID.Name = "textID";
-            this.textID.ReadOnly = true;
-            this.textID.Size = new System.Drawing.Size(111, 22);
-            this.textID.TabIndex = 99;
-            this.textID.TabStop = false;
+            this.textClave.Location = new System.Drawing.Point(112, 71);
+            this.textClave.Name = "textClave";
+            this.textClave.Size = new System.Drawing.Size(200, 22);
+            this.textClave.TabIndex = 1;
             // 
             // label2
             // 
@@ -80,7 +79,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(46, 286);
+            this.button1.Location = new System.Drawing.Point(45, 286);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 31);
             this.button1.TabIndex = 5;
@@ -93,57 +92,56 @@
             this.textNombre.Location = new System.Drawing.Point(112, 122);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(200, 22);
-            this.textNombre.TabIndex = 1;
+            this.textNombre.TabIndex = 2;
             this.textNombre.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 222);
+            this.label6.Location = new System.Drawing.Point(27, 225);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 34);
+            this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 31;
-            this.label6.Text = "Nueva \r\nContraseña:";
-            // 
-            // textClave_2
-            // 
-            this.textClave_2.Location = new System.Drawing.Point(112, 234);
-            this.textClave_2.Name = "textClave_2";
-            this.textClave_2.Size = new System.Drawing.Size(200, 22);
-            this.textClave_2.TabIndex = 4;
-            this.textClave_2.UseSystemPasswordChar = true;
-            this.textClave_2.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
-            // 
-            // textClave
-            // 
-            this.textClave.Location = new System.Drawing.Point(112, 172);
-            this.textClave.Name = "textClave";
-            this.textClave.Size = new System.Drawing.Size(200, 22);
-            this.textClave.TabIndex = 3;
-            this.textClave.UseSystemPasswordChar = true;
-            this.textClave.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
+            this.label6.Text = "Creditos:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
+            this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Contraseña:";
+            this.label3.Text = "Profesor:";
             // 
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.TitleLabel.Location = new System.Drawing.Point(26, 18);
+            this.TitleLabel.Location = new System.Drawing.Point(39, 23);
             this.TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(286, 31);
+            this.TitleLabel.Size = new System.Drawing.Size(258, 31);
             this.TitleLabel.TabIndex = 32;
-            this.TitleLabel.Text = "Nuevo Administrador";
+            this.TitleLabel.Text = "Nueva Calificación";
             // 
-            // NewAdmin
+            // textCreditos
+            // 
+            this.textCreditos.Location = new System.Drawing.Point(112, 223);
+            this.textCreditos.Name = "textCreditos";
+            this.textCreditos.Size = new System.Drawing.Size(200, 22);
+            this.textCreditos.TabIndex = 4;
+            // 
+            // textProfesor
+            // 
+            this.textProfesor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textProfesor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.textProfesor.FormattingEnabled = true;
+            this.textProfesor.Location = new System.Drawing.Point(112, 175);
+            this.textProfesor.Name = "textProfesor";
+            this.textProfesor.Size = new System.Drawing.Size(200, 24);
+            this.textProfesor.TabIndex = 3;
+            // 
+            // NewScore
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,22 +149,24 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(348, 343);
+            this.Controls.Add(this.textProfesor);
+            this.Controls.Add(this.textCreditos);
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textClave_2);
-            this.Controls.Add(this.textClave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textNombre);
-            this.Controls.Add(this.textID);
+            this.Controls.Add(this.textClave);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NewAdmin";
+            this.Name = "NewScore";
             this.Text = "NewStudent";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewAdmin_FormClosing);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NewAdmin_KeyDown);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewScore_FormClosing);
+            this.Load += new System.EventHandler(this.NewScore_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NewScore_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.textCreditos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,15 +175,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.TextBox textClave;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textClave_2;
-        private System.Windows.Forms.TextBox textClave;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.NumericUpDown textCreditos;
+        private System.Windows.Forms.ComboBox textProfesor;
     }
 }
