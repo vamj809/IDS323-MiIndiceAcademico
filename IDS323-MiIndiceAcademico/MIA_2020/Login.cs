@@ -125,5 +125,15 @@ namespace MIA_2020
                 CancelButton.PerformClick();
             }
         }
+
+        private void StudentsButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (StudentsButton.Checked) {
+                NewStudent.Visible = true;
+            }
+            else {
+                NewStudent.Visible = false;
+            }
+        }
     }
 }

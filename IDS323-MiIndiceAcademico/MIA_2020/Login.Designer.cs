@@ -73,6 +73,7 @@
             this.StudentsButton.Text = "Estudiantes";
             this.toolTip.SetToolTip(this.StudentsButton, "Acceso para Estudiantes");
             this.StudentsButton.UseVisualStyleBackColor = false;
+            this.StudentsButton.CheckedChanged += new System.EventHandler(this.StudentsButton_CheckedChanged);
             // 
             // TeachersButton
             // 
