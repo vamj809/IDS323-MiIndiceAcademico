@@ -20,19 +20,35 @@ namespace MIA_2020.Objetos
         /// <returns> DEVUELVE LISTA DEL TIPO DE CADA OBJETO </returns>
         public List<Estudiante> CargarEstudiantes()
         {
-            return ReadFromBinaryFile<List<Estudiante>>(RutaEstudiantes);
+            var lista = ReadFromBinaryFile<List<Estudiante>>(RutaEstudiantes);
+            if(lista == null) {
+                return new List<Estudiante>();
+            }
+            return lista;
         }
         public List<Profesor> CargarProfesores()
         {
-            return ReadFromBinaryFile<List<Profesor>>(RutaProfesores);
+            var lista = ReadFromBinaryFile<List<Profesor>>(RutaProfesores);
+            if (lista == null) {
+                return new List<Profesor>();
+            }
+            return lista;
         }
         public List<Asignatura> CargarAsignaturas()
         {
-            return ReadFromBinaryFile<List<Asignatura>>(RutaAsignaturas);
+            var lista = ReadFromBinaryFile<List<Asignatura>>(RutaAsignaturas);
+            if (lista == null) {
+                return new List<Asignatura>();
+            }
+            return lista;
         }
         public List<Calificacion> CargarCalificaciones()
         {
-            return ReadFromBinaryFile<List<Calificacion>>(RutaCalificaciones);
+            var lista = ReadFromBinaryFile<List<Calificacion>>(RutaCalificaciones);
+            if (lista == null) {
+                return new List<Calificacion>();
+            }
+            return lista;
         }
         /// <summary>
         /// METODOS PARA GUARDAR LOS CAMBIOS
@@ -78,8 +94,13 @@ namespace MIA_2020.Objetos
         /// <returns> Devuelve la instancia de un objeto de un archivo binario.</returns>
         private static T ReadFromBinaryFile<T>(string filePath)
         {
+            if (!File.Exists(filePath))
+                File.Create(filePath).Close();
             using (Stream stream = File.Open(filePath, FileMode.Open)) {
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                if (stream.Length < 1) {
+                    return default(T);
+                }
                 return (T)binaryFormatter.Deserialize(stream);
             }
         }

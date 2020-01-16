@@ -42,8 +42,12 @@
             this.TitleLabel = new System.Windows.Forms.Label();
             this.OkButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.GuestsAccessPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NewStudent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoMIA)).BeginInit();
+            this.GuestsAccessPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // StudentsButton
@@ -149,6 +153,7 @@
             this.GuestsButton.TabIndex = 8;
             this.toolTip.SetToolTip(this.GuestsButton, "Invitados");
             this.GuestsButton.UseVisualStyleBackColor = false;
+            this.GuestsButton.CheckedChanged += new System.EventHandler(this.GuestsButton_CheckedChanged);
             // 
             // LogoMIA
             // 
@@ -177,7 +182,7 @@
             // 
             this.LabelClave.AutoSize = true;
             this.LabelClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.LabelClave.Location = new System.Drawing.Point(413, 261);
+            this.LabelClave.Location = new System.Drawing.Point(413, 246);
             this.LabelClave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelClave.Name = "LabelClave";
             this.LabelClave.Size = new System.Drawing.Size(111, 20);
@@ -193,10 +198,11 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(557, 258);
+            this.PasswordTextBox.Location = new System.Drawing.Point(557, 243);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(224, 26);
             this.PasswordTextBox.TabIndex = 2;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
             // toolTip
             // 
@@ -235,6 +241,40 @@
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // GuestsAccessPanel
+            // 
+            this.GuestsAccessPanel.Controls.Add(this.label1);
+            this.GuestsAccessPanel.Location = new System.Drawing.Point(372, 115);
+            this.GuestsAccessPanel.Name = "GuestsAccessPanel";
+            this.GuestsAccessPanel.Size = new System.Drawing.Size(1, 1);
+            this.GuestsAccessPanel.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(148, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 62);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Acceso para\r\nInvitados";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NewStudent
+            // 
+            this.NewStudent.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.NewStudent.FlatAppearance.BorderSize = 0;
+            this.NewStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewStudent.Location = new System.Drawing.Point(492, 275);
+            this.NewStudent.Name = "NewStudent";
+            this.NewStudent.Size = new System.Drawing.Size(204, 26);
+            this.NewStudent.TabIndex = 14;
+            this.NewStudent.Text = "¿Crear nuevo estudiante?";
+            this.NewStudent.UseVisualStyleBackColor = true;
+            this.NewStudent.Click += new System.EventHandler(this.NewStudent_Click);
+            // 
             // Login
             // 
             this.AcceptButton = this.OkButton;
@@ -242,6 +282,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(876, 403);
+            this.Controls.Add(this.NewStudent);
+            this.Controls.Add(this.GuestsAccessPanel);
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OkButton);
@@ -257,9 +299,12 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciando Sesión";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoMIA)).EndInit();
+            this.GuestsAccessPanel.ResumeLayout(false);
+            this.GuestsAccessPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,6 +326,9 @@
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Panel GuestsAccessPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button NewStudent;
     }
 }
 

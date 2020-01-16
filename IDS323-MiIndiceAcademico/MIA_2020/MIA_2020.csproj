@@ -76,6 +76,12 @@
     <Compile Include="Menus\TeachersMenu.Designer.cs">
       <DependentUpon>TeachersMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewStudent.Designer.cs">
+      <DependentUpon>NewStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Objetos\Asignatura.cs" />
     <Compile Include="Objetos\Calificacion.cs" />
     <Compile Include="Objetos\ColeccionCompleta.cs" />
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menus\TeachersMenu.resx">
       <DependentUpon>TeachersMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewStudent.resx">
+      <DependentUpon>NewStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

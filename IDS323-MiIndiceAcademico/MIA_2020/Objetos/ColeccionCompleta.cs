@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MIA_2020.Objetos
 {
-    class ColeccionCompleta
+    public class ColeccionCompleta
     {
         public List<Estudiante> Estudiantes {
             get; set;
@@ -21,6 +21,12 @@ namespace MIA_2020.Objetos
             get; set;
         }
         private GestorDeObjetos GDO;
+
+        //Recarga todo.
+        //Si lo redefines, el carga todo de nuevo. Es decir, si:
+        //ColeccionCompleta [nombre_objeto] = /.../
+        //Entonces lo recargas si pones:
+        //[nombre_objeto] = new ColeccionCompleta();
         public ColeccionCompleta()
         {
             GDO = new GestorDeObjetos();
@@ -44,6 +50,24 @@ namespace MIA_2020.Objetos
         public void GuardarCalificaciones()
         {
             GDO.Guardar(Calificaciones);
+        }
+        ////////////////////////////////////////
+        public void RecargarEstudiantes()
+        {
+            Estudiantes = GDO.CargarEstudiantes();
+        }
+        public void RecargarProfesores()
+        {
+            Profesores = GDO.CargarProfesores();
+        }
+        public void RecargarAsignaturas()
+        {
+            Asignaturas = GDO.CargarAsignaturas();
+        }
+
+        public void RecargarCalificaciones()
+        {
+            Calificaciones = GDO.CargarCalificaciones();
         }
     }
 }
