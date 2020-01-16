@@ -33,7 +33,6 @@
             this.MisCalificacionesButton = new System.Windows.Forms.RadioButton();
             this.SeleccionButton = new System.Windows.Forms.RadioButton();
             this.MiCuentaButton = new System.Windows.Forms.RadioButton();
-            this.TopFillPanel = new System.Windows.Forms.Panel();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.MiCuenta = new System.Windows.Forms.TabPage();
             this.Seleccion = new System.Windows.Forms.TabPage();
@@ -44,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.TopFillPanel = new System.Windows.Forms.Panel();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
@@ -173,17 +173,6 @@
             this.MiCuentaButton.UseVisualStyleBackColor = false;
             this.MiCuentaButton.CheckedChanged += new System.EventHandler(this.MiCuentaButton_CheckedChanged);
             // 
-            // TopFillPanel
-            // 
-            this.TopFillPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.TopFillPanel.BackgroundImage = global::MIA_2020.Properties.Resources.OurLogo;
-            this.TopFillPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.TopFillPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopFillPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopFillPanel.Name = "TopFillPanel";
-            this.TopFillPanel.Size = new System.Drawing.Size(188, 163);
-            this.TopFillPanel.TabIndex = 13;
-            // 
             // TabControl
             // 
             this.TabControl.Controls.Add(this.MiCuenta);
@@ -295,6 +284,17 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
             // 
+            // TopFillPanel
+            // 
+            this.TopFillPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.TopFillPanel.BackgroundImage = global::MIA_2020.Properties.Resources.OurLogo;
+            this.TopFillPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TopFillPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopFillPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopFillPanel.Name = "TopFillPanel";
+            this.TopFillPanel.Size = new System.Drawing.Size(188, 163);
+            this.TopFillPanel.TabIndex = 13;
+            // 
             // StudentsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -304,7 +304,7 @@
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.SubMenuPanel);
             this.Name = "StudentsMenu";
-            this.Text = "StudentsMenu";
+            this.Text = "Menu de los Estudiantes";
             this.SubMenuPanel.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.MiCuenta.ResumeLayout(false);

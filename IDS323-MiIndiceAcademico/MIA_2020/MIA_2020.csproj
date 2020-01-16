@@ -52,29 +52,29 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menus\AdminsMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menus\AdminsMenu.Designer.cs">
-      <DependentUpon>AdminsMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menus\GuestsMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menus\GuestsMenu.Designer.cs">
       <DependentUpon>GuestsMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menus\StudentsMenu.cs">
+    <Compile Include="Menus\AdminsMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menus\StudentsMenu.Designer.cs">
-      <DependentUpon>StudentsMenu.cs</DependentUpon>
+    <Compile Include="Menus\AdminsMenu.Designer.cs">
+      <DependentUpon>AdminsMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Menus\TeachersMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menus\TeachersMenu.Designer.cs">
       <DependentUpon>TeachersMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\StudentsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\StudentsMenu.Designer.cs">
+      <DependentUpon>StudentsMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="NewStudent.cs">
       <SubType>Form</SubType>
@@ -99,17 +99,17 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menus\AdminsMenu.resx">
-      <DependentUpon>AdminsMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menus\GuestsMenu.resx">
       <DependentUpon>GuestsMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menus\StudentsMenu.resx">
-      <DependentUpon>StudentsMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Menus\AdminsMenu.resx">
+      <DependentUpon>AdminsMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menus\TeachersMenu.resx">
       <DependentUpon>TeachersMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\StudentsMenu.resx">
+      <DependentUpon>StudentsMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewStudent.resx">
       <DependentUpon>NewStudent.cs</DependentUpon>

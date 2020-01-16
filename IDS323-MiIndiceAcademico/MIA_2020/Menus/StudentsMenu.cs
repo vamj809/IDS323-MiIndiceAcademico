@@ -8,17 +8,19 @@ namespace MIA_2020.Menus
 {
     public partial class StudentsMenu : Form
     {
-        List<Estudiante> ListaEstudiantes;
-        GestorDeObjetos GDO;
-        public StudentsMenu()
+        ColeccionCompleta datosBin;
+        public StudentsMenu(ColeccionCompleta _datos = null)
         {
             InitializeComponent();
+            //Esta seccion hace que las pestañas se oculten.
             TabControl.Appearance = TabAppearance.FlatButtons;
             TabControl.ItemSize = new Size(0, 1);
             TabControl.SizeMode = TabSizeMode.Fixed;
 
-            GDO = new GestorDeObjetos();
-            ListaEstudiantes = GDO.CargarEstudiantes();
+            //Aqui se cargan los datos:
+            if (_datos == null)
+                _datos = new ColeccionCompleta();
+            datosBin = _datos;
         }
 
         private void LogOffButton_Click(object sender, EventArgs e)

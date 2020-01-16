@@ -66,7 +66,12 @@ namespace MIA_2020
                 //Contraseña correcta
                 Menu = new Menus.TeachersMenu();
             }
-            else if (AdminsButton.Checked) { //Administradores
+            else if (AdminsButton.Checked) {
+                if (UserTextBox.Text == PasswordTextBox.Text &&
+                    PasswordTextBox.Text == "admin") {
+                    WrongPassword();
+                    return;
+                }//Administradores
                 /*var administradores = datosBin.Administradores.Where(x => x.ID_Profesor.ToString() == UserTextBox.Text);
                 if (.Count() < 1) {
                     UserNotFound();
