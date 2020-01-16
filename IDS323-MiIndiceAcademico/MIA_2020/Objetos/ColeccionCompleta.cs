@@ -6,6 +6,21 @@ using System.Threading.Tasks;
 
 namespace MIA_2020.Objetos
 {
+    public class ItemDeLista
+    {
+        public string Text { get; set; }
+        public string Value { get; set; }
+        public ItemDeLista(string text, string value)
+        {
+            Text = text;
+            Value = value;
+        }
+
+        public override string ToString()
+        {
+            return Text;
+        }
+    }
     public class ColeccionCompleta
     {
         public List<Estudiante> Estudiantes {

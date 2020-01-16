@@ -1,13 +1,5 @@
 ﻿using MIA_2020.Objetos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace MIA_2020
@@ -45,7 +37,7 @@ namespace MIA_2020
                 CC.Asignaturas.Add(new Asignatura() {
                     Clave_Materia = textClave.Text,
                     Nombre_Asignatura = textNombre.Text,
-                    ID_Profesor = textProfesor.SelectedIndex,
+                    ID_Profesor = int.Parse((textProfesor.SelectedItem as ItemDeLista).Value.ToString()),
                     Credito = int.Parse(textCreditos.Value.ToString())
                 });
                 CC.GuardarAsignaturas();
@@ -93,8 +85,13 @@ namespace MIA_2020
         {
             foreach (Profesor item in CC.Profesores) {
                 //new ListItem(Name, Value);
-                textProfesor.Items.Add(new ListItem(item.Nombre_Profesor, item.ID_Profesor.ToString()));
+                textProfesor.Items.Add(new ItemDeLista(item.Nombre_Profesor, item.ID_Profesor.ToString()));
             }
+        }
+
+        private void textProfesor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(textProfesor.SelectedItem.ToString() + "\n" + textProfesor.SelectedValue?.ToString());
         }
     }
 }

@@ -101,7 +101,7 @@ namespace MIA_2020.Menus
                                 materia.Nombre_Asignatura,
                                 materia.Credito,
                                 calculos[0],
-                                calculos[1],
+                                item.Nota,
                                 calculos[2],
                                 calculos[3]
                                 );

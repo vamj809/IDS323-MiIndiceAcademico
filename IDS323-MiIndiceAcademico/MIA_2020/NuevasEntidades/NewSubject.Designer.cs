@@ -140,6 +140,7 @@
             this.textProfesor.Name = "textProfesor";
             this.textProfesor.Size = new System.Drawing.Size(200, 24);
             this.textProfesor.TabIndex = 3;
+            this.textProfesor.SelectedIndexChanged += new System.EventHandler(this.textProfesor_SelectedIndexChanged);
             // 
             // NewSubject
             // 

@@ -28,48 +28,39 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textClave = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textNombre = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.textCreditos = new System.Windows.Forms.NumericUpDown();
-            this.textProfesor = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.textCreditos)).BeginInit();
+            this.textAsignatura = new System.Windows.Forms.ComboBox();
+            this.textEstudiante = new System.Windows.Forms.ComboBox();
+            this.textNota = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.textNota)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 74);
+            this.label1.Location = new System.Drawing.Point(25, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Clave:";
-            // 
-            // textClave
-            // 
-            this.textClave.Location = new System.Drawing.Point(112, 71);
-            this.textClave.Name = "textClave";
-            this.textClave.Size = new System.Drawing.Size(200, 22);
-            this.textClave.TabIndex = 1;
+            this.label1.Text = "Estudiante:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 122);
+            this.label2.Location = new System.Drawing.Point(26, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
+            this.label2.Size = new System.Drawing.Size(80, 17);
             this.label2.TabIndex = 26;
-            this.label2.Text = "Nombre:";
+            this.label2.Text = "Asignatura:";
             // 
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(193, 286);
+            this.button2.Location = new System.Drawing.Point(193, 276);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 31);
             this.button2.TabIndex = 6;
@@ -79,7 +70,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(45, 286);
+            this.button1.Location = new System.Drawing.Point(45, 276);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 31);
             this.button1.TabIndex = 5;
@@ -87,31 +78,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textNombre
-            // 
-            this.textNombre.Location = new System.Drawing.Point(112, 122);
-            this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(200, 22);
-            this.textNombre.TabIndex = 2;
-            this.textNombre.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 225);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 17);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Creditos:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 175);
+            this.label3.Location = new System.Drawing.Point(26, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Profesor:";
+            this.label3.Text = "Nota:";
             // 
             // TitleLabel
             // 
@@ -124,22 +98,32 @@
             this.TitleLabel.TabIndex = 32;
             this.TitleLabel.Text = "Nueva Calificación";
             // 
-            // textCreditos
+            // textAsignatura
             // 
-            this.textCreditos.Location = new System.Drawing.Point(112, 223);
-            this.textCreditos.Name = "textCreditos";
-            this.textCreditos.Size = new System.Drawing.Size(200, 22);
-            this.textCreditos.TabIndex = 4;
+            this.textAsignatura.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textAsignatura.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.textAsignatura.FormattingEnabled = true;
+            this.textAsignatura.Location = new System.Drawing.Point(112, 150);
+            this.textAsignatura.Name = "textAsignatura";
+            this.textAsignatura.Size = new System.Drawing.Size(200, 24);
+            this.textAsignatura.TabIndex = 3;
             // 
-            // textProfesor
+            // textEstudiante
             // 
-            this.textProfesor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textProfesor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.textProfesor.FormattingEnabled = true;
-            this.textProfesor.Location = new System.Drawing.Point(112, 175);
-            this.textProfesor.Name = "textProfesor";
-            this.textProfesor.Size = new System.Drawing.Size(200, 24);
-            this.textProfesor.TabIndex = 3;
+            this.textEstudiante.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textEstudiante.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.textEstudiante.FormattingEnabled = true;
+            this.textEstudiante.Location = new System.Drawing.Point(112, 82);
+            this.textEstudiante.Name = "textEstudiante";
+            this.textEstudiante.Size = new System.Drawing.Size(200, 24);
+            this.textEstudiante.TabIndex = 33;
+            // 
+            // textNota
+            // 
+            this.textNota.Location = new System.Drawing.Point(112, 214);
+            this.textNota.Name = "textNota";
+            this.textNota.Size = new System.Drawing.Size(200, 22);
+            this.textNota.TabIndex = 4;
             // 
             // NewScore
             // 
@@ -149,16 +133,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(348, 343);
-            this.Controls.Add(this.textProfesor);
-            this.Controls.Add(this.textCreditos);
+            this.Controls.Add(this.textEstudiante);
+            this.Controls.Add(this.textAsignatura);
+            this.Controls.Add(this.textNota);
             this.Controls.Add(this.TitleLabel);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textNombre);
-            this.Controls.Add(this.textClave);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NewScore";
@@ -166,7 +148,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewScore_FormClosing);
             this.Load += new System.EventHandler(this.NewScore_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NewScore_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.textCreditos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textNota)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,15 +157,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textClave;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.NumericUpDown textCreditos;
-        private System.Windows.Forms.ComboBox textProfesor;
+        private System.Windows.Forms.ComboBox textAsignatura;
+        private System.Windows.Forms.ComboBox textEstudiante;
+        private System.Windows.Forms.NumericUpDown textNota;
     }
 }
