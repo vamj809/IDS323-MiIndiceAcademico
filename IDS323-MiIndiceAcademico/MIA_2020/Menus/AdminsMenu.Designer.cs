@@ -38,8 +38,10 @@
             this.TopFillPanel = new System.Windows.Forms.Panel();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.MiCuenta = new System.Windows.Forms.TabPage();
+            this.InfoLabel = new System.Windows.Forms.Label();
             this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
             this.Estudiantes = new System.Windows.Forms.TabPage();
+            this.E_dataGrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.Asignaturas = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,15 +49,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Ranking = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.E_dataGrid = new System.Windows.Forms.DataGridView();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
             this.Estudiantes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).BeginInit();
             this.Asignaturas.SuspendLayout();
             this.Profesores.SuspendLayout();
             this.Ranking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -244,6 +245,7 @@
             // MiCuenta
             // 
             this.MiCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.MiCuenta.Controls.Add(this.InfoLabel);
             this.MiCuenta.Controls.Add(this.MiCuenta_TitleLabel);
             this.MiCuenta.Location = new System.Drawing.Point(4, 25);
             this.MiCuenta.Name = "MiCuenta";
@@ -252,15 +254,26 @@
             this.MiCuenta.TabIndex = 0;
             this.MiCuenta.Text = "Mi Cuenta";
             // 
+            // InfoLabel
+            // 
+            this.InfoLabel.AutoEllipsis = true;
+            this.InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InfoLabel.Location = new System.Drawing.Point(139, 155);
+            this.InfoLabel.Name = "InfoLabel";
+            this.InfoLabel.Size = new System.Drawing.Size(431, 251);
+            this.InfoLabel.TabIndex = 16;
+            this.InfoLabel.Text = "ID:\r\nasdf\r\n\r\nNombre:\r\nasdf";
+            this.InfoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // MiCuenta_TitleLabel
             // 
             this.MiCuenta_TitleLabel.AutoSize = true;
             this.MiCuenta_TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(271, 15);
+            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(281, 79);
             this.MiCuenta_TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MiCuenta_TitleLabel.Name = "MiCuenta_TitleLabel";
             this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(146, 31);
-            this.MiCuenta_TitleLabel.TabIndex = 13;
+            this.MiCuenta_TitleLabel.TabIndex = 15;
             this.MiCuenta_TitleLabel.Text = "Mi Cuenta";
             // 
             // Estudiantes
@@ -274,6 +287,19 @@
             this.Estudiantes.Size = new System.Drawing.Size(708, 484);
             this.Estudiantes.TabIndex = 1;
             this.Estudiantes.Text = "Estudiantes";
+            // 
+            // E_dataGrid
+            // 
+            this.E_dataGrid.AllowUserToAddRows = false;
+            this.E_dataGrid.AllowUserToDeleteRows = false;
+            this.E_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.E_dataGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.E_dataGrid.Location = new System.Drawing.Point(3, 49);
+            this.E_dataGrid.Name = "E_dataGrid";
+            this.E_dataGrid.RowHeadersWidth = 51;
+            this.E_dataGrid.RowTemplate.Height = 24;
+            this.E_dataGrid.Size = new System.Drawing.Size(702, 432);
+            this.E_dataGrid.TabIndex = 16;
             // 
             // label1
             // 
@@ -350,19 +376,6 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
             // 
-            // E_dataGrid
-            // 
-            this.E_dataGrid.AllowUserToAddRows = false;
-            this.E_dataGrid.AllowUserToDeleteRows = false;
-            this.E_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.E_dataGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.E_dataGrid.Location = new System.Drawing.Point(3, 49);
-            this.E_dataGrid.Name = "E_dataGrid";
-            this.E_dataGrid.RowHeadersWidth = 51;
-            this.E_dataGrid.RowTemplate.Height = 24;
-            this.E_dataGrid.Size = new System.Drawing.Size(702, 432);
-            this.E_dataGrid.TabIndex = 16;
-            // 
             // AdminsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -373,19 +386,20 @@
             this.Controls.Add(this.SubMenuPanel);
             this.Name = "AdminsMenu";
             this.Text = "Menu del Administrador";
+            this.Load += new System.EventHandler(this.AdminsMenu_Load);
             this.SubMenuPanel.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.MiCuenta.ResumeLayout(false);
             this.MiCuenta.PerformLayout();
             this.Estudiantes.ResumeLayout(false);
             this.Estudiantes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).EndInit();
             this.Asignaturas.ResumeLayout(false);
             this.Asignaturas.PerformLayout();
             this.Profesores.ResumeLayout(false);
             this.Profesores.PerformLayout();
             this.Ranking.ResumeLayout(false);
             this.Ranking.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,7 +419,6 @@
         private System.Windows.Forms.TabPage Asignaturas;
         private System.Windows.Forms.TabPage Ranking;
         private System.Windows.Forms.Button CloseSystem;
-        private System.Windows.Forms.Label MiCuenta_TitleLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -413,5 +426,7 @@
         private System.Windows.Forms.TabPage Profesores;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView E_dataGrid;
+        private System.Windows.Forms.Label InfoLabel;
+        private System.Windows.Forms.Label MiCuenta_TitleLabel;
     }
 }

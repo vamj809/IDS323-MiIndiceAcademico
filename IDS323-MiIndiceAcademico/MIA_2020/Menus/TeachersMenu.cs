@@ -8,8 +8,9 @@ namespace MIA_2020.Menus
 {
     public partial class TeachersMenu : Form
     {
-        ColeccionCompleta datosBin;
-        public TeachersMenu(ColeccionCompleta _datos = null)
+        private ColeccionCompleta datosBin;
+        private Profesor ProfesorActual;
+        public TeachersMenu(ColeccionCompleta _datos = null, Profesor _profesor = null)
         {
             InitializeComponent();
             //Esta seccion hace que las pestañas se oculten.
@@ -21,6 +22,14 @@ namespace MIA_2020.Menus
             if (_datos == null)
                 _datos = new ColeccionCompleta();
             datosBin = _datos;
+
+            //Aqui se carga la información del maestro para mostrarla:
+            if (_profesor != null) {
+                ProfesorActual = _profesor;
+            }
+            else {
+                ProfesorActual = new Profesor();
+            }
         }
 
         private void LogOffButton_Click(object sender, EventArgs e)
@@ -44,9 +53,7 @@ namespace MIA_2020.Menus
 
         private void SeleccionButton_CheckedChanged(object sender, EventArgs e)
         {
-            if(AsignaturaButton.Checked) {
-                TabControl.SelectedTab = Asignaturas;
-            }
+            
         }
 
         private void MisCalificacionesButton_CheckedChanged(object sender, EventArgs e)
@@ -60,6 +67,20 @@ namespace MIA_2020.Menus
         {
             if(RankingButton.Checked) {
                 TabControl.SelectedTab = Ranking;
+            }
+        }
+
+        private void TeachersMenu_Load(object sender, EventArgs e)
+        {
+            //Aqui se carga la información del estudiante para mostrarla:
+            if (ProfesorActual != null) {
+                InfoLabel.Text = "ID:\n" +
+                    $"{ProfesorActual.ID_Profesor}\n\n" +
+                    $"Nombre:\n" +
+                    $"{ProfesorActual.Nombre_Profesor}";
+            }
+            else {
+                InfoLabel.Text = "";
             }
         }
     }

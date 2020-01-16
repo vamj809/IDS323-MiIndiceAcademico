@@ -8,6 +8,7 @@ namespace MIA_2020.Menus
 {
     public partial class StudentsMenu : Form
     {
+        private ModuloConsulta moduloConsulta;
         private ColeccionCompleta datosBin;
         private Estudiante EstudianteActual;
         public StudentsMenu(ColeccionCompleta _datos = null, Estudiante _estudiante = null)
@@ -23,23 +24,15 @@ namespace MIA_2020.Menus
                 _datos = new ColeccionCompleta();
             datosBin = _datos;
 
+            moduloConsulta = new ModuloConsulta();
+
             //Aqui se carga la información del estudiante para mostrarla:
             if (_estudiante != null) {
-                InfoLabel.Text = "ID:\n" +
-                    $"{_estudiante.ID_Estudiante}\n\n" +
-                    $"Nombre:\n" +
-                    $"{_estudiante.Nombre_Estudiante}\n\n" +
-                    $"Carrera:\n" +
-                    $"{_estudiante.Carrera_Estudiante}";
-                
                 EstudianteActual = _estudiante;
             }
             else {
-                InfoLabel.Text = "";
+                EstudianteActual = new Estudiante();
             }
-
-            //Aqui se cargan las asignaturas disponibles:
-            ListBoxDisponibles.DataSource = datosBin.Asignaturas;
         }
 
         private void LogOffButton_Click(object sender, EventArgs e)
@@ -61,13 +54,6 @@ namespace MIA_2020.Menus
             }
         }
 
-        private void SeleccionButton_CheckedChanged(object sender, EventArgs e)
-        {
-            if(SeleccionButton.Checked) {
-                TabControl.SelectedTab = Seleccion;
-            }
-        }
-
         private void MisCalificacionesButton_CheckedChanged(object sender, EventArgs e)
         {
             if(MisCalificacionesButton.Checked) {
@@ -79,6 +65,56 @@ namespace MIA_2020.Menus
         {
             if(RankingButton.Checked) {
                 TabControl.SelectedTab = Ranking;
+            }
+        }
+
+        private void StudentsMenu_Load(object sender, EventArgs e)
+        {
+            //Aqui se carga la información del estudiante para mostrarla:
+            if (EstudianteActual != null) {
+                InfoLabel.Text = "ID:\n" +
+                    $"{EstudianteActual.ID_Estudiante}\n\n" +
+                    $"Nombre:\n" +
+                    $"{EstudianteActual.Nombre_Estudiante}\n\n" +
+                    $"Carrera:\n" +
+                    $"{EstudianteActual.Carrera_Estudiante}";
+            }
+            else {
+                InfoLabel.Text = "";
+            }
+
+            //Aqui se cargan las calificaciones disponibles:
+            //TablaCalificaciones.DataSource = datosBin.Calificaciones.FindAll(x => x.ID_Estudiante == EstudianteActual.ID_Estudiante);
+
+            int total_credito = 0, total_honor = 0;
+            foreach (Calificacion item in datosBin.Calificaciones) {
+                if (item.ID_Estudiante == EstudianteActual.ID_Estudiante) {
+                    foreach (Asignatura materia in datosBin.Asignaturas) {
+                        if (item.Clave_Materia == materia.Clave_Materia) {
+                            object[] calculos = moduloConsulta.NotaALetra(materia.Credito, item.Nota);
+                            if (calculos[0].ToString() != "R") {
+                                total_credito += materia.Credito;
+                            }
+                            total_honor += int.Parse(calculos[3].ToString());
+                            TablaCalificaciones.Rows.Add(
+                                materia.Clave_Materia,
+                                materia.Nombre_Asignatura,
+                                materia.Credito,
+                                calculos[0],
+                                calculos[1],
+                                calculos[2],
+                                calculos[3]
+                                );
+                            break;
+                        }
+                    }
+                }
+            }
+            if (total_credito != 0) {
+                C_GPA_Value.Text = moduloConsulta.getHonor(Math.Round(total_honor * 1.0 / total_credito, 2));
+            }
+            else {
+                C_GPA_Value.Text = "-";
             }
         }
     }

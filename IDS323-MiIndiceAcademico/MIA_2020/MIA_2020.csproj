@@ -76,10 +76,22 @@
     <Compile Include="Menus\StudentsMenu.Designer.cs">
       <DependentUpon>StudentsMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewStudent.cs">
+    <Compile Include="NuevasEntidades\NewAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewStudent.Designer.cs">
+    <Compile Include="NuevasEntidades\NewAdmin.Designer.cs">
+      <DependentUpon>NewAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevasEntidades\NewTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevasEntidades\NewTeacher.Designer.cs">
+      <DependentUpon>NewTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevasEntidades\NewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevasEntidades\NewStudent.Designer.cs">
       <DependentUpon>NewStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Objetos\Asignatura.cs" />
@@ -87,6 +99,7 @@
     <Compile Include="Objetos\ColeccionCompleta.cs" />
     <Compile Include="Objetos\Administrador.cs" />
     <Compile Include="Objetos\Estudiante.cs" />
+    <Compile Include="Objetos\ModuloConsulta.cs" />
     <Compile Include="Objetos\Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,7 +125,13 @@
     <EmbeddedResource Include="Menus\StudentsMenu.resx">
       <DependentUpon>StudentsMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewStudent.resx">
+    <EmbeddedResource Include="NuevasEntidades\NewAdmin.resx">
+      <DependentUpon>NewAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevasEntidades\NewTeacher.resx">
+      <DependentUpon>NewTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevasEntidades\NewStudent.resx">
       <DependentUpon>NewStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

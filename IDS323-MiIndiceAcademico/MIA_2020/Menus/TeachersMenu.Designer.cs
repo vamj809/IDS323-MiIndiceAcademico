@@ -32,22 +32,19 @@
             this.LogOffButton = new System.Windows.Forms.Button();
             this.RankingButton = new System.Windows.Forms.RadioButton();
             this.CalificacionesButton = new System.Windows.Forms.RadioButton();
-            this.AsignaturaButton = new System.Windows.Forms.RadioButton();
             this.MiCuentaButton = new System.Windows.Forms.RadioButton();
             this.TopFillPanel = new System.Windows.Forms.Panel();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.MiCuenta = new System.Windows.Forms.TabPage();
-            this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
-            this.Asignaturas = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.MisCalificaciones = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.Ranking = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
+            this.InfoLabel = new System.Windows.Forms.Label();
+            this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
-            this.Asignaturas.SuspendLayout();
             this.MisCalificaciones.SuspendLayout();
             this.Ranking.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +56,6 @@
             this.SubMenuPanel.Controls.Add(this.LogOffButton);
             this.SubMenuPanel.Controls.Add(this.RankingButton);
             this.SubMenuPanel.Controls.Add(this.CalificacionesButton);
-            this.SubMenuPanel.Controls.Add(this.AsignaturaButton);
             this.SubMenuPanel.Controls.Add(this.MiCuentaButton);
             this.SubMenuPanel.Controls.Add(this.TopFillPanel);
             this.SubMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -102,7 +98,7 @@
             this.RankingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.RankingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RankingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.RankingButton.Location = new System.Drawing.Point(0, 343);
+            this.RankingButton.Location = new System.Drawing.Point(0, 283);
             this.RankingButton.Margin = new System.Windows.Forms.Padding(4);
             this.RankingButton.Name = "RankingButton";
             this.RankingButton.Size = new System.Drawing.Size(188, 60);
@@ -125,7 +121,7 @@
             this.CalificacionesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CalificacionesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalificacionesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.CalificacionesButton.Location = new System.Drawing.Point(0, 283);
+            this.CalificacionesButton.Location = new System.Drawing.Point(0, 223);
             this.CalificacionesButton.Margin = new System.Windows.Forms.Padding(4);
             this.CalificacionesButton.Name = "CalificacionesButton";
             this.CalificacionesButton.Size = new System.Drawing.Size(188, 60);
@@ -134,29 +130,6 @@
             this.CalificacionesButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CalificacionesButton.UseVisualStyleBackColor = false;
             this.CalificacionesButton.CheckedChanged += new System.EventHandler(this.MisCalificacionesButton_CheckedChanged);
-            // 
-            // AsignaturaButton
-            // 
-            this.AsignaturaButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.AsignaturaButton.AutoEllipsis = true;
-            this.AsignaturaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.AsignaturaButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AsignaturaButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.AsignaturaButton.FlatAppearance.BorderSize = 0;
-            this.AsignaturaButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.AsignaturaButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.AsignaturaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.AsignaturaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AsignaturaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.AsignaturaButton.Location = new System.Drawing.Point(0, 223);
-            this.AsignaturaButton.Margin = new System.Windows.Forms.Padding(4);
-            this.AsignaturaButton.Name = "AsignaturaButton";
-            this.AsignaturaButton.Size = new System.Drawing.Size(188, 60);
-            this.AsignaturaButton.TabIndex = 10;
-            this.AsignaturaButton.Text = "Asignaturas";
-            this.AsignaturaButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AsignaturaButton.UseVisualStyleBackColor = false;
-            this.AsignaturaButton.CheckedChanged += new System.EventHandler(this.SeleccionButton_CheckedChanged);
             // 
             // MiCuentaButton
             // 
@@ -197,7 +170,6 @@
             // TabControl
             // 
             this.TabControl.Controls.Add(this.MiCuenta);
-            this.TabControl.Controls.Add(this.Asignaturas);
             this.TabControl.Controls.Add(this.MisCalificaciones);
             this.TabControl.Controls.Add(this.Ranking);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -212,6 +184,7 @@
             // MiCuenta
             // 
             this.MiCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.MiCuenta.Controls.Add(this.InfoLabel);
             this.MiCuenta.Controls.Add(this.MiCuenta_TitleLabel);
             this.MiCuenta.Location = new System.Drawing.Point(4, 25);
             this.MiCuenta.Name = "MiCuenta";
@@ -219,39 +192,6 @@
             this.MiCuenta.Size = new System.Drawing.Size(708, 484);
             this.MiCuenta.TabIndex = 0;
             this.MiCuenta.Text = "Mi Cuenta";
-            // 
-            // MiCuenta_TitleLabel
-            // 
-            this.MiCuenta_TitleLabel.AutoSize = true;
-            this.MiCuenta_TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(271, 15);
-            this.MiCuenta_TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.MiCuenta_TitleLabel.Name = "MiCuenta_TitleLabel";
-            this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(146, 31);
-            this.MiCuenta_TitleLabel.TabIndex = 13;
-            this.MiCuenta_TitleLabel.Text = "Mi Cuenta";
-            // 
-            // Asignaturas
-            // 
-            this.Asignaturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Asignaturas.Controls.Add(this.label1);
-            this.Asignaturas.Location = new System.Drawing.Point(4, 25);
-            this.Asignaturas.Name = "Asignaturas";
-            this.Asignaturas.Padding = new System.Windows.Forms.Padding(3);
-            this.Asignaturas.Size = new System.Drawing.Size(708, 484);
-            this.Asignaturas.TabIndex = 1;
-            this.Asignaturas.Text = "Asignaturas";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(271, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 31);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Asignaturas";
             // 
             // MisCalificaciones
             // 
@@ -295,6 +235,28 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
             // 
+            // InfoLabel
+            // 
+            this.InfoLabel.AutoEllipsis = true;
+            this.InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InfoLabel.Location = new System.Drawing.Point(139, 155);
+            this.InfoLabel.Name = "InfoLabel";
+            this.InfoLabel.Size = new System.Drawing.Size(431, 251);
+            this.InfoLabel.TabIndex = 16;
+            this.InfoLabel.Text = "ID:\r\nasdf\r\n\r\nNombre:\r\nasdf\r\n";
+            this.InfoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // MiCuenta_TitleLabel
+            // 
+            this.MiCuenta_TitleLabel.AutoSize = true;
+            this.MiCuenta_TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(281, 79);
+            this.MiCuenta_TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MiCuenta_TitleLabel.Name = "MiCuenta_TitleLabel";
+            this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(146, 31);
+            this.MiCuenta_TitleLabel.TabIndex = 15;
+            this.MiCuenta_TitleLabel.Text = "Mi Cuenta";
+            // 
             // TeachersMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -305,12 +267,11 @@
             this.Controls.Add(this.SubMenuPanel);
             this.Name = "TeachersMenu";
             this.Text = "Menu de los Profesores";
+            this.Load += new System.EventHandler(this.TeachersMenu_Load);
             this.SubMenuPanel.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.MiCuenta.ResumeLayout(false);
             this.MiCuenta.PerformLayout();
-            this.Asignaturas.ResumeLayout(false);
-            this.Asignaturas.PerformLayout();
             this.MisCalificaciones.ResumeLayout(false);
             this.MisCalificaciones.PerformLayout();
             this.Ranking.ResumeLayout(false);
@@ -325,18 +286,16 @@
         private System.Windows.Forms.Button LogOffButton;
         private System.Windows.Forms.RadioButton RankingButton;
         private System.Windows.Forms.RadioButton CalificacionesButton;
-        private System.Windows.Forms.RadioButton AsignaturaButton;
         private System.Windows.Forms.RadioButton MiCuentaButton;
         private System.Windows.Forms.Panel TopFillPanel;
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage MiCuenta;
-        private System.Windows.Forms.TabPage Asignaturas;
         private System.Windows.Forms.TabPage MisCalificaciones;
         private System.Windows.Forms.TabPage Ranking;
         private System.Windows.Forms.Button CloseSystem;
-        private System.Windows.Forms.Label MiCuenta_TitleLabel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label InfoLabel;
+        private System.Windows.Forms.Label MiCuenta_TitleLabel;
     }
 }

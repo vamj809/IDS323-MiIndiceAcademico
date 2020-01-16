@@ -8,8 +8,9 @@ namespace MIA_2020.Menus
 {
     public partial class AdminsMenu : Form
     {
-        ColeccionCompleta datosBin;
-        public AdminsMenu(ColeccionCompleta _datos = null)
+        private ColeccionCompleta datosBin;
+        private Administrador AdministradorActual;
+        public AdminsMenu(ColeccionCompleta _datos = null, Administrador _administrador = null)
         {
             InitializeComponent();
             //Esta seccion hace que las pestañas se oculten.
@@ -22,6 +23,14 @@ namespace MIA_2020.Menus
                 _datos = new ColeccionCompleta();
             datosBin = _datos;
             E_dataGrid.DataSource = datosBin.Estudiantes;
+
+            //Aqui se carga la información del administrador para mostrarla:
+            if (_administrador != null) {
+                AdministradorActual = _administrador;
+            }
+            else {
+                AdministradorActual = new Administrador();
+            }
         }
 
         private void LogOffButton_Click(object sender, EventArgs e)
@@ -67,6 +76,20 @@ namespace MIA_2020.Menus
         {
             if(RankingButton.Checked) {
                 TabControl.SelectedTab = Ranking;
+            }
+        }
+
+        private void AdminsMenu_Load(object sender, EventArgs e)
+        {
+            //Aqui se carga la información del estudiante para mostrarla:
+            if (AdministradorActual != null) {
+                InfoLabel.Text = "ID:\n" +
+                    $"{AdministradorActual.Usuario}\n\n" +
+                    $"Nombre:\n" +
+                    $"{AdministradorActual.Nombre}";
+            }
+            else {
+                InfoLabel.Text = "";
             }
         }
     }

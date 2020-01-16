@@ -23,6 +23,9 @@ namespace MIA_2020
                 UserTextBox.Text = ID;
             }
             //Debug Options:
+            UserTextBox.Text = 1201001.ToString();
+            PasswordTextBox.Text = "1234";
+            OkButton.PerformClick();
             //this.Hide();
             //new Menus.StudentsMenu().Show(this);
         }
@@ -61,30 +64,34 @@ namespace MIA_2020
                     UserNotFound();
                     return;
                 }
-                else if (profesores.Where(x => x.Clave_Profesor.ToString() == PasswordTextBox.Text).Count() < 1) {
+                profesores = profesores.Where(x => x.Clave_Profesor.ToString() == PasswordTextBox.Text);
+                if (profesores.Count() < 1) {
                     WrongPassword();
                     return;
                 }
                 //Contraseña correcta
-                Menu = new Menus.TeachersMenu();
+                Menu = new Menus.TeachersMenu(datosBin, profesores.First()) ;
             }
-            else if (AdminsButton.Checked) {
-                if (UserTextBox.Text == PasswordTextBox.Text &&
-                    PasswordTextBox.Text == "admin") {
+            else if (AdminsButton.Checked) {//Administradores
+                /*if (UserTextBox.Text != PasswordTextBox.Text &&
+                    PasswordTextBox.Text != "admin") {
                     WrongPassword();
                     return;
-                }//Administradores
-                /*var administradores = datosBin.Administradores.Where(x => x.ID_Profesor.ToString() == UserTextBox.Text);
-                if (.Count() < 1) {
+                }
+                */
+
+                var administradores = datosBin.Administradores.Where(x => x.Usuario.ToString() == UserTextBox.Text);
+                if (administradores.Count() < 1) {
                     UserNotFound();
                     return;
                 }
-                else if (profesores.Where(x => x.Clave_Profesor.ToString() == PasswordTextBox.Text).Count() < 1) {
+                administradores = administradores.Where(x => x.Clave.ToString() == PasswordTextBox.Text);
+                if (administradores.Count() < 1) {
                     WrongPassword();
                     return;
-                }*/
+                }
                 //Contraseña correcta
-                Menu = new Menus.AdminsMenu();
+                Menu = new Menus.AdminsMenu(datosBin, administradores.First());
             }
             else { //Invitados
                 //Menu Invitados.
@@ -136,6 +143,22 @@ namespace MIA_2020
             else {
                 NewStudent.Visible = false;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NewTeacher AddTeacherForm = new NewTeacher(datosBin);
+            this.Hide();
+            AddTeacherForm.Show();
+            datosBin.RecargarProfesores();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NewAdmin AddAdminForm = new NewAdmin(datosBin);
+            this.Hide();
+            AddAdminForm.Show();
+            datosBin.RecargarAdministradores();
         }
     }
 }

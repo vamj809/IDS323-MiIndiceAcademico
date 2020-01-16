@@ -32,8 +32,6 @@
             this.TeachersButton = new System.Windows.Forms.RadioButton();
             this.AdminsButton = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.GuestsButton = new System.Windows.Forms.RadioButton();
-            this.LogoMIA = new System.Windows.Forms.PictureBox();
             this.LabelUsuario = new System.Windows.Forms.Label();
             this.LabelClave = new System.Windows.Forms.Label();
             this.UserTextBox = new System.Windows.Forms.TextBox();
@@ -45,9 +43,13 @@
             this.GuestsAccessPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.NewStudent = new System.Windows.Forms.Button();
+            this.LogoMIA = new System.Windows.Forms.PictureBox();
+            this.GuestsButton = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoMIA)).BeginInit();
             this.GuestsAccessPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoMIA)).BeginInit();
             this.SuspendLayout();
             // 
             // StudentsButton
@@ -132,41 +134,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(876, 80);
             this.panel1.TabIndex = 4;
-            // 
-            // GuestsButton
-            // 
-            this.GuestsButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.GuestsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GuestsButton.BackgroundImage = global::MIA_2020.Properties.Resources.User;
-            this.GuestsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.GuestsButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.GuestsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.GuestsButton.FlatAppearance.BorderSize = 0;
-            this.GuestsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.GuestsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GuestsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GuestsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GuestsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.GuestsButton.Location = new System.Drawing.Point(413, 0);
-            this.GuestsButton.Margin = new System.Windows.Forms.Padding(4);
-            this.GuestsButton.Name = "GuestsButton";
-            this.GuestsButton.Size = new System.Drawing.Size(80, 80);
-            this.GuestsButton.TabIndex = 8;
-            this.toolTip.SetToolTip(this.GuestsButton, "Invitados");
-            this.GuestsButton.UseVisualStyleBackColor = false;
-            this.GuestsButton.CheckedChanged += new System.EventHandler(this.GuestsButton_CheckedChanged);
-            // 
-            // LogoMIA
-            // 
-            this.LogoMIA.BackColor = System.Drawing.Color.Azure;
-            this.LogoMIA.Image = global::MIA_2020.Properties.Resources.OurLogo;
-            this.LogoMIA.Location = new System.Drawing.Point(34, 115);
-            this.LogoMIA.Margin = new System.Windows.Forms.Padding(4);
-            this.LogoMIA.Name = "LogoMIA";
-            this.LogoMIA.Size = new System.Drawing.Size(285, 255);
-            this.LogoMIA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogoMIA.TabIndex = 5;
-            this.LogoMIA.TabStop = false;
             // 
             // LabelUsuario
             // 
@@ -276,6 +243,65 @@
             this.NewStudent.UseVisualStyleBackColor = true;
             this.NewStudent.Click += new System.EventHandler(this.NewStudent_Click);
             // 
+            // LogoMIA
+            // 
+            this.LogoMIA.BackColor = System.Drawing.Color.Azure;
+            this.LogoMIA.Image = global::MIA_2020.Properties.Resources.OurLogo;
+            this.LogoMIA.Location = new System.Drawing.Point(34, 115);
+            this.LogoMIA.Margin = new System.Windows.Forms.Padding(4);
+            this.LogoMIA.Name = "LogoMIA";
+            this.LogoMIA.Size = new System.Drawing.Size(285, 255);
+            this.LogoMIA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoMIA.TabIndex = 5;
+            this.LogoMIA.TabStop = false;
+            // 
+            // GuestsButton
+            // 
+            this.GuestsButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.GuestsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GuestsButton.BackgroundImage = global::MIA_2020.Properties.Resources.User;
+            this.GuestsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GuestsButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.GuestsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.GuestsButton.FlatAppearance.BorderSize = 0;
+            this.GuestsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.GuestsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GuestsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GuestsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GuestsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.GuestsButton.Location = new System.Drawing.Point(413, 0);
+            this.GuestsButton.Margin = new System.Windows.Forms.Padding(4);
+            this.GuestsButton.Name = "GuestsButton";
+            this.GuestsButton.Size = new System.Drawing.Size(80, 80);
+            this.GuestsButton.TabIndex = 8;
+            this.toolTip.SetToolTip(this.GuestsButton, "Invitados");
+            this.GuestsButton.UseVisualStyleBackColor = false;
+            this.GuestsButton.CheckedChanged += new System.EventHandler(this.GuestsButton_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(5, 86);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(29, 29);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "P";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button2.Location = new System.Drawing.Point(5, 372);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(29, 29);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "A";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Login
             // 
             this.AcceptButton = this.OkButton;
@@ -283,6 +309,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(876, 403);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.NewStudent);
             this.Controls.Add(this.GuestsAccessPanel);
             this.Controls.Add(this.TitleLabel);
@@ -303,9 +331,9 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoMIA)).EndInit();
             this.GuestsAccessPanel.ResumeLayout(false);
             this.GuestsAccessPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoMIA)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,6 +358,8 @@
         private System.Windows.Forms.Panel GuestsAccessPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button NewStudent;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

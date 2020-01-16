@@ -31,30 +31,28 @@
             this.LogOffButton = new System.Windows.Forms.Button();
             this.RankingButton = new System.Windows.Forms.RadioButton();
             this.MisCalificacionesButton = new System.Windows.Forms.RadioButton();
-            this.SeleccionButton = new System.Windows.Forms.RadioButton();
             this.MiCuentaButton = new System.Windows.Forms.RadioButton();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.MiCuenta = new System.Windows.Forms.TabPage();
-            this.Seleccion = new System.Windows.Forms.TabPage();
             this.MisCalificaciones = new System.Windows.Forms.TabPage();
             this.Ranking = new System.Windows.Forms.TabPage();
             this.CloseSystem = new System.Windows.Forms.Button();
             this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TopFillPanel = new System.Windows.Forms.Panel();
             this.InfoLabel = new System.Windows.Forms.Label();
-            this.ListBoxSeleccionadas = new System.Windows.Forms.ListBox();
-            this.ListBoxDisponibles = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.TablaCalificaciones = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.C_GPA_Label = new System.Windows.Forms.Label();
+            this.C_GPA_Value = new System.Windows.Forms.Label();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
-            this.Seleccion.SuspendLayout();
             this.MisCalificaciones.SuspendLayout();
             this.Ranking.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -64,7 +62,6 @@
             this.SubMenuPanel.Controls.Add(this.LogOffButton);
             this.SubMenuPanel.Controls.Add(this.RankingButton);
             this.SubMenuPanel.Controls.Add(this.MisCalificacionesButton);
-            this.SubMenuPanel.Controls.Add(this.SeleccionButton);
             this.SubMenuPanel.Controls.Add(this.MiCuentaButton);
             this.SubMenuPanel.Controls.Add(this.TopFillPanel);
             this.SubMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -97,7 +94,7 @@
             this.RankingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.RankingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RankingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.RankingButton.Location = new System.Drawing.Point(0, 343);
+            this.RankingButton.Location = new System.Drawing.Point(0, 283);
             this.RankingButton.Margin = new System.Windows.Forms.Padding(4);
             this.RankingButton.Name = "RankingButton";
             this.RankingButton.Size = new System.Drawing.Size(188, 60);
@@ -120,7 +117,7 @@
             this.MisCalificacionesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.MisCalificacionesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MisCalificacionesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.MisCalificacionesButton.Location = new System.Drawing.Point(0, 283);
+            this.MisCalificacionesButton.Location = new System.Drawing.Point(0, 223);
             this.MisCalificacionesButton.Margin = new System.Windows.Forms.Padding(4);
             this.MisCalificacionesButton.Name = "MisCalificacionesButton";
             this.MisCalificacionesButton.Size = new System.Drawing.Size(188, 60);
@@ -129,29 +126,6 @@
             this.MisCalificacionesButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.MisCalificacionesButton.UseVisualStyleBackColor = false;
             this.MisCalificacionesButton.CheckedChanged += new System.EventHandler(this.MisCalificacionesButton_CheckedChanged);
-            // 
-            // SeleccionButton
-            // 
-            this.SeleccionButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.SeleccionButton.AutoEllipsis = true;
-            this.SeleccionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SeleccionButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SeleccionButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.SeleccionButton.FlatAppearance.BorderSize = 0;
-            this.SeleccionButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.SeleccionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SeleccionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SeleccionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SeleccionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.SeleccionButton.Location = new System.Drawing.Point(0, 223);
-            this.SeleccionButton.Margin = new System.Windows.Forms.Padding(4);
-            this.SeleccionButton.Name = "SeleccionButton";
-            this.SeleccionButton.Size = new System.Drawing.Size(188, 60);
-            this.SeleccionButton.TabIndex = 10;
-            this.SeleccionButton.Text = "Selección";
-            this.SeleccionButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.SeleccionButton.UseVisualStyleBackColor = false;
-            this.SeleccionButton.CheckedChanged += new System.EventHandler(this.SeleccionButton_CheckedChanged);
             // 
             // MiCuentaButton
             // 
@@ -181,7 +155,6 @@
             // TabControl
             // 
             this.TabControl.Controls.Add(this.MiCuenta);
-            this.TabControl.Controls.Add(this.Seleccion);
             this.TabControl.Controls.Add(this.MisCalificaciones);
             this.TabControl.Controls.Add(this.Ranking);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -205,25 +178,12 @@
             this.MiCuenta.TabIndex = 0;
             this.MiCuenta.Text = "Mi Cuenta";
             // 
-            // Seleccion
-            // 
-            this.Seleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Seleccion.Controls.Add(this.label5);
-            this.Seleccion.Controls.Add(this.label4);
-            this.Seleccion.Controls.Add(this.ListBoxDisponibles);
-            this.Seleccion.Controls.Add(this.ListBoxSeleccionadas);
-            this.Seleccion.Controls.Add(this.label1);
-            this.Seleccion.Location = new System.Drawing.Point(4, 25);
-            this.Seleccion.Name = "Seleccion";
-            this.Seleccion.Padding = new System.Windows.Forms.Padding(3);
-            this.Seleccion.Size = new System.Drawing.Size(708, 484);
-            this.Seleccion.TabIndex = 1;
-            this.Seleccion.Text = "Selección";
-            // 
             // MisCalificaciones
             // 
             this.MisCalificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.MisCalificaciones.Controls.Add(this.TablaCalificaciones);
             this.MisCalificaciones.Controls.Add(this.label2);
+            this.MisCalificaciones.Controls.Add(this.panel1);
             this.MisCalificaciones.Location = new System.Drawing.Point(4, 25);
             this.MisCalificaciones.Name = "MisCalificaciones";
             this.MisCalificaciones.Size = new System.Drawing.Size(708, 484);
@@ -254,29 +214,18 @@
             // 
             this.MiCuenta_TitleLabel.AutoSize = true;
             this.MiCuenta_TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(271, 15);
+            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(276, 80);
             this.MiCuenta_TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MiCuenta_TitleLabel.Name = "MiCuenta_TitleLabel";
             this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(146, 31);
             this.MiCuenta_TitleLabel.TabIndex = 13;
             this.MiCuenta_TitleLabel.Text = "Mi Cuenta";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(186, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(344, 31);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Selección de Asignaturas";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(271, 15);
+            this.label2.Location = new System.Drawing.Point(245, 19);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 31);
@@ -309,52 +258,58 @@
             // 
             this.InfoLabel.AutoEllipsis = true;
             this.InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.InfoLabel.Location = new System.Drawing.Point(131, 101);
+            this.InfoLabel.Location = new System.Drawing.Point(134, 156);
             this.InfoLabel.Name = "InfoLabel";
             this.InfoLabel.Size = new System.Drawing.Size(431, 251);
             this.InfoLabel.TabIndex = 14;
             this.InfoLabel.Text = "ID:\r\nasdf\r\n\r\nNombre:\r\nasdf\r\n\r\nCarrera:\r\nasda";
             this.InfoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ListBoxSeleccionadas
+            // TablaCalificaciones
             // 
-            this.ListBoxSeleccionadas.FormattingEnabled = true;
-            this.ListBoxSeleccionadas.ItemHeight = 16;
-            this.ListBoxSeleccionadas.Location = new System.Drawing.Point(46, 96);
-            this.ListBoxSeleccionadas.Name = "ListBoxSeleccionadas";
-            this.ListBoxSeleccionadas.Size = new System.Drawing.Size(191, 308);
-            this.ListBoxSeleccionadas.TabIndex = 16;
+            this.TablaCalificaciones.AllowUserToAddRows = false;
+            this.TablaCalificaciones.AllowUserToDeleteRows = false;
+            this.TablaCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaCalificaciones.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaCalificaciones.Location = new System.Drawing.Point(0, 71);
+            this.TablaCalificaciones.Name = "TablaCalificaciones";
+            this.TablaCalificaciones.ReadOnly = true;
+            this.TablaCalificaciones.RowHeadersWidth = 51;
+            this.TablaCalificaciones.RowTemplate.Height = 24;
+            this.TablaCalificaciones.Size = new System.Drawing.Size(708, 365);
+            this.TablaCalificaciones.TabIndex = 17;
             // 
-            // ListBoxDisponibles
+            // panel1
             // 
-            this.ListBoxDisponibles.FormattingEnabled = true;
-            this.ListBoxDisponibles.ItemHeight = 16;
-            this.ListBoxDisponibles.Location = new System.Drawing.Point(481, 96);
-            this.ListBoxDisponibles.Name = "ListBoxDisponibles";
-            this.ListBoxDisponibles.Size = new System.Drawing.Size(191, 308);
-            this.ListBoxDisponibles.TabIndex = 17;
+            this.panel1.Controls.Add(this.C_GPA_Label);
+            this.panel1.Controls.Add(this.C_GPA_Value);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 436);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(708, 48);
+            this.panel1.TabIndex = 18;
             // 
-            // label4
+            // C_GPA_Label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(59, 68);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 25);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Seleccionadas:";
+            this.C_GPA_Label.AutoSize = true;
+            this.C_GPA_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C_GPA_Label.Location = new System.Drawing.Point(216, 15);
+            this.C_GPA_Label.Name = "C_GPA_Label";
+            this.C_GPA_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.C_GPA_Label.Size = new System.Drawing.Size(202, 17);
+            this.C_GPA_Label.TabIndex = 5;
+            this.C_GPA_Label.Text = "Índice Académico General:";
             // 
-            // label5
+            // C_GPA_Value
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(514, 68);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 25);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Disponibles:";
+            this.C_GPA_Value.AutoSize = true;
+            this.C_GPA_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C_GPA_Value.Location = new System.Drawing.Point(439, 15);
+            this.C_GPA_Value.Name = "C_GPA_Value";
+            this.C_GPA_Value.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.C_GPA_Value.Size = new System.Drawing.Size(13, 17);
+            this.C_GPA_Value.TabIndex = 6;
+            this.C_GPA_Value.Text = "-";
             // 
             // StudentsMenu
             // 
@@ -366,16 +321,18 @@
             this.Controls.Add(this.SubMenuPanel);
             this.Name = "StudentsMenu";
             this.Text = "Menu de los Estudiantes";
+            this.Load += new System.EventHandler(this.StudentsMenu_Load);
             this.SubMenuPanel.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.MiCuenta.ResumeLayout(false);
             this.MiCuenta.PerformLayout();
-            this.Seleccion.ResumeLayout(false);
-            this.Seleccion.PerformLayout();
             this.MisCalificaciones.ResumeLayout(false);
             this.MisCalificaciones.PerformLayout();
             this.Ranking.ResumeLayout(false);
             this.Ranking.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -386,23 +343,20 @@
         private System.Windows.Forms.Button LogOffButton;
         private System.Windows.Forms.RadioButton RankingButton;
         private System.Windows.Forms.RadioButton MisCalificacionesButton;
-        private System.Windows.Forms.RadioButton SeleccionButton;
         private System.Windows.Forms.RadioButton MiCuentaButton;
         private System.Windows.Forms.Panel TopFillPanel;
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage MiCuenta;
-        private System.Windows.Forms.TabPage Seleccion;
         private System.Windows.Forms.TabPage MisCalificaciones;
         private System.Windows.Forms.TabPage Ranking;
         private System.Windows.Forms.Button CloseSystem;
         private System.Windows.Forms.Label MiCuenta_TitleLabel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label InfoLabel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox ListBoxDisponibles;
-        private System.Windows.Forms.ListBox ListBoxSeleccionadas;
+        private System.Windows.Forms.DataGridView TablaCalificaciones;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label C_GPA_Label;
+        private System.Windows.Forms.Label C_GPA_Value;
     }
 }

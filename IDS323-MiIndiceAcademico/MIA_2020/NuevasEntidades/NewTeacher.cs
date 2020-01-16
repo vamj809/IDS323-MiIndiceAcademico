@@ -11,15 +11,11 @@ using System.Windows.Forms;
 
 namespace MIA_2020
 {
-    public partial class NewStudent : Form
+    public partial class NewTeacher : Form
     {
-        public int ID_Estudiante;
-        public string Nombre_Estudiante;
-        public string Carrera_Estudiante;
-        public string Clave_Estudiante;
         private int progressState = 0; //{0, no changes; -1, unsaved changes; 1, saved changes}
         private ColeccionCompleta CC;
-        public NewStudent(ColeccionCompleta _CC)
+        public NewTeacher(ColeccionCompleta _CC)
         {
             if (_CC == null) {
                 _CC = new ColeccionCompleta();
@@ -27,10 +23,10 @@ namespace MIA_2020
             CC = _CC;
             InitializeComponent();
             progressState = 0;
-            if(CC.Estudiantes.Count() < 1) {
-                textID.Text = 1201001.ToString();
+            if(CC.Profesores.Count() < 1) {
+                textID.Text = 220001.ToString();
             } else {
-                textID.Text = (CC.Estudiantes.Max(x => x.ID_Estudiante) + 1).ToString();
+                textID.Text = (CC.Profesores.Max(x => x.ID_Profesor) + 1).ToString();
             }
         }
 
@@ -39,9 +35,7 @@ namespace MIA_2020
             //Registrar
             if(textNombre.Text == "") {
                 textNombre.Focus();
-            } else if (textCarrera.Text == "") {
-                textCarrera.Focus();
-            }
+            } 
             else if (textClave.Text == "") {
                 textClave.Focus();
             }
@@ -56,14 +50,13 @@ namespace MIA_2020
                 if(textID.Text == "") {
                     textID.Text = "0";
                 }
-                CC.Estudiantes.Add(new Estudiante() {
-                    ID_Estudiante = int.Parse(textID.Text),
-                    Nombre_Estudiante = textNombre.Text,
-                    Carrera_Estudiante = textCarrera.Text,
-                    Clave_Estudiante = textClave.Text
+                CC.Profesores.Add(new Profesor() {
+                    ID_Profesor = int.Parse(textID.Text),
+                    Nombre_Profesor = textNombre.Text,
+                    Clave_Profesor = textClave.Text
                 });
-                CC.GuardarEstudiantes();
-                MessageBox.Show($"Estudiante creado correctamente.\nRecuerde que su ID es {textID.Text}",
+                CC.GuardarProfesores();
+                MessageBox.Show($"Profesor creado correctamente.\nRecuerde que su ID es {textID.Text}",
                     "Proceso completado con exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 progressState = 1;
                 this.Close();
@@ -81,7 +74,7 @@ namespace MIA_2020
             progressState = -1;
         }
 
-        private void NewStudent_FormClosing(object sender, FormClosingEventArgs e)
+        private void NewTeacher_FormClosing(object sender, FormClosingEventArgs e)
         {
             Login Menu = new Login();
             //Verifica que si han habido cambios, preguntará para confirmar que quiere salir sin guardar.
@@ -99,11 +92,12 @@ namespace MIA_2020
             Menu.Show();
         }
 
-        private void NewStudent_KeyDown(object sender, KeyEventArgs e)
+        private void NewTeacher_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter) {
                 button1.PerformClick();
-            } else if(e.KeyCode == Keys.Escape) {
+            }
+            else if (e.KeyCode == Keys.Escape) {
                 button2.PerformClick();
             }
         }

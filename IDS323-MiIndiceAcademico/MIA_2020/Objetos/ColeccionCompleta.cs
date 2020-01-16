@@ -36,6 +36,7 @@ namespace MIA_2020.Objetos
             GDO = new GestorDeObjetos();
             Estudiantes = GDO.CargarEstudiantes();
             Profesores = GDO.CargarProfesores();
+            Administradores = GDO.CargarAdministradores();
             Asignaturas = GDO.CargarAsignaturas();
             Calificaciones = GDO.CargarCalificaciones();
         }
