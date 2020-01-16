@@ -44,12 +44,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Ranking = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
+            this.TablaRanking = new System.Windows.Forms.DataGridView();
+            this.ID_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Honor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
             this.MisCalificaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).BeginInit();
             this.Ranking.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRanking)).BeginInit();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -268,6 +274,7 @@
             // Ranking
             // 
             this.Ranking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Ranking.Controls.Add(this.TablaRanking);
             this.Ranking.Controls.Add(this.label3);
             this.Ranking.Location = new System.Drawing.Point(4, 25);
             this.Ranking.Name = "Ranking";
@@ -285,6 +292,57 @@
             this.label3.Size = new System.Drawing.Size(121, 31);
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
+            // 
+            // TablaRanking
+            // 
+            this.TablaRanking.AllowUserToAddRows = false;
+            this.TablaRanking.AllowUserToDeleteRows = false;
+            this.TablaRanking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaRanking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Estudiante,
+            this.Estudiante,
+            this.GPA,
+            this.Honor});
+            this.TablaRanking.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaRanking.Location = new System.Drawing.Point(0, 70);
+            this.TablaRanking.Name = "TablaRanking";
+            this.TablaRanking.ReadOnly = true;
+            this.TablaRanking.RowHeadersWidth = 51;
+            this.TablaRanking.RowTemplate.Height = 24;
+            this.TablaRanking.Size = new System.Drawing.Size(708, 414);
+            this.TablaRanking.TabIndex = 20;
+            // 
+            // ID_Estudiante
+            // 
+            this.ID_Estudiante.HeaderText = "ID Estudiante";
+            this.ID_Estudiante.MinimumWidth = 6;
+            this.ID_Estudiante.Name = "ID_Estudiante";
+            this.ID_Estudiante.ReadOnly = true;
+            this.ID_Estudiante.Width = 125;
+            // 
+            // Estudiante
+            // 
+            this.Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Estudiante.HeaderText = "Estudiante";
+            this.Estudiante.MinimumWidth = 6;
+            this.Estudiante.Name = "Estudiante";
+            this.Estudiante.ReadOnly = true;
+            // 
+            // GPA
+            // 
+            this.GPA.HeaderText = "Índice Académico";
+            this.GPA.MinimumWidth = 6;
+            this.GPA.Name = "GPA";
+            this.GPA.ReadOnly = true;
+            this.GPA.Width = 125;
+            // 
+            // Honor
+            // 
+            this.Honor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Honor.HeaderText = "Honorarios";
+            this.Honor.MinimumWidth = 6;
+            this.Honor.Name = "Honor";
+            this.Honor.ReadOnly = true;
             // 
             // TeachersMenu
             // 
@@ -306,6 +364,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).EndInit();
             this.Ranking.ResumeLayout(false);
             this.Ranking.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRanking)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,5 +388,10 @@
         private System.Windows.Forms.Label MiCuenta_TitleLabel;
         private System.Windows.Forms.DataGridView TablaCalificaciones;
         private System.Windows.Forms.Button NuevaCalificacion;
+        private System.Windows.Forms.DataGridView TablaRanking;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GPA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Honor;
     }
 }
