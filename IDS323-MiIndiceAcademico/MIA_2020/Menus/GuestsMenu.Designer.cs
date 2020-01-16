@@ -32,14 +32,20 @@
             this.CloseSystem = new System.Windows.Forms.Button();
             this.LogOffButton = new System.Windows.Forms.Button();
             this.TopFillPanel = new System.Windows.Forms.Panel();
+            this.TablaRanking = new System.Windows.Forms.DataGridView();
+            this.ID_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Honor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubMenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRanking)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(416, 9);
+            this.label3.Location = new System.Drawing.Point(479, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 31);
@@ -89,17 +95,71 @@
             this.TopFillPanel.Size = new System.Drawing.Size(188, 163);
             this.TopFillPanel.TabIndex = 13;
             // 
+            // TablaRanking
+            // 
+            this.TablaRanking.AllowUserToAddRows = false;
+            this.TablaRanking.AllowUserToDeleteRows = false;
+            this.TablaRanking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaRanking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Estudiante,
+            this.Estudiante,
+            this.GPA,
+            this.Honor});
+            this.TablaRanking.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaRanking.Location = new System.Drawing.Point(188, 62);
+            this.TablaRanking.Name = "TablaRanking";
+            this.TablaRanking.ReadOnly = true;
+            this.TablaRanking.RowHeadersWidth = 51;
+            this.TablaRanking.RowTemplate.Height = 24;
+            this.TablaRanking.Size = new System.Drawing.Size(710, 394);
+            this.TablaRanking.TabIndex = 19;
+            // 
+            // ID_Estudiante
+            // 
+            this.ID_Estudiante.HeaderText = "ID Estudiante";
+            this.ID_Estudiante.MinimumWidth = 6;
+            this.ID_Estudiante.Name = "ID_Estudiante";
+            this.ID_Estudiante.ReadOnly = true;
+            this.ID_Estudiante.Width = 125;
+            // 
+            // Estudiante
+            // 
+            this.Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Estudiante.HeaderText = "Estudiante";
+            this.Estudiante.MinimumWidth = 6;
+            this.Estudiante.Name = "Estudiante";
+            this.Estudiante.ReadOnly = true;
+            // 
+            // GPA
+            // 
+            this.GPA.HeaderText = "Índice Académico";
+            this.GPA.MinimumWidth = 6;
+            this.GPA.Name = "GPA";
+            this.GPA.ReadOnly = true;
+            this.GPA.Width = 125;
+            // 
+            // Honor
+            // 
+            this.Honor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Honor.HeaderText = "Honorarios";
+            this.Honor.MinimumWidth = 6;
+            this.Honor.Name = "Honor";
+            this.Honor.ReadOnly = true;
+            // 
             // GuestsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(800, 456);
+            this.ClientSize = new System.Drawing.Size(898, 456);
+            this.Controls.Add(this.TablaRanking);
             this.Controls.Add(this.SubMenuPanel);
             this.Controls.Add(this.label3);
             this.Name = "GuestsMenu";
             this.Text = "Menú de Invitados";
+            this.Load += new System.EventHandler(this.GuestsMenu_Load);
             this.SubMenuPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRanking)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +172,10 @@
         private System.Windows.Forms.Button CloseSystem;
         private System.Windows.Forms.Button LogOffButton;
         private System.Windows.Forms.Panel TopFillPanel;
+        private System.Windows.Forms.DataGridView TablaRanking;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GPA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Honor;
     }
 }
