@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MiIndiceAcademico_F1.Properties
+namespace MIA_2020.Properties
 {
 
 

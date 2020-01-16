@@ -1,4 +1,4 @@
-﻿namespace MiIndiceAcademico_F1.Registro
+﻿namespace MIA_2020.Registro
 {
     partial class Registro_Profesores
     {

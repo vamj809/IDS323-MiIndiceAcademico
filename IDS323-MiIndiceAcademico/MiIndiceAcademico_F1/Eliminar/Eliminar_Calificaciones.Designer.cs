@@ -1,4 +1,4 @@
-﻿namespace MiIndiceAcademico_F1.Eliminar
+﻿namespace MIA_2020.Eliminar
 {
     partial class Eliminar_Calificaciones
     {

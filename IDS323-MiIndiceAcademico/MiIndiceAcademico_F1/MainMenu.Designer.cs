@@ -1,4 +1,4 @@
-﻿namespace MiIndiceAcademico_F1
+﻿namespace MIA_2020
 {
     partial class MainMenu
     {
@@ -68,7 +68,7 @@
             this.calificacionesToolStripMenuItem,
             this.asignaturasToolStripMenuItem,
             this.profesoresToolStripMenuItem});
-            this.registroToolStripMenuItem.Image = global::MiIndiceAcademico_F1.Properties.Resources.add;
+            this.registroToolStripMenuItem.Image = global::MIA_2020.Properties.Resources.add;
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.registroToolStripMenuItem.Text = "Registro";
@@ -103,7 +103,7 @@
             // 
             // modificaciónToolStripMenuItem
             // 
-            this.modificaciónToolStripMenuItem.Image = global::MiIndiceAcademico_F1.Properties.Resources.edit;
+            this.modificaciónToolStripMenuItem.Image = global::MIA_2020.Properties.Resources.edit;
             this.modificaciónToolStripMenuItem.Name = "modificaciónToolStripMenuItem";
             this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.modificaciónToolStripMenuItem.Text = "Modificación";
@@ -111,7 +111,7 @@
             // 
             // consultasToolStripMenuItem
             // 
-            this.consultasToolStripMenuItem.Image = global::MiIndiceAcademico_F1.Properties.Resources.search;
+            this.consultasToolStripMenuItem.Image = global::MIA_2020.Properties.Resources.search;
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.consultasToolStripMenuItem.Text = "Consultas";
@@ -124,7 +124,7 @@
             this.calificacionesToolStripMenuItem1,
             this.asignaturasToolStripMenuItem1,
             this.profesoresToolStripMenuItem1});
-            this.eliminaciónToolStripMenuItem.Image = global::MiIndiceAcademico_F1.Properties.Resources.delete;
+            this.eliminaciónToolStripMenuItem.Image = global::MIA_2020.Properties.Resources.delete;
             this.eliminaciónToolStripMenuItem.Name = "eliminaciónToolStripMenuItem";
             this.eliminaciónToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
             this.eliminaciónToolStripMenuItem.Text = "Eliminación";
