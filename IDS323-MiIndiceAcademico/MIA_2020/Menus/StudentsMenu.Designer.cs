@@ -44,6 +44,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TopFillPanel = new System.Windows.Forms.Panel();
+            this.InfoLabel = new System.Windows.Forms.Label();
+            this.ListBoxSeleccionadas = new System.Windows.Forms.ListBox();
+            this.ListBoxDisponibles = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
@@ -191,6 +196,7 @@
             // MiCuenta
             // 
             this.MiCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.MiCuenta.Controls.Add(this.InfoLabel);
             this.MiCuenta.Controls.Add(this.MiCuenta_TitleLabel);
             this.MiCuenta.Location = new System.Drawing.Point(4, 25);
             this.MiCuenta.Name = "MiCuenta";
@@ -202,6 +208,10 @@
             // Seleccion
             // 
             this.Seleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Seleccion.Controls.Add(this.label5);
+            this.Seleccion.Controls.Add(this.label4);
+            this.Seleccion.Controls.Add(this.ListBoxDisponibles);
+            this.Seleccion.Controls.Add(this.ListBoxSeleccionadas);
             this.Seleccion.Controls.Add(this.label1);
             this.Seleccion.Location = new System.Drawing.Point(4, 25);
             this.Seleccion.Name = "Seleccion";
@@ -255,12 +265,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(271, 15);
+            this.label1.Location = new System.Drawing.Point(186, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 31);
+            this.label1.Size = new System.Drawing.Size(344, 31);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Selección";
+            this.label1.Text = "Selección de Asignaturas";
             // 
             // label2
             // 
@@ -294,6 +304,57 @@
             this.TopFillPanel.Name = "TopFillPanel";
             this.TopFillPanel.Size = new System.Drawing.Size(188, 163);
             this.TopFillPanel.TabIndex = 13;
+            // 
+            // InfoLabel
+            // 
+            this.InfoLabel.AutoEllipsis = true;
+            this.InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.InfoLabel.Location = new System.Drawing.Point(131, 101);
+            this.InfoLabel.Name = "InfoLabel";
+            this.InfoLabel.Size = new System.Drawing.Size(431, 251);
+            this.InfoLabel.TabIndex = 14;
+            this.InfoLabel.Text = "ID:\r\nasdf\r\n\r\nNombre:\r\nasdf\r\n\r\nCarrera:\r\nasda";
+            this.InfoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ListBoxSeleccionadas
+            // 
+            this.ListBoxSeleccionadas.FormattingEnabled = true;
+            this.ListBoxSeleccionadas.ItemHeight = 16;
+            this.ListBoxSeleccionadas.Location = new System.Drawing.Point(46, 96);
+            this.ListBoxSeleccionadas.Name = "ListBoxSeleccionadas";
+            this.ListBoxSeleccionadas.Size = new System.Drawing.Size(191, 308);
+            this.ListBoxSeleccionadas.TabIndex = 16;
+            // 
+            // ListBoxDisponibles
+            // 
+            this.ListBoxDisponibles.FormattingEnabled = true;
+            this.ListBoxDisponibles.ItemHeight = 16;
+            this.ListBoxDisponibles.Location = new System.Drawing.Point(481, 96);
+            this.ListBoxDisponibles.Name = "ListBoxDisponibles";
+            this.ListBoxDisponibles.Size = new System.Drawing.Size(191, 308);
+            this.ListBoxDisponibles.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(59, 68);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 25);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Seleccionadas:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(514, 68);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 25);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Disponibles:";
             // 
             // StudentsMenu
             // 
@@ -338,5 +399,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label InfoLabel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox ListBoxDisponibles;
+        private System.Windows.Forms.ListBox ListBoxSeleccionadas;
     }
 }

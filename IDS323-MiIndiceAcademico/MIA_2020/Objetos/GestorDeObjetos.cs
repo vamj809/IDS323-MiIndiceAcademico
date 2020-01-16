@@ -11,6 +11,7 @@ namespace MIA_2020.Objetos
         /// </summary>
         private string RutaEstudiantes = "Estudiantes.bin";
         private string RutaProfesores = "Profesores.bin";
+        private string RutaAdministradores = "Administradores.bin";
         private string RutaAsignaturas = "Asignaturas.bin";
         private string RutaCalificaciones = "Calificaciones.bin";
         
@@ -31,6 +32,14 @@ namespace MIA_2020.Objetos
             var lista = ReadFromBinaryFile<List<Profesor>>(RutaProfesores);
             if (lista == null) {
                 return new List<Profesor>();
+            }
+            return lista;
+        }
+        public List<Administrador> CargarAdministradores()
+        {
+            var lista = ReadFromBinaryFile<List<Administrador>>(RutaAdministradores);
+            if (lista == null) {
+                return new List<Administrador>();
             }
             return lista;
         }
@@ -60,6 +69,10 @@ namespace MIA_2020.Objetos
         public void Guardar(List<Profesor> lista)
         {
             WriteToBinaryFile(RutaProfesores, lista);
+        }
+        public void Guardar(List<Administrador> lista)
+        {
+            WriteToBinaryFile(RutaAdministradores, lista);
         }
         public void Guardar(List<Asignatura> lista)
         {

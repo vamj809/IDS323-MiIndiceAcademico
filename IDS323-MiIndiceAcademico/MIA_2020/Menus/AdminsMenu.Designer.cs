@@ -28,9 +28,10 @@
         private void InitializeComponent()
         {
             this.SubMenuPanel = new System.Windows.Forms.Panel();
+            this.RankingButton = new System.Windows.Forms.RadioButton();
+            this.ProfesoresButton = new System.Windows.Forms.RadioButton();
             this.CloseSystem = new System.Windows.Forms.Button();
             this.LogOffButton = new System.Windows.Forms.Button();
-            this.RankingButton = new System.Windows.Forms.RadioButton();
             this.MisCalificacionesButton = new System.Windows.Forms.RadioButton();
             this.SeleccionButton = new System.Windows.Forms.RadioButton();
             this.MiCuentaButton = new System.Windows.Forms.RadioButton();
@@ -42,18 +43,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Asignaturas = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
-            this.Ranking = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ProfesoresButton = new System.Windows.Forms.RadioButton();
             this.Profesores = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
+            this.Ranking = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.E_dataGrid = new System.Windows.Forms.DataGridView();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
             this.Estudiantes.SuspendLayout();
             this.Asignaturas.SuspendLayout();
-            this.Ranking.SuspendLayout();
             this.Profesores.SuspendLayout();
+            this.Ranking.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -72,26 +74,6 @@
             this.SubMenuPanel.Name = "SubMenuPanel";
             this.SubMenuPanel.Size = new System.Drawing.Size(188, 513);
             this.SubMenuPanel.TabIndex = 0;
-            // 
-            // CloseSystem
-            // 
-            this.CloseSystem.Location = new System.Drawing.Point(3, 461);
-            this.CloseSystem.Name = "CloseSystem";
-            this.CloseSystem.Size = new System.Drawing.Size(182, 46);
-            this.CloseSystem.TabIndex = 15;
-            this.CloseSystem.Text = "Cerrar Sistema";
-            this.CloseSystem.UseVisualStyleBackColor = true;
-            this.CloseSystem.Click += new System.EventHandler(this.CloseSystem_Click);
-            // 
-            // LogOffButton
-            // 
-            this.LogOffButton.Location = new System.Drawing.Point(3, 410);
-            this.LogOffButton.Name = "LogOffButton";
-            this.LogOffButton.Size = new System.Drawing.Size(182, 46);
-            this.LogOffButton.TabIndex = 14;
-            this.LogOffButton.Text = "Cerrar Sesión";
-            this.LogOffButton.UseVisualStyleBackColor = true;
-            this.LogOffButton.Click += new System.EventHandler(this.LogOffButton_Click);
             // 
             // RankingButton
             // 
@@ -116,6 +98,50 @@
             this.RankingButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RankingButton.UseVisualStyleBackColor = false;
             this.RankingButton.CheckedChanged += new System.EventHandler(this.RankingButton_CheckedChanged);
+            // 
+            // ProfesoresButton
+            // 
+            this.ProfesoresButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ProfesoresButton.AutoEllipsis = true;
+            this.ProfesoresButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ProfesoresButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ProfesoresButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProfesoresButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.ProfesoresButton.FlatAppearance.BorderSize = 0;
+            this.ProfesoresButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.ProfesoresButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ProfesoresButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ProfesoresButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProfesoresButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
+            this.ProfesoresButton.Location = new System.Drawing.Point(0, 298);
+            this.ProfesoresButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ProfesoresButton.Name = "ProfesoresButton";
+            this.ProfesoresButton.Size = new System.Drawing.Size(188, 45);
+            this.ProfesoresButton.TabIndex = 16;
+            this.ProfesoresButton.Text = "Profesores";
+            this.ProfesoresButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ProfesoresButton.UseVisualStyleBackColor = false;
+            this.ProfesoresButton.CheckedChanged += new System.EventHandler(this.ProfesoresButton_CheckedChanged);
+            // 
+            // CloseSystem
+            // 
+            this.CloseSystem.Location = new System.Drawing.Point(3, 461);
+            this.CloseSystem.Name = "CloseSystem";
+            this.CloseSystem.Size = new System.Drawing.Size(182, 46);
+            this.CloseSystem.TabIndex = 15;
+            this.CloseSystem.Text = "Cerrar Sistema";
+            this.CloseSystem.UseVisualStyleBackColor = true;
+            this.CloseSystem.Click += new System.EventHandler(this.CloseSystem_Click);
+            // 
+            // LogOffButton
+            // 
+            this.LogOffButton.Location = new System.Drawing.Point(3, 410);
+            this.LogOffButton.Name = "LogOffButton";
+            this.LogOffButton.Size = new System.Drawing.Size(182, 46);
+            this.LogOffButton.TabIndex = 14;
+            this.LogOffButton.Text = "Cerrar Sesión";
+            this.LogOffButton.UseVisualStyleBackColor = true;
+            this.LogOffButton.Click += new System.EventHandler(this.LogOffButton_Click);
             // 
             // MisCalificacionesButton
             // 
@@ -240,6 +266,7 @@
             // Estudiantes
             // 
             this.Estudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Estudiantes.Controls.Add(this.E_dataGrid);
             this.Estudiantes.Controls.Add(this.label1);
             this.Estudiantes.Location = new System.Drawing.Point(4, 25);
             this.Estudiantes.Name = "Estudiantes";
@@ -252,7 +279,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(271, 15);
+            this.label1.Location = new System.Drawing.Point(254, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 31);
@@ -280,51 +307,6 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Asignaturas";
             // 
-            // Ranking
-            // 
-            this.Ranking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Ranking.Controls.Add(this.label3);
-            this.Ranking.Location = new System.Drawing.Point(4, 25);
-            this.Ranking.Name = "Ranking";
-            this.Ranking.Size = new System.Drawing.Size(708, 484);
-            this.Ranking.TabIndex = 3;
-            this.Ranking.Text = "Ranking";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(271, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 31);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Ranking";
-            // 
-            // ProfesoresButton
-            // 
-            this.ProfesoresButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ProfesoresButton.AutoEllipsis = true;
-            this.ProfesoresButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ProfesoresButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ProfesoresButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ProfesoresButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ProfesoresButton.FlatAppearance.BorderSize = 0;
-            this.ProfesoresButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.ProfesoresButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ProfesoresButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ProfesoresButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProfesoresButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.ProfesoresButton.Location = new System.Drawing.Point(0, 298);
-            this.ProfesoresButton.Margin = new System.Windows.Forms.Padding(4);
-            this.ProfesoresButton.Name = "ProfesoresButton";
-            this.ProfesoresButton.Size = new System.Drawing.Size(188, 45);
-            this.ProfesoresButton.TabIndex = 16;
-            this.ProfesoresButton.Text = "Profesores";
-            this.ProfesoresButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ProfesoresButton.UseVisualStyleBackColor = false;
-            this.ProfesoresButton.CheckedChanged += new System.EventHandler(this.ProfesoresButton_CheckedChanged);
-            // 
             // Profesores
             // 
             this.Profesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -347,6 +329,40 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Profesores";
             // 
+            // Ranking
+            // 
+            this.Ranking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Ranking.Controls.Add(this.label3);
+            this.Ranking.Location = new System.Drawing.Point(4, 25);
+            this.Ranking.Name = "Ranking";
+            this.Ranking.Size = new System.Drawing.Size(708, 484);
+            this.Ranking.TabIndex = 3;
+            this.Ranking.Text = "Ranking";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(271, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 31);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Ranking";
+            // 
+            // E_dataGrid
+            // 
+            this.E_dataGrid.AllowUserToAddRows = false;
+            this.E_dataGrid.AllowUserToDeleteRows = false;
+            this.E_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.E_dataGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.E_dataGrid.Location = new System.Drawing.Point(3, 49);
+            this.E_dataGrid.Name = "E_dataGrid";
+            this.E_dataGrid.RowHeadersWidth = 51;
+            this.E_dataGrid.RowTemplate.Height = 24;
+            this.E_dataGrid.Size = new System.Drawing.Size(702, 432);
+            this.E_dataGrid.TabIndex = 16;
+            // 
             // AdminsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -365,10 +381,11 @@
             this.Estudiantes.PerformLayout();
             this.Asignaturas.ResumeLayout(false);
             this.Asignaturas.PerformLayout();
-            this.Ranking.ResumeLayout(false);
-            this.Ranking.PerformLayout();
             this.Profesores.ResumeLayout(false);
             this.Profesores.PerformLayout();
+            this.Ranking.ResumeLayout(false);
+            this.Ranking.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.E_dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,5 +412,6 @@
         private System.Windows.Forms.RadioButton ProfesoresButton;
         private System.Windows.Forms.TabPage Profesores;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView E_dataGrid;
     }
 }

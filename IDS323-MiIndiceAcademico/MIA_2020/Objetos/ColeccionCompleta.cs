@@ -14,12 +14,16 @@ namespace MIA_2020.Objetos
         public List<Profesor> Profesores {
             get; set;
         }
+        public List<Administrador> Administradores {
+            get; set;
+        }
         public List<Asignatura> Asignaturas {
             get; set;
         }
         public List<Calificacion> Calificaciones {
             get; set;
         }
+
         private GestorDeObjetos GDO;
 
         //Recarga todo.
@@ -47,6 +51,10 @@ namespace MIA_2020.Objetos
         {
             GDO.Guardar(Asignaturas);
         }
+        public void GuardarAdministradores()
+        {
+            GDO.Guardar(Administradores);
+        }
         public void GuardarCalificaciones()
         {
             GDO.Guardar(Calificaciones);
@@ -59,6 +67,10 @@ namespace MIA_2020.Objetos
         public void RecargarProfesores()
         {
             Profesores = GDO.CargarProfesores();
+        }
+        public void RecargarAdministradores()
+        {
+            Administradores = GDO.CargarAdministradores();
         }
         public void RecargarAsignaturas()
         {

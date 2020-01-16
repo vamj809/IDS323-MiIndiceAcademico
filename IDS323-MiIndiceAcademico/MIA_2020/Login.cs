@@ -46,12 +46,14 @@ namespace MIA_2020
                 if (estudiantes.Count() < 1) {
                     UserNotFound();
                     return;
-                } else if(estudiantes.Where(x => x.Clave_Estudiante.ToString() == PasswordTextBox.Text).Count() < 1) {
+                }
+                estudiantes = estudiantes.Where(x => x.Clave_Estudiante.ToString() == PasswordTextBox.Text);
+                if (estudiantes.Count() < 1) {
                     WrongPassword();
                     return;
                 }
                 //Contraseña correcta
-                Menu = new Menus.StudentsMenu();
+                Menu = new Menus.StudentsMenu(datosBin, estudiantes.First());
             }
             else if (TeachersButton.Checked) { //Profesores
                 var profesores = datosBin.Profesores.Where(x => x.ID_Profesor.ToString() == UserTextBox.Text);

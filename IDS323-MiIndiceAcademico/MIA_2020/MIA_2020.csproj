@@ -85,6 +85,7 @@
     <Compile Include="Objetos\Asignatura.cs" />
     <Compile Include="Objetos\Calificacion.cs" />
     <Compile Include="Objetos\ColeccionCompleta.cs" />
+    <Compile Include="Objetos\Administrador.cs" />
     <Compile Include="Objetos\Estudiante.cs" />
     <Compile Include="Objetos\Profesor.cs" />
     <Compile Include="Program.cs" />

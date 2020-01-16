@@ -21,6 +21,7 @@ namespace MIA_2020.Menus
             if (_datos == null)
                 _datos = new ColeccionCompleta();
             datosBin = _datos;
+            E_dataGrid.DataSource = datosBin.Estudiantes;
         }
 
         private void LogOffButton_Click(object sender, EventArgs e)

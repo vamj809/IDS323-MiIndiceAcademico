@@ -8,8 +8,9 @@ namespace MIA_2020.Menus
 {
     public partial class StudentsMenu : Form
     {
-        ColeccionCompleta datosBin;
-        public StudentsMenu(ColeccionCompleta _datos = null)
+        private ColeccionCompleta datosBin;
+        private Estudiante EstudianteActual;
+        public StudentsMenu(ColeccionCompleta _datos = null, Estudiante _estudiante = null)
         {
             InitializeComponent();
             //Esta seccion hace que las pestañas se oculten.
@@ -21,6 +22,24 @@ namespace MIA_2020.Menus
             if (_datos == null)
                 _datos = new ColeccionCompleta();
             datosBin = _datos;
+
+            //Aqui se carga la información del estudiante para mostrarla:
+            if (_estudiante != null) {
+                InfoLabel.Text = "ID:\n" +
+                    $"{_estudiante.ID_Estudiante}\n\n" +
+                    $"Nombre:\n" +
+                    $"{_estudiante.Nombre_Estudiante}\n\n" +
+                    $"Carrera:\n" +
+                    $"{_estudiante.Carrera_Estudiante}";
+                
+                EstudianteActual = _estudiante;
+            }
+            else {
+                InfoLabel.Text = "";
+            }
+
+            //Aqui se cargan las asignaturas disponibles:
+            ListBoxDisponibles.DataSource = datosBin.Asignaturas;
         }
 
         private void LogOffButton_Click(object sender, EventArgs e)
