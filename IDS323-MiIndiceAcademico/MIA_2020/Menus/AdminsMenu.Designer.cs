@@ -49,6 +49,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Ranking = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NuevaAsignatura = new System.Windows.Forms.Button();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
@@ -57,6 +59,7 @@
             this.Asignaturas.SuspendLayout();
             this.Profesores.SuspendLayout();
             this.Ranking.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -315,6 +318,8 @@
             // Asignaturas
             // 
             this.Asignaturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Asignaturas.Controls.Add(this.NuevaAsignatura);
+            this.Asignaturas.Controls.Add(this.dataGridView1);
             this.Asignaturas.Controls.Add(this.label2);
             this.Asignaturas.Location = new System.Drawing.Point(4, 25);
             this.Asignaturas.Name = "Asignaturas";
@@ -326,7 +331,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(271, 15);
+            this.label2.Location = new System.Drawing.Point(261, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 31);
@@ -348,7 +353,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(243, 12);
+            this.label4.Location = new System.Drawing.Point(263, 16);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(156, 31);
@@ -376,6 +381,27 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 69);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(708, 415);
+            this.dataGridView1.TabIndex = 17;
+            // 
+            // NuevaAsignatura
+            // 
+            this.NuevaAsignatura.Location = new System.Drawing.Point(641, 13);
+            this.NuevaAsignatura.Name = "NuevaAsignatura";
+            this.NuevaAsignatura.Size = new System.Drawing.Size(59, 46);
+            this.NuevaAsignatura.TabIndex = 17;
+            this.NuevaAsignatura.Text = "Crear Nueva";
+            this.NuevaAsignatura.UseVisualStyleBackColor = true;
+            this.NuevaAsignatura.Click += new System.EventHandler(this.NuevaAsignatura_Click);
+            // 
             // AdminsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -400,6 +426,7 @@
             this.Profesores.PerformLayout();
             this.Ranking.ResumeLayout(false);
             this.Ranking.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,5 +455,7 @@
         private System.Windows.Forms.DataGridView E_dataGrid;
         private System.Windows.Forms.Label InfoLabel;
         private System.Windows.Forms.Label MiCuenta_TitleLabel;
+        private System.Windows.Forms.Button NuevaAsignatura;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

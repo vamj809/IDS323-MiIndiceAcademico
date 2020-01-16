@@ -29,8 +29,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textID = new System.Windows.Forms.TextBox();
-            this.textCarrera = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 70);
+            this.label1.Location = new System.Drawing.Point(25, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 0;
@@ -53,34 +51,17 @@
             // 
             // textID
             // 
-            this.textID.Location = new System.Drawing.Point(112, 67);
+            this.textID.Location = new System.Drawing.Point(112, 71);
             this.textID.Name = "textID";
             this.textID.ReadOnly = true;
             this.textID.Size = new System.Drawing.Size(111, 22);
             this.textID.TabIndex = 99;
             this.textID.TabStop = false;
             // 
-            // textCarrera
-            // 
-            this.textCarrera.Location = new System.Drawing.Point(112, 154);
-            this.textCarrera.Name = "textCarrera";
-            this.textCarrera.Size = new System.Drawing.Size(200, 22);
-            this.textCarrera.TabIndex = 2;
-            this.textCarrera.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 157);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Carrera: ";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 110);
+            this.label2.Location = new System.Drawing.Point(25, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 26;
@@ -109,7 +90,7 @@
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(112, 110);
+            this.textNombre.Location = new System.Drawing.Point(112, 122);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(200, 22);
             this.textNombre.TabIndex = 1;
@@ -135,7 +116,7 @@
             // 
             // textClave
             // 
-            this.textClave.Location = new System.Drawing.Point(112, 191);
+            this.textClave.Location = new System.Drawing.Point(112, 172);
             this.textClave.Name = "textClave";
             this.textClave.Size = new System.Drawing.Size(200, 22);
             this.textClave.TabIndex = 3;
@@ -145,7 +126,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 194);
+            this.label3.Location = new System.Drawing.Point(25, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 17);
             this.label3.TabIndex = 28;
@@ -175,8 +156,6 @@
             this.Controls.Add(this.textClave_2);
             this.Controls.Add(this.textClave);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textCarrera);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -197,8 +176,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textID;
-        private System.Windows.Forms.TextBox textCarrera;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;

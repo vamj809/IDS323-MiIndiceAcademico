@@ -92,5 +92,10 @@ namespace MIA_2020.Menus
                 InfoLabel.Text = "";
             }
         }
+
+        private void NuevaAsignatura_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
