@@ -10,6 +10,7 @@ namespace MIA_2020.Menus
     {
         private ColeccionCompleta datosBin;
         private Administrador AdministradorActual;
+        private ModuloConsulta moduloConsulta = new ModuloConsulta();
         public AdminsMenu(ColeccionCompleta _datos = null, Administrador _administrador = null)
         {
             InitializeComponent();
@@ -102,6 +103,37 @@ namespace MIA_2020.Menus
             }
             else {
                 InfoLabel.Text = "";
+            }
+
+            //TablaRanking {ID,Estudiante,GPA,Honor)
+            int total_credito = 0, total_honor = 0;
+            string gpa = "", honor = "";
+            foreach (Estudiante estudiante in datosBin.Estudiantes) {
+                total_credito = 0; total_honor = 0;
+                gpa = ""; honor = "";
+                foreach (Calificacion calificacion in datosBin.Calificaciones.FindAll(cal => cal.ID_Estudiante == estudiante.ID_Estudiante)) {
+                    foreach (Asignatura materia in datosBin.Asignaturas.FindAll(mat => mat.Clave_Materia == calificacion.Clave_Materia)) {
+                        object[] calculos = moduloConsulta.NotaALetra(materia.Credito, calificacion.Nota);
+                        if (calculos[0].ToString() != "R") {
+                            total_credito += materia.Credito;
+                        }
+                        total_honor += int.Parse(calculos[3].ToString()); // <- puntos de honor
+                    }
+                }
+
+                if (total_credito != 0) {
+                    honor = moduloConsulta.getHonor(Math.Round(total_honor * 1.0 / total_credito, 2));
+                    gpa = Math.Round(total_honor * 1.0 / total_credito, 2).ToString();
+                }
+                else {
+                    honor = "-";
+                    gpa = "-";
+                }
+                TablaRanking.Rows.Add(
+                            estudiante.ID_Estudiante,
+                            estudiante.Nombre_Estudiante,
+                            gpa,
+                            honor);
             }
         }
 

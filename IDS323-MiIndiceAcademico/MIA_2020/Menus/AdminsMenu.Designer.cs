@@ -41,6 +41,7 @@
             this.InfoLabel = new System.Windows.Forms.Label();
             this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
             this.Estudiantes = new System.Windows.Forms.TabPage();
+            this.NuevoEstudiante = new System.Windows.Forms.Button();
             this.TablaEstudiantes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.Asignaturas = new System.Windows.Forms.TabPage();
@@ -48,12 +49,16 @@
             this.TablaAsignaturas = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.Profesores = new System.Windows.Forms.TabPage();
+            this.NuevoProfesor = new System.Windows.Forms.Button();
+            this.TablaProfesores = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.Ranking = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.NuevoEstudiante = new System.Windows.Forms.Button();
-            this.NuevoProfesor = new System.Windows.Forms.Button();
-            this.TablaProfesores = new System.Windows.Forms.DataGridView();
+            this.TablaRanking = new System.Windows.Forms.DataGridView();
+            this.ID_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Honor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
@@ -62,8 +67,9 @@
             this.Asignaturas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaAsignaturas)).BeginInit();
             this.Profesores.SuspendLayout();
-            this.Ranking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProfesores)).BeginInit();
+            this.Ranking.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRanking)).BeginInit();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -296,6 +302,16 @@
             this.Estudiantes.TabIndex = 1;
             this.Estudiantes.Text = "Estudiantes";
             // 
+            // NuevoEstudiante
+            // 
+            this.NuevoEstudiante.Location = new System.Drawing.Point(568, 11);
+            this.NuevoEstudiante.Name = "NuevoEstudiante";
+            this.NuevoEstudiante.Size = new System.Drawing.Size(132, 46);
+            this.NuevoEstudiante.TabIndex = 18;
+            this.NuevoEstudiante.Text = "Crear Nuevo";
+            this.NuevoEstudiante.UseVisualStyleBackColor = true;
+            this.NuevoEstudiante.Click += new System.EventHandler(this.NuevoEstudiante_Click);
+            // 
             // TablaEstudiantes
             // 
             this.TablaEstudiantes.AllowUserToAddRows = false;
@@ -377,48 +393,6 @@
             this.Profesores.TabIndex = 4;
             this.Profesores.Text = "Profesores";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(263, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 31);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Profesores";
-            // 
-            // Ranking
-            // 
-            this.Ranking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Ranking.Controls.Add(this.label3);
-            this.Ranking.Location = new System.Drawing.Point(4, 25);
-            this.Ranking.Name = "Ranking";
-            this.Ranking.Size = new System.Drawing.Size(708, 484);
-            this.Ranking.TabIndex = 3;
-            this.Ranking.Text = "Ranking";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(271, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 31);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Ranking";
-            // 
-            // NuevoEstudiante
-            // 
-            this.NuevoEstudiante.Location = new System.Drawing.Point(568, 11);
-            this.NuevoEstudiante.Name = "NuevoEstudiante";
-            this.NuevoEstudiante.Size = new System.Drawing.Size(132, 46);
-            this.NuevoEstudiante.TabIndex = 18;
-            this.NuevoEstudiante.Text = "Crear Nuevo";
-            this.NuevoEstudiante.UseVisualStyleBackColor = true;
-            this.NuevoEstudiante.Click += new System.EventHandler(this.NuevoEstudiante_Click);
-            // 
             // NuevoProfesor
             // 
             this.NuevoProfesor.Location = new System.Drawing.Point(566, 8);
@@ -439,6 +413,90 @@
             this.TablaProfesores.RowTemplate.Height = 24;
             this.TablaProfesores.Size = new System.Drawing.Size(702, 415);
             this.TablaProfesores.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(263, 16);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(156, 31);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Profesores";
+            // 
+            // Ranking
+            // 
+            this.Ranking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Ranking.Controls.Add(this.TablaRanking);
+            this.Ranking.Controls.Add(this.label3);
+            this.Ranking.Location = new System.Drawing.Point(4, 25);
+            this.Ranking.Name = "Ranking";
+            this.Ranking.Size = new System.Drawing.Size(708, 484);
+            this.Ranking.TabIndex = 3;
+            this.Ranking.Text = "Ranking";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(271, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 31);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Ranking";
+            // 
+            // TablaRanking
+            // 
+            this.TablaRanking.AllowUserToAddRows = false;
+            this.TablaRanking.AllowUserToDeleteRows = false;
+            this.TablaRanking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaRanking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Estudiante,
+            this.Estudiante,
+            this.GPA,
+            this.Honor});
+            this.TablaRanking.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaRanking.Location = new System.Drawing.Point(0, 67);
+            this.TablaRanking.Name = "TablaRanking";
+            this.TablaRanking.ReadOnly = true;
+            this.TablaRanking.RowHeadersWidth = 51;
+            this.TablaRanking.RowTemplate.Height = 24;
+            this.TablaRanking.Size = new System.Drawing.Size(708, 417);
+            this.TablaRanking.TabIndex = 20;
+            // 
+            // ID_Estudiante
+            // 
+            this.ID_Estudiante.HeaderText = "ID Estudiante";
+            this.ID_Estudiante.MinimumWidth = 6;
+            this.ID_Estudiante.Name = "ID_Estudiante";
+            this.ID_Estudiante.ReadOnly = true;
+            this.ID_Estudiante.Width = 125;
+            // 
+            // Estudiante
+            // 
+            this.Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Estudiante.HeaderText = "Estudiante";
+            this.Estudiante.MinimumWidth = 6;
+            this.Estudiante.Name = "Estudiante";
+            this.Estudiante.ReadOnly = true;
+            // 
+            // GPA
+            // 
+            this.GPA.HeaderText = "Índice Académico";
+            this.GPA.MinimumWidth = 6;
+            this.GPA.Name = "GPA";
+            this.GPA.ReadOnly = true;
+            this.GPA.Width = 125;
+            // 
+            // Honor
+            // 
+            this.Honor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Honor.HeaderText = "Honorarios";
+            this.Honor.MinimumWidth = 6;
+            this.Honor.Name = "Honor";
+            this.Honor.ReadOnly = true;
             // 
             // AdminsMenu
             // 
@@ -463,9 +521,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.TablaAsignaturas)).EndInit();
             this.Profesores.ResumeLayout(false);
             this.Profesores.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaProfesores)).EndInit();
             this.Ranking.ResumeLayout(false);
             this.Ranking.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaProfesores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRanking)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -499,5 +558,10 @@
         private System.Windows.Forms.Button NuevoEstudiante;
         private System.Windows.Forms.Button NuevoProfesor;
         private System.Windows.Forms.DataGridView TablaProfesores;
+        private System.Windows.Forms.DataGridView TablaRanking;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GPA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Honor;
     }
 }

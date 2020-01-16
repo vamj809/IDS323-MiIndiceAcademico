@@ -39,12 +39,6 @@
             this.InfoLabel = new System.Windows.Forms.Label();
             this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
             this.MisCalificaciones = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.C_GPA_Label = new System.Windows.Forms.Label();
-            this.C_GPA_Value = new System.Windows.Forms.Label();
-            this.Ranking = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
             this.TablaCalificaciones = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asignatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,13 +47,25 @@
             this.ValorDeLaNota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_por_VN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PuntosDeHonor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.C_GPA_Label = new System.Windows.Forms.Label();
+            this.C_GPA_Value = new System.Windows.Forms.Label();
+            this.Ranking = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TablaRanking = new System.Windows.Forms.DataGridView();
+            this.ID_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Honor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
             this.MisCalificaciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).BeginInit();
             this.panel1.SuspendLayout();
             this.Ranking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRanking)).BeginInit();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -240,70 +246,6 @@
             this.MisCalificaciones.TabIndex = 2;
             this.MisCalificaciones.Text = "Calificaciones";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(337, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 31);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Calificaciones";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.C_GPA_Label);
-            this.panel1.Controls.Add(this.C_GPA_Value);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 436);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(942, 48);
-            this.panel1.TabIndex = 18;
-            // 
-            // C_GPA_Label
-            // 
-            this.C_GPA_Label.AutoSize = true;
-            this.C_GPA_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C_GPA_Label.Location = new System.Drawing.Point(332, 15);
-            this.C_GPA_Label.Name = "C_GPA_Label";
-            this.C_GPA_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.C_GPA_Label.Size = new System.Drawing.Size(202, 17);
-            this.C_GPA_Label.TabIndex = 5;
-            this.C_GPA_Label.Text = "Índice Académico General:";
-            // 
-            // C_GPA_Value
-            // 
-            this.C_GPA_Value.AutoSize = true;
-            this.C_GPA_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C_GPA_Value.Location = new System.Drawing.Point(555, 15);
-            this.C_GPA_Value.Name = "C_GPA_Value";
-            this.C_GPA_Value.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.C_GPA_Value.Size = new System.Drawing.Size(13, 17);
-            this.C_GPA_Value.TabIndex = 6;
-            this.C_GPA_Value.Text = "-";
-            // 
-            // Ranking
-            // 
-            this.Ranking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Ranking.Controls.Add(this.label3);
-            this.Ranking.Location = new System.Drawing.Point(4, 25);
-            this.Ranking.Name = "Ranking";
-            this.Ranking.Size = new System.Drawing.Size(942, 484);
-            this.Ranking.TabIndex = 3;
-            this.Ranking.Text = "Ranking";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(367, 16);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 31);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Ranking";
-            // 
             // TablaCalificaciones
             // 
             this.TablaCalificaciones.AllowUserToAddRows = false;
@@ -384,6 +326,122 @@
             this.PuntosDeHonor.ReadOnly = true;
             this.PuntosDeHonor.Width = 125;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(337, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 31);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Calificaciones";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.C_GPA_Label);
+            this.panel1.Controls.Add(this.C_GPA_Value);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 436);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(942, 48);
+            this.panel1.TabIndex = 18;
+            // 
+            // C_GPA_Label
+            // 
+            this.C_GPA_Label.AutoSize = true;
+            this.C_GPA_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C_GPA_Label.Location = new System.Drawing.Point(332, 15);
+            this.C_GPA_Label.Name = "C_GPA_Label";
+            this.C_GPA_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.C_GPA_Label.Size = new System.Drawing.Size(202, 17);
+            this.C_GPA_Label.TabIndex = 5;
+            this.C_GPA_Label.Text = "Índice Académico General:";
+            // 
+            // C_GPA_Value
+            // 
+            this.C_GPA_Value.AutoSize = true;
+            this.C_GPA_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C_GPA_Value.Location = new System.Drawing.Point(555, 15);
+            this.C_GPA_Value.Name = "C_GPA_Value";
+            this.C_GPA_Value.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.C_GPA_Value.Size = new System.Drawing.Size(13, 17);
+            this.C_GPA_Value.TabIndex = 6;
+            this.C_GPA_Value.Text = "-";
+            // 
+            // Ranking
+            // 
+            this.Ranking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Ranking.Controls.Add(this.TablaRanking);
+            this.Ranking.Controls.Add(this.label3);
+            this.Ranking.Location = new System.Drawing.Point(4, 25);
+            this.Ranking.Name = "Ranking";
+            this.Ranking.Size = new System.Drawing.Size(942, 484);
+            this.Ranking.TabIndex = 3;
+            this.Ranking.Text = "Ranking";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(367, 16);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 31);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Ranking";
+            // 
+            // TablaRanking
+            // 
+            this.TablaRanking.AllowUserToAddRows = false;
+            this.TablaRanking.AllowUserToDeleteRows = false;
+            this.TablaRanking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaRanking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Estudiante,
+            this.Estudiante,
+            this.GPA,
+            this.Honor});
+            this.TablaRanking.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaRanking.Location = new System.Drawing.Point(0, 67);
+            this.TablaRanking.Name = "TablaRanking";
+            this.TablaRanking.ReadOnly = true;
+            this.TablaRanking.RowHeadersWidth = 51;
+            this.TablaRanking.RowTemplate.Height = 24;
+            this.TablaRanking.Size = new System.Drawing.Size(942, 417);
+            this.TablaRanking.TabIndex = 21;
+            // 
+            // ID_Estudiante
+            // 
+            this.ID_Estudiante.HeaderText = "ID Estudiante";
+            this.ID_Estudiante.MinimumWidth = 6;
+            this.ID_Estudiante.Name = "ID_Estudiante";
+            this.ID_Estudiante.ReadOnly = true;
+            this.ID_Estudiante.Width = 125;
+            // 
+            // Estudiante
+            // 
+            this.Estudiante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Estudiante.HeaderText = "Estudiante";
+            this.Estudiante.MinimumWidth = 6;
+            this.Estudiante.Name = "Estudiante";
+            this.Estudiante.ReadOnly = true;
+            // 
+            // GPA
+            // 
+            this.GPA.HeaderText = "Índice Académico";
+            this.GPA.MinimumWidth = 6;
+            this.GPA.Name = "GPA";
+            this.GPA.ReadOnly = true;
+            this.GPA.Width = 125;
+            // 
+            // Honor
+            // 
+            this.Honor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Honor.HeaderText = "Honorarios";
+            this.Honor.MinimumWidth = 6;
+            this.Honor.Name = "Honor";
+            this.Honor.ReadOnly = true;
+            // 
             // StudentsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -401,11 +459,12 @@
             this.MiCuenta.PerformLayout();
             this.MisCalificaciones.ResumeLayout(false);
             this.MisCalificaciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Ranking.ResumeLayout(false);
             this.Ranking.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRanking)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,5 +497,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorDeLaNota;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_por_VN;
         private System.Windows.Forms.DataGridViewTextBoxColumn PuntosDeHonor;
+        private System.Windows.Forms.DataGridView TablaRanking;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GPA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Honor;
     }
 }

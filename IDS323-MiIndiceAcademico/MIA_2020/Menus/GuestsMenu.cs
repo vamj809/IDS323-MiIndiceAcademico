@@ -42,7 +42,9 @@ namespace MIA_2020.Menus
             int total_credito = 0, total_honor = 0;
             string gpa = "", honor = "";
             foreach(Estudiante estudiante in datosBin.Estudiantes) {
-                foreach(Calificacion calificacion in datosBin.Calificaciones.FindAll(cal => cal.ID_Estudiante == estudiante.ID_Estudiante)){
+                total_credito = 0; total_honor = 0;
+                gpa = ""; honor = "";
+                foreach (Calificacion calificacion in datosBin.Calificaciones.FindAll(cal => cal.ID_Estudiante == estudiante.ID_Estudiante)){
                     foreach(Asignatura materia in datosBin.Asignaturas.FindAll(mat => mat.Clave_Materia == calificacion.Clave_Materia)){
                         object[] calculos = moduloConsulta.NotaALetra(materia.Credito, calificacion.Nota);
                         if (calculos[0].ToString() != "R") {
