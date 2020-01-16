@@ -32,6 +32,9 @@ namespace MIA_2020
             }
             else if (textCreditos.Value == 0) {
                 textCreditos.Focus();
+            } else if(CC.Asignaturas.FindAll(x => x.Clave_Materia == textClave.Text).Count > 0) {
+                MessageBox.Show("Clave de asignatura ya existe.", "Selección incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textClave.Focus();
             }
             else {
                 CC.Asignaturas.Add(new Asignatura() {
@@ -91,7 +94,7 @@ namespace MIA_2020
 
         private void textProfesor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(textProfesor.SelectedItem.ToString() + "\n" + textProfesor.SelectedValue?.ToString());
+
         }
     }
 }

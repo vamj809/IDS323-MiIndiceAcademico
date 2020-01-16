@@ -39,17 +39,17 @@
             this.InfoLabel = new System.Windows.Forms.Label();
             this.MiCuenta_TitleLabel = new System.Windows.Forms.Label();
             this.MisCalificaciones = new System.Windows.Forms.TabPage();
+            this.NuevaCalificacion = new System.Windows.Forms.Button();
+            this.TablaCalificaciones = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.Ranking = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.TablaCalificaciones = new System.Windows.Forms.DataGridView();
-            this.NuevaAsignatura = new System.Windows.Forms.Button();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
             this.MisCalificaciones.SuspendLayout();
-            this.Ranking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).BeginInit();
+            this.Ranking.SuspendLayout();
             this.SuspendLayout();
             // 
             // SubMenuPanel
@@ -221,7 +221,7 @@
             // MisCalificaciones
             // 
             this.MisCalificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MisCalificaciones.Controls.Add(this.NuevaAsignatura);
+            this.MisCalificaciones.Controls.Add(this.NuevaCalificacion);
             this.MisCalificaciones.Controls.Add(this.TablaCalificaciones);
             this.MisCalificaciones.Controls.Add(this.label2);
             this.MisCalificaciones.Location = new System.Drawing.Point(4, 25);
@@ -229,6 +229,30 @@
             this.MisCalificaciones.Size = new System.Drawing.Size(708, 484);
             this.MisCalificaciones.TabIndex = 2;
             this.MisCalificaciones.Text = "Calificaciones";
+            // 
+            // NuevaCalificacion
+            // 
+            this.NuevaCalificacion.Location = new System.Drawing.Point(559, 14);
+            this.NuevaCalificacion.Name = "NuevaCalificacion";
+            this.NuevaCalificacion.Size = new System.Drawing.Size(141, 46);
+            this.NuevaCalificacion.TabIndex = 18;
+            this.NuevaCalificacion.Text = "Asignar Nueva";
+            this.NuevaCalificacion.UseVisualStyleBackColor = true;
+            this.NuevaCalificacion.Click += new System.EventHandler(this.NuevaCalificacion_Click);
+            // 
+            // TablaCalificaciones
+            // 
+            this.TablaCalificaciones.AllowUserToAddRows = false;
+            this.TablaCalificaciones.AllowUserToDeleteRows = false;
+            this.TablaCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaCalificaciones.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TablaCalificaciones.Location = new System.Drawing.Point(0, 66);
+            this.TablaCalificaciones.Name = "TablaCalificaciones";
+            this.TablaCalificaciones.ReadOnly = true;
+            this.TablaCalificaciones.RowHeadersWidth = 51;
+            this.TablaCalificaciones.RowTemplate.Height = 24;
+            this.TablaCalificaciones.Size = new System.Drawing.Size(708, 418);
+            this.TablaCalificaciones.TabIndex = 17;
             // 
             // label2
             // 
@@ -262,30 +286,6 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
             // 
-            // TablaCalificaciones
-            // 
-            this.TablaCalificaciones.AllowUserToAddRows = false;
-            this.TablaCalificaciones.AllowUserToDeleteRows = false;
-            this.TablaCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaCalificaciones.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TablaCalificaciones.Location = new System.Drawing.Point(0, 66);
-            this.TablaCalificaciones.Name = "TablaCalificaciones";
-            this.TablaCalificaciones.ReadOnly = true;
-            this.TablaCalificaciones.RowHeadersWidth = 51;
-            this.TablaCalificaciones.RowTemplate.Height = 24;
-            this.TablaCalificaciones.Size = new System.Drawing.Size(708, 418);
-            this.TablaCalificaciones.TabIndex = 17;
-            // 
-            // NuevaAsignatura
-            // 
-            this.NuevaAsignatura.Location = new System.Drawing.Point(559, 14);
-            this.NuevaAsignatura.Name = "NuevaAsignatura";
-            this.NuevaAsignatura.Size = new System.Drawing.Size(141, 46);
-            this.NuevaAsignatura.TabIndex = 18;
-            this.NuevaAsignatura.Text = "Asignar Nueva";
-            this.NuevaAsignatura.UseVisualStyleBackColor = true;
-            this.NuevaAsignatura.Click += new System.EventHandler(this.NuevaAsignatura_Click);
-            // 
             // TeachersMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -303,9 +303,9 @@
             this.MiCuenta.PerformLayout();
             this.MisCalificaciones.ResumeLayout(false);
             this.MisCalificaciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).EndInit();
             this.Ranking.ResumeLayout(false);
             this.Ranking.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaCalificaciones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,6 +328,6 @@
         private System.Windows.Forms.Label InfoLabel;
         private System.Windows.Forms.Label MiCuenta_TitleLabel;
         private System.Windows.Forms.DataGridView TablaCalificaciones;
-        private System.Windows.Forms.Button NuevaAsignatura;
+        private System.Windows.Forms.Button NuevaCalificacion;
     }
 }

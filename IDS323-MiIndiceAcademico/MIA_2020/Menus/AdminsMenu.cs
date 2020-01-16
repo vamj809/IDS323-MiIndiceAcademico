@@ -65,6 +65,7 @@ namespace MIA_2020.Menus
         {
             if(SeleccionButton.Checked) {
                 TabControl.SelectedTab = Estudiantes;
+                TablaEstudiantes.Refresh();
             }
         }
 
@@ -72,12 +73,14 @@ namespace MIA_2020.Menus
         {
             if(MisCalificacionesButton.Checked) {
                 TabControl.SelectedTab = Asignaturas;
+                TablaAsignaturas.Refresh();
             }
         }
         private void ProfesoresButton_CheckedChanged(object sender, EventArgs e)
         {
             if (ProfesoresButton.Checked) {
                 TabControl.SelectedTab = Profesores;
+                TablaProfesores.Refresh();
             }
         }
 
@@ -107,6 +110,7 @@ namespace MIA_2020.Menus
             NewSubject AddSubjectForm = new NewSubject(datosBin);
             AddSubjectForm.ShowDialog();
             datosBin.RecargarAsignaturas();
+            TablaAsignaturas.DataSource = datosBin.Asignaturas;
             TablaAsignaturas.Refresh();
         }
 
@@ -115,6 +119,7 @@ namespace MIA_2020.Menus
             NewStudent AddStudentForm = new NewStudent(datosBin);
             AddStudentForm.ShowDialog();
             datosBin.RecargarEstudiantes();
+            TablaEstudiantes.DataSource = datosBin.Estudiantes;
             TablaEstudiantes.Refresh();
         }
 
@@ -123,6 +128,7 @@ namespace MIA_2020.Menus
             NewTeacher AddTeacherForm = new NewTeacher(datosBin);
             AddTeacherForm.ShowDialog();
             datosBin.RecargarProfesores();
+            TablaProfesores.DataSource = datosBin.Profesores;
             TablaProfesores.Refresh();
         }
     }

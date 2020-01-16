@@ -65,6 +65,7 @@ namespace MIA_2020.Menus
         {
             if(CalificacionesButton.Checked) {
                 TabControl.SelectedTab = MisCalificaciones;
+                TablaCalificaciones.Refresh();
             }
         }
 
@@ -100,11 +101,12 @@ namespace MIA_2020.Menus
             TablaCalificaciones.DataSource = misCalificaciones;
         }
 
-        private void NuevaAsignatura_Click(object sender, EventArgs e)
+        private void NuevaCalificacion_Click(object sender, EventArgs e)
         {
             NewScore AddScoreForm = new NewScore(datosBin);
             AddScoreForm.ShowDialog();
             datosBin.RecargarProfesores();
+            TablaCalificaciones.DataSource = datosBin.Profesores;
             TablaCalificaciones.Refresh();
         }
     }
