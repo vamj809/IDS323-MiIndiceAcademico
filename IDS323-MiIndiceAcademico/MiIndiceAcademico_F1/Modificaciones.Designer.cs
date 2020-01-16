@@ -1,4 +1,4 @@
-﻿namespace MIA_2020
+﻿namespace MiIndiceAcademico_F1
 {
     partial class Modificaciones
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace MiIndiceAcademico_F1
+namespace MiIndiceAcademico_F1.Eliminar
 {
     public partial class Eliminar_Estudiantes : Form
     {

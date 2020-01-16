@@ -1,4 +1,4 @@
-﻿namespace MIA_2020.Eliminar
+﻿namespace MiIndiceAcademico_F1.Eliminar
 {
     partial class Eliminar_Asignaturas
     {

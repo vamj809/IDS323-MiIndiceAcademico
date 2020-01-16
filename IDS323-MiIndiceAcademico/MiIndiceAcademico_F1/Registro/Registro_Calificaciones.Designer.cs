@@ -1,4 +1,4 @@
-﻿namespace MIA_2020.Registro
+﻿namespace MiIndiceAcademico_F1.Registro
 {
     partial class Registro_Calificaciones
     {

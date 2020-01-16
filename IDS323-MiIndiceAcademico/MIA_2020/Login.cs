@@ -8,35 +8,44 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MIA_2020.Objetos;
 
 namespace MIA_2020
 {
     public partial class Login : Form
     {
+        ColeccionCompleta datosBin;
         public Login()
         {
             InitializeComponent();
+            datosBin = new ColeccionCompleta();
+            //Debug Options:
+            this.Hide();
+            new Menus.StudentsMenu().Show(this);
         }
 
         private void OkButton_Click(object sender, EventArgs e)
         {
             if (UserTextBox.Text == PasswordTextBox.Text && UserTextBox.Text == "admin") {
-                this.Hide();
 
                 Form Menu;
-                if (StudentsButton.Checked)
+                if (StudentsButton.Checked) { 
                     Menu = new Menus.StudentsMenu();
-                else if (TeachersButton.Checked)
+                }
+                else if (TeachersButton.Checked) { 
                     Menu = new Menus.TeachersMenu();
-                else if (AdminsButton.Checked)
+                }
+                else if (AdminsButton.Checked) { 
                     Menu = new Menus.AdminsMenu();
-                else
+                }
+                else { 
                     Menu = new Menus.GuestsMenu();
+                }
 
-                Menu.ShowDialog(this);
+                this.Hide();
+                Menu.Show(this);
                 //this.Hide();
                 //new MainMenu(UserTextBox.Text).ShowDialog(this);
-                this.Close();
             }
             else {
                 MessageBox.Show("Usuario y/o contraseña inválidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);

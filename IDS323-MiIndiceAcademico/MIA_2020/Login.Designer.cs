@@ -61,7 +61,7 @@
             this.StudentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.StudentsButton.Location = new System.Drawing.Point(493, 0);
-            this.StudentsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StudentsButton.Margin = new System.Windows.Forms.Padding(4);
             this.StudentsButton.Name = "StudentsButton";
             this.StudentsButton.Size = new System.Drawing.Size(118, 80);
             this.StudentsButton.TabIndex = 5;
@@ -84,7 +84,7 @@
             this.TeachersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TeachersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.TeachersButton.Location = new System.Drawing.Point(611, 0);
-            this.TeachersButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeachersButton.Margin = new System.Windows.Forms.Padding(4);
             this.TeachersButton.Name = "TeachersButton";
             this.TeachersButton.Size = new System.Drawing.Size(121, 80);
             this.TeachersButton.TabIndex = 6;
@@ -106,7 +106,7 @@
             this.AdminsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdminsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.AdminsButton.Location = new System.Drawing.Point(732, 0);
-            this.AdminsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AdminsButton.Margin = new System.Windows.Forms.Padding(4);
             this.AdminsButton.Name = "AdminsButton";
             this.AdminsButton.Size = new System.Drawing.Size(144, 80);
             this.AdminsButton.TabIndex = 7;
@@ -123,7 +123,7 @@
             this.panel1.Controls.Add(this.AdminsButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(876, 80);
             this.panel1.TabIndex = 4;
@@ -143,7 +143,7 @@
             this.GuestsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuestsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.GuestsButton.Location = new System.Drawing.Point(413, 0);
-            this.GuestsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GuestsButton.Margin = new System.Windows.Forms.Padding(4);
             this.GuestsButton.Name = "GuestsButton";
             this.GuestsButton.Size = new System.Drawing.Size(80, 80);
             this.GuestsButton.TabIndex = 8;
@@ -155,7 +155,7 @@
             this.LogoMIA.BackColor = System.Drawing.Color.Azure;
             this.LogoMIA.Image = global::MIA_2020.Properties.Resources.OurLogo;
             this.LogoMIA.Location = new System.Drawing.Point(34, 115);
-            this.LogoMIA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogoMIA.Margin = new System.Windows.Forms.Padding(4);
             this.LogoMIA.Name = "LogoMIA";
             this.LogoMIA.Size = new System.Drawing.Size(285, 255);
             this.LogoMIA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -241,7 +241,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CancelButton = this.CancelButton;
             this.ClientSize = new System.Drawing.Size(876, 403);
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.CancelButton);
@@ -254,7 +253,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciando Sesión";

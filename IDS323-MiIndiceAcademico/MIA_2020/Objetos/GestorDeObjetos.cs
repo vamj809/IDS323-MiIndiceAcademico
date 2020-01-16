@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MIA_2020.Objetos;
 
-namespace MIA_2020.Resources
+namespace MIA_2020.Objetos
 {
     class GestorDeObjetos
     {
