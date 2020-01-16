@@ -23,9 +23,9 @@ namespace MIA_2020
                 UserTextBox.Text = ID;
             }
             //Debug Options:
-            UserTextBox.Text = 1201001.ToString();
-            PasswordTextBox.Text = "1234";
-            OkButton.PerformClick();
+            //UserTextBox.Text = 1201001.ToString();
+            //PasswordTextBox.Text = "1234";
+            //OkButton.PerformClick();
             //this.Hide();
             //new Menus.StudentsMenu().Show(this);
         }

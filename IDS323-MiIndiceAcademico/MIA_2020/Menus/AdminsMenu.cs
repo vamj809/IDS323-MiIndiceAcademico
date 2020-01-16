@@ -135,6 +135,7 @@ namespace MIA_2020.Menus
                             gpa,
                             honor);
             }
+            TablaRanking.Sort(TablaRanking.Columns[2], System.ComponentModel.ListSortDirection.Descending);
         }
 
         private void NuevaAsignatura_Click(object sender, EventArgs e)
