@@ -12,7 +12,7 @@ namespace MIA_2020.Resources
 {
     public partial class SplashScreen : Form
     {
-        int i = 0;
+        int CounterIndex = 0, LimitInMiliseconds = 2000;
         public SplashScreen()
         {
             InitializeComponent();
@@ -20,9 +20,25 @@ namespace MIA_2020.Resources
 
         private void loadAndCloseTimer_Tick(object sender, EventArgs e)
         {
-            i++;
-            if(i >= 20) {
+            CounterIndex++;
+            if(CounterIndex >= LimitInMiliseconds/100) {
+                this.Hide();
+                loadAndCloseTimer.Stop();
+                loadAndCloseTimer.Enabled = false;
                 this.Close();
+            }
+        }
+
+        private void SplashScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login LoginForm = new Login();
+            LoginForm.ShowDialog(this);
+        }
+
+        private void SplashScreen_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape) {
+                CounterIndex = LimitInMiliseconds;
             }
         }
     }

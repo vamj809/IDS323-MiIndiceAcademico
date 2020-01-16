@@ -16,16 +16,36 @@ namespace MIA_2020
         public Login()
         {
             InitializeComponent();
-            /*this.BackgroundImage = Properties.Resources.OurLogo;
-            this.TransparencyKey = Color.White;
-            this.BackColor = Color.White;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            */
+        }
 
-            //this.Hide();
-            Resources.SplashScreen x = new Resources.SplashScreen();
-            x.ShowDialog();
+        private void OkButton_Click(object sender, EventArgs e)
+        {
+            if (UserTextBox.Text == PasswordTextBox.Text && UserTextBox.Text == "admin") {
+                this.Hide();
+
+                Form Menu;
+                if (StudentsButton.Checked)
+                    Menu = new Menus.StudentsMenu();
+                else if (TeachersButton.Checked)
+                    Menu = new Menus.TeachersMenu();
+                else if (AdminsButton.Checked)
+                    Menu = new Menus.AdminsMenu();
+                else
+                    Menu = new Menus.GuestsMenu();
+
+                Menu.ShowDialog(this);
+                //this.Hide();
+                //new MainMenu(UserTextBox.Text).ShowDialog(this);
+                this.Close();
+            }
+            else {
+                MessageBox.Show("Usuario y/o contraseña inválidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
