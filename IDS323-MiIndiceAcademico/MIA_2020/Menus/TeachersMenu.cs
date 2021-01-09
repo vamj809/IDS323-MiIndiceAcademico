@@ -143,5 +143,10 @@ namespace MIA_2020.Menus
             TablaCalificaciones.DataSource = datosBin.Profesores;
             TablaCalificaciones.Refresh();
         }
+
+        private void TeachersMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LogOffButton.PerformClick();
+        }
     }
 }

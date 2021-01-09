@@ -120,8 +120,7 @@ namespace MIA_2020
         private void NewStudent_Click(object sender, EventArgs e)
         {
             NewStudent AddStudentForm = new NewStudent(datosBin,true);
-            this.Hide();
-            AddStudentForm.Show();
+            AddStudentForm.ShowDialog();
             datosBin.RecargarEstudiantes();
         }
 
@@ -148,7 +147,6 @@ namespace MIA_2020
         private void button1_Click(object sender, EventArgs e)
         {
             NewTeacher AddTeacherForm = new NewTeacher(datosBin);
-            this.Hide();
             AddTeacherForm.ShowDialog();
             datosBin.RecargarProfesores();
         }
@@ -156,9 +154,13 @@ namespace MIA_2020
         private void button2_Click(object sender, EventArgs e)
         {
             NewAdmin AddAdminForm = new NewAdmin(datosBin);
-            this.Hide();
             AddAdminForm.ShowDialog();
             datosBin.RecargarAdministradores();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
