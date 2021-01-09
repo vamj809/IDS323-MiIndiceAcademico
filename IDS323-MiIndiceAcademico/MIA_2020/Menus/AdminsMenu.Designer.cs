@@ -53,12 +53,12 @@
             this.TablaProfesores = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.Ranking = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
             this.TablaRanking = new System.Windows.Forms.DataGridView();
             this.ID_Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Honor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
             this.SubMenuPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.MiCuenta.SuspendLayout();
@@ -436,17 +436,6 @@
             this.Ranking.TabIndex = 3;
             this.Ranking.Text = "Ranking";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(271, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 31);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Ranking";
-            // 
             // TablaRanking
             // 
             this.TablaRanking.AllowUserToAddRows = false;
@@ -498,6 +487,17 @@
             this.Honor.Name = "Honor";
             this.Honor.ReadOnly = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(271, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 31);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Ranking";
+            // 
             // AdminsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -508,6 +508,7 @@
             this.Controls.Add(this.SubMenuPanel);
             this.Name = "AdminsMenu";
             this.Text = "Menu del Administrador";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminsMenu_FormClosing);
             this.Load += new System.EventHandler(this.AdminsMenu_Load);
             this.SubMenuPanel.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);

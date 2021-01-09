@@ -45,7 +45,6 @@ namespace MIA_2020.Menus
 
         private void LogOffButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Login LoginForm = new Login();
             LoginForm.Show();
         }
@@ -163,6 +162,11 @@ namespace MIA_2020.Menus
             datosBin.RecargarProfesores();
             TablaProfesores.DataSource = datosBin.Profesores;
             TablaProfesores.Refresh();
+        }
+
+        private void AdminsMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LogOffButton.PerformClick();
         }
     }
 }

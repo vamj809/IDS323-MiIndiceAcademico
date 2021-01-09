@@ -157,6 +157,7 @@
             this.Controls.Add(this.label3);
             this.Name = "GuestsMenu";
             this.Text = "Menú de Invitados";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GuestsMenu_FormClosing);
             this.Load += new System.EventHandler(this.GuestsMenu_Load);
             this.SubMenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TablaRanking)).EndInit();

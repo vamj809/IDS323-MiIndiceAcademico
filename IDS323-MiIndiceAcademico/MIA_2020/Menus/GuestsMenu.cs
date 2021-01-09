@@ -70,5 +70,10 @@ namespace MIA_2020.Menus
             }
             TablaRanking.Sort(TablaRanking.Columns[2], System.ComponentModel.ListSortDirection.Descending);
         }
+
+        private void GuestsMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LogOffButton.PerformClick();
+        }
     }
 }
