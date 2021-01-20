@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiIndiceAcademico_F1", "MiI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIA_2020", "MIA_2020\MIA_2020.csproj", "{F1FC3A17-6B16-475B-8CC5-C3B707E72CE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_Testing", "GUI_Testing\GUI_Testing.csproj", "{FB5E63A8-DF71-42E5-A131-40AE9CB21F19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F1FC3A17-6B16-475B-8CC5-C3B707E72CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1FC3A17-6B16-475B-8CC5-C3B707E72CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1FC3A17-6B16-475B-8CC5-C3B707E72CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB5E63A8-DF71-42E5-A131-40AE9CB21F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5E63A8-DF71-42E5-A131-40AE9CB21F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5E63A8-DF71-42E5-A131-40AE9CB21F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5E63A8-DF71-42E5-A131-40AE9CB21F19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
