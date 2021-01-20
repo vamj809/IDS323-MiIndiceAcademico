@@ -5,6 +5,7 @@ using OpenQA.Selenium.Remote;
 
 namespace GUI_Testing
 {
+    [TestClass]
     public class TC34_LogInLogOut : TestSession
     {
         [ClassInitialize]
@@ -21,7 +22,13 @@ namespace GUI_Testing
             if (LogIn(User, Passwd, TipoUsuario) == false) {
                 return false;
             }
+            //Si llega a este punto, se asume que se abrió la pantalla del menú.
+            var CerrarSesion = GetElement("LogOffButton");
+            CerrarSesion.Click();
 
+            //Se hace click en un lugar aleatorio de la pantalla de inicio de sesión para asegurar que volvió a esta pantalla.
+            var AseguraLogIn = GetElement("Login");
+            AseguraLogIn.Click();
             return true;
         }
 

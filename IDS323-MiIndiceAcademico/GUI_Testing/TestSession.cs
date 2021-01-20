@@ -8,7 +8,7 @@ namespace GUI_Testing
     public class TestSession
     {
         protected const string WindowsApplicationDriverUrl = "http://127.0.0.1:4723";
-        private const string TestApp = @"C:\Users\vamj809\Source\Repos\IDS323-MiIndiceAcademico\IDS323-MiIndiceAcademico\MIA_2020\bin\Debug\MIA_2020.exe";
+        private static string TestApp = System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName + @"\MIA_2020\bin\Debug\MIA_2020.exe";
 
         protected static WindowsDriver<WindowsElement> session;
         public static WindowsDriver<WindowsElement> desktopSession;
