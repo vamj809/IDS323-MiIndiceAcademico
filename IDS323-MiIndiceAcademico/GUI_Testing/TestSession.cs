@@ -51,7 +51,7 @@ namespace GUI_Testing
             }
         }
 
-        public WindowsElement GetElement(string AccesibilityId)
+        public WindowsElement GetElement(string AccesibilityId, bool UseName = false)
         {
             WindowsElement Elemento = null;
 
@@ -59,7 +59,12 @@ namespace GUI_Testing
                 try {
                     if (Elemento != null)
                         break;
-                    Elemento = desktopSession.FindElementByAccessibilityId(AccesibilityId);
+                    if (UseName) {
+                        Elemento = desktopSession.FindElementByName(AccesibilityId);
+                    }
+                    else { 
+                        Elemento = desktopSession.FindElementByAccessibilityId(AccesibilityId);
+                    }
                     System.Threading.Thread.Sleep(100);
                 }
                 catch { }
