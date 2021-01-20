@@ -20,14 +20,6 @@ namespace GUI_Testing
             TearDown();
         }
 
-        public bool OpcionesMenu(string User, string Passwd, int TipoUsuario = 0) { 
-            if (LogIn(User, Passwd, TipoUsuario) == false) {
-                return false;
-            }
-
-            return true;
-        }
-
         public bool CanMove()
         {
             var MyTitleBar = GetElement("Login").FindElementByAccessibilityId("TitleBar");

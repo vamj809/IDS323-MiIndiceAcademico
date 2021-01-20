@@ -37,9 +37,8 @@ namespace MIA_2020.Menus
 
         private void LogOffButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login LoginForm = new Login();
-            LoginForm.Show();
+            Hide();
+            new Login().Show();
         }
 
         private void CloseSystem_Click(object sender, EventArgs e)
