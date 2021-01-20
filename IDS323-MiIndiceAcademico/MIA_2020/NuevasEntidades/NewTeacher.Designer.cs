@@ -43,36 +43,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 74);
+            this.label1.Location = new System.Drawing.Point(19, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 17);
+            this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID:";
             // 
             // textID
             // 
-            this.textID.Location = new System.Drawing.Point(112, 71);
+            this.textID.Location = new System.Drawing.Point(84, 58);
+            this.textID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textID.Name = "textID";
             this.textID.ReadOnly = true;
-            this.textID.Size = new System.Drawing.Size(111, 22);
+            this.textID.Size = new System.Drawing.Size(84, 20);
             this.textID.TabIndex = 99;
             this.textID.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 118);
+            this.label2.Location = new System.Drawing.Point(19, 96);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 26;
             this.label2.Text = "Nombre:";
             // 
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(193, 286);
+            this.button2.Location = new System.Drawing.Point(145, 232);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 31);
+            this.button2.Size = new System.Drawing.Size(78, 25);
             this.button2.TabIndex = 6;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(49, 286);
+            this.button1.Location = new System.Drawing.Point(37, 232);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 31);
+            this.button1.Size = new System.Drawing.Size(78, 25);
             this.button1.TabIndex = 5;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -90,35 +95,39 @@
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(112, 118);
+            this.textNombre.Location = new System.Drawing.Point(84, 96);
+            this.textNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(200, 22);
+            this.textNombre.Size = new System.Drawing.Size(151, 20);
             this.textNombre.TabIndex = 1;
             this.textNombre.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 210);
+            this.label6.Location = new System.Drawing.Point(19, 171);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 34);
+            this.label6.Size = new System.Drawing.Size(64, 26);
             this.label6.TabIndex = 31;
             this.label6.Text = "Nueva \r\nContraseña:";
             // 
             // textClave_2
             // 
-            this.textClave_2.Location = new System.Drawing.Point(112, 222);
+            this.textClave_2.Location = new System.Drawing.Point(84, 180);
+            this.textClave_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textClave_2.Name = "textClave_2";
-            this.textClave_2.Size = new System.Drawing.Size(200, 22);
+            this.textClave_2.Size = new System.Drawing.Size(151, 20);
             this.textClave_2.TabIndex = 4;
             this.textClave_2.UseSystemPasswordChar = true;
             this.textClave_2.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
             // 
             // textClave
             // 
-            this.textClave.Location = new System.Drawing.Point(112, 166);
+            this.textClave.Location = new System.Drawing.Point(84, 135);
+            this.textClave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textClave.Name = "textClave";
-            this.textClave.Size = new System.Drawing.Size(200, 22);
+            this.textClave.Size = new System.Drawing.Size(151, 20);
             this.textClave.TabIndex = 3;
             this.textClave.UseSystemPasswordChar = true;
             this.textClave.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
@@ -126,9 +135,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 169);
+            this.label3.Location = new System.Drawing.Point(19, 137);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
+            this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 28;
             this.label3.Text = "Contraseña:";
             // 
@@ -136,21 +146,21 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.TitleLabel.Location = new System.Drawing.Point(52, 20);
-            this.TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TitleLabel.Location = new System.Drawing.Point(39, 16);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(211, 31);
+            this.TitleLabel.Size = new System.Drawing.Size(102, 26);
             this.TitleLabel.TabIndex = 32;
-            this.TitleLabel.Text = "Nuevo Maestro";
+            this.TitleLabel.Text = "Profesor";
             // 
             // NewTeacher
             // 
             this.AcceptButton = this.button1;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(348, 343);
+            this.ClientSize = new System.Drawing.Size(261, 279);
+            this.ControlBox = false;
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textClave_2);
@@ -162,9 +172,10 @@
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.textID);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NewTeacher";
-            this.Text = "NewStudent";
+            this.Text = "Nuevo Profesor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewTeacher_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NewTeacher_KeyDown);
             this.ResumeLayout(false);

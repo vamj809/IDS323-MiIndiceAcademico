@@ -69,15 +69,17 @@
             this.SubMenuPanel.Controls.Add(this.TopFillPanel);
             this.SubMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SubMenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.SubMenuPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SubMenuPanel.Name = "SubMenuPanel";
-            this.SubMenuPanel.Size = new System.Drawing.Size(188, 513);
+            this.SubMenuPanel.Size = new System.Drawing.Size(141, 417);
             this.SubMenuPanel.TabIndex = 0;
             // 
             // CloseSystem
             // 
-            this.CloseSystem.Location = new System.Drawing.Point(3, 461);
+            this.CloseSystem.Location = new System.Drawing.Point(2, 375);
+            this.CloseSystem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CloseSystem.Name = "CloseSystem";
-            this.CloseSystem.Size = new System.Drawing.Size(182, 46);
+            this.CloseSystem.Size = new System.Drawing.Size(136, 37);
             this.CloseSystem.TabIndex = 15;
             this.CloseSystem.Text = "Cerrar Sistema";
             this.CloseSystem.UseVisualStyleBackColor = true;
@@ -85,9 +87,10 @@
             // 
             // LogOffButton
             // 
-            this.LogOffButton.Location = new System.Drawing.Point(3, 410);
+            this.LogOffButton.Location = new System.Drawing.Point(2, 333);
+            this.LogOffButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogOffButton.Name = "LogOffButton";
-            this.LogOffButton.Size = new System.Drawing.Size(182, 46);
+            this.LogOffButton.Size = new System.Drawing.Size(136, 37);
             this.LogOffButton.TabIndex = 14;
             this.LogOffButton.Text = "Cerrar Sesión";
             this.LogOffButton.UseVisualStyleBackColor = true;
@@ -107,10 +110,9 @@
             this.RankingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.RankingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RankingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.RankingButton.Location = new System.Drawing.Point(0, 283);
-            this.RankingButton.Margin = new System.Windows.Forms.Padding(4);
+            this.RankingButton.Location = new System.Drawing.Point(0, 230);
             this.RankingButton.Name = "RankingButton";
-            this.RankingButton.Size = new System.Drawing.Size(188, 60);
+            this.RankingButton.Size = new System.Drawing.Size(141, 49);
             this.RankingButton.TabIndex = 12;
             this.RankingButton.Text = "Ranking";
             this.RankingButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,10 +132,9 @@
             this.CalificacionesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CalificacionesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalificacionesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.CalificacionesButton.Location = new System.Drawing.Point(0, 223);
-            this.CalificacionesButton.Margin = new System.Windows.Forms.Padding(4);
+            this.CalificacionesButton.Location = new System.Drawing.Point(0, 181);
             this.CalificacionesButton.Name = "CalificacionesButton";
-            this.CalificacionesButton.Size = new System.Drawing.Size(188, 60);
+            this.CalificacionesButton.Size = new System.Drawing.Size(141, 49);
             this.CalificacionesButton.TabIndex = 11;
             this.CalificacionesButton.Text = "Calificaciones";
             this.CalificacionesButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,10 +155,9 @@
             this.MiCuentaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.MiCuentaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MiCuentaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.MiCuentaButton.Location = new System.Drawing.Point(0, 163);
-            this.MiCuentaButton.Margin = new System.Windows.Forms.Padding(4);
+            this.MiCuentaButton.Location = new System.Drawing.Point(0, 132);
             this.MiCuentaButton.Name = "MiCuentaButton";
-            this.MiCuentaButton.Size = new System.Drawing.Size(188, 60);
+            this.MiCuentaButton.Size = new System.Drawing.Size(141, 49);
             this.MiCuentaButton.TabIndex = 9;
             this.MiCuentaButton.TabStop = true;
             this.MiCuentaButton.Text = "Mi Cuenta";
@@ -172,8 +172,9 @@
             this.TopFillPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.TopFillPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopFillPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopFillPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TopFillPanel.Name = "TopFillPanel";
-            this.TopFillPanel.Size = new System.Drawing.Size(188, 163);
+            this.TopFillPanel.Size = new System.Drawing.Size(141, 132);
             this.TopFillPanel.TabIndex = 13;
             // 
             // TabControl
@@ -183,10 +184,11 @@
             this.TabControl.Controls.Add(this.Ranking);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.ItemSize = new System.Drawing.Size(120, 21);
-            this.TabControl.Location = new System.Drawing.Point(188, 0);
+            this.TabControl.Location = new System.Drawing.Point(141, 0);
+            this.TabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(716, 513);
+            this.TabControl.Size = new System.Drawing.Size(537, 417);
             this.TabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabControl.TabIndex = 3;
             // 
@@ -196,9 +198,10 @@
             this.MiCuenta.Controls.Add(this.InfoLabel);
             this.MiCuenta.Controls.Add(this.MiCuenta_TitleLabel);
             this.MiCuenta.Location = new System.Drawing.Point(4, 25);
+            this.MiCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MiCuenta.Name = "MiCuenta";
-            this.MiCuenta.Padding = new System.Windows.Forms.Padding(3);
-            this.MiCuenta.Size = new System.Drawing.Size(708, 484);
+            this.MiCuenta.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MiCuenta.Size = new System.Drawing.Size(529, 388);
             this.MiCuenta.TabIndex = 0;
             this.MiCuenta.Text = "Mi Cuenta";
             // 
@@ -206,9 +209,10 @@
             // 
             this.InfoLabel.AutoEllipsis = true;
             this.InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.InfoLabel.Location = new System.Drawing.Point(139, 155);
+            this.InfoLabel.Location = new System.Drawing.Point(104, 126);
+            this.InfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.InfoLabel.Name = "InfoLabel";
-            this.InfoLabel.Size = new System.Drawing.Size(431, 251);
+            this.InfoLabel.Size = new System.Drawing.Size(323, 204);
             this.InfoLabel.TabIndex = 16;
             this.InfoLabel.Text = "ID:\r\nasdf\r\n\r\nNombre:\r\nasdf\r\n";
             this.InfoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -217,10 +221,9 @@
             // 
             this.MiCuenta_TitleLabel.AutoSize = true;
             this.MiCuenta_TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(281, 79);
-            this.MiCuenta_TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(211, 64);
             this.MiCuenta_TitleLabel.Name = "MiCuenta_TitleLabel";
-            this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(146, 31);
+            this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(120, 26);
             this.MiCuenta_TitleLabel.TabIndex = 15;
             this.MiCuenta_TitleLabel.Text = "Mi Cuenta";
             // 
@@ -231,16 +234,18 @@
             this.MisCalificaciones.Controls.Add(this.TablaCalificaciones);
             this.MisCalificaciones.Controls.Add(this.label2);
             this.MisCalificaciones.Location = new System.Drawing.Point(4, 25);
+            this.MisCalificaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MisCalificaciones.Name = "MisCalificaciones";
-            this.MisCalificaciones.Size = new System.Drawing.Size(708, 484);
+            this.MisCalificaciones.Size = new System.Drawing.Size(529, 388);
             this.MisCalificaciones.TabIndex = 2;
             this.MisCalificaciones.Text = "Calificaciones";
             // 
             // NuevaCalificacion
             // 
-            this.NuevaCalificacion.Location = new System.Drawing.Point(559, 14);
+            this.NuevaCalificacion.Location = new System.Drawing.Point(419, 11);
+            this.NuevaCalificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NuevaCalificacion.Name = "NuevaCalificacion";
-            this.NuevaCalificacion.Size = new System.Drawing.Size(141, 46);
+            this.NuevaCalificacion.Size = new System.Drawing.Size(106, 37);
             this.NuevaCalificacion.TabIndex = 18;
             this.NuevaCalificacion.Text = "Asignar Nueva";
             this.NuevaCalificacion.UseVisualStyleBackColor = true;
@@ -252,22 +257,22 @@
             this.TablaCalificaciones.AllowUserToDeleteRows = false;
             this.TablaCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaCalificaciones.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TablaCalificaciones.Location = new System.Drawing.Point(0, 66);
+            this.TablaCalificaciones.Location = new System.Drawing.Point(0, 52);
+            this.TablaCalificaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TablaCalificaciones.Name = "TablaCalificaciones";
             this.TablaCalificaciones.ReadOnly = true;
             this.TablaCalificaciones.RowHeadersWidth = 51;
             this.TablaCalificaciones.RowTemplate.Height = 24;
-            this.TablaCalificaciones.Size = new System.Drawing.Size(708, 418);
+            this.TablaCalificaciones.Size = new System.Drawing.Size(529, 336);
             this.TablaCalificaciones.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(255, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(191, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 31);
+            this.label2.Size = new System.Drawing.Size(161, 26);
             this.label2.TabIndex = 16;
             this.label2.Text = "Calificaciones";
             // 
@@ -277,8 +282,9 @@
             this.Ranking.Controls.Add(this.TablaRanking);
             this.Ranking.Controls.Add(this.label3);
             this.Ranking.Location = new System.Drawing.Point(4, 25);
+            this.Ranking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Ranking.Name = "Ranking";
-            this.Ranking.Size = new System.Drawing.Size(708, 484);
+            this.Ranking.Size = new System.Drawing.Size(529, 388);
             this.Ranking.TabIndex = 3;
             this.Ranking.Text = "Ranking";
             // 
@@ -293,12 +299,13 @@
             this.GPA,
             this.Honor});
             this.TablaRanking.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TablaRanking.Location = new System.Drawing.Point(0, 70);
+            this.TablaRanking.Location = new System.Drawing.Point(0, 52);
+            this.TablaRanking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TablaRanking.Name = "TablaRanking";
             this.TablaRanking.ReadOnly = true;
             this.TablaRanking.RowHeadersWidth = 51;
             this.TablaRanking.RowTemplate.Height = 24;
-            this.TablaRanking.Size = new System.Drawing.Size(708, 414);
+            this.TablaRanking.Size = new System.Drawing.Size(529, 336);
             this.TablaRanking.TabIndex = 20;
             // 
             // ID_Estudiante
@@ -337,21 +344,21 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(271, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(203, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 31);
+            this.label3.Size = new System.Drawing.Size(99, 26);
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
             // 
             // TeachersMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(904, 513);
+            this.ClientSize = new System.Drawing.Size(678, 417);
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.SubMenuPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TeachersMenu";
             this.Text = "Menu de los Profesores";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TeachersMenu_FormClosing);
