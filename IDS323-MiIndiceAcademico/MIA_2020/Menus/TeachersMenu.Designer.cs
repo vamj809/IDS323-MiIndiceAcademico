@@ -69,7 +69,7 @@
             this.SubMenuPanel.Controls.Add(this.TopFillPanel);
             this.SubMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SubMenuPanel.Location = new System.Drawing.Point(0, 0);
-            this.SubMenuPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubMenuPanel.Margin = new System.Windows.Forms.Padding(2);
             this.SubMenuPanel.Name = "SubMenuPanel";
             this.SubMenuPanel.Size = new System.Drawing.Size(141, 417);
             this.SubMenuPanel.TabIndex = 0;
@@ -77,7 +77,7 @@
             // CloseSystem
             // 
             this.CloseSystem.Location = new System.Drawing.Point(2, 375);
-            this.CloseSystem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CloseSystem.Margin = new System.Windows.Forms.Padding(2);
             this.CloseSystem.Name = "CloseSystem";
             this.CloseSystem.Size = new System.Drawing.Size(136, 37);
             this.CloseSystem.TabIndex = 15;
@@ -88,7 +88,7 @@
             // LogOffButton
             // 
             this.LogOffButton.Location = new System.Drawing.Point(2, 333);
-            this.LogOffButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LogOffButton.Margin = new System.Windows.Forms.Padding(2);
             this.LogOffButton.Name = "LogOffButton";
             this.LogOffButton.Size = new System.Drawing.Size(136, 37);
             this.LogOffButton.TabIndex = 14;
@@ -172,7 +172,7 @@
             this.TopFillPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.TopFillPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopFillPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopFillPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TopFillPanel.Margin = new System.Windows.Forms.Padding(2);
             this.TopFillPanel.Name = "TopFillPanel";
             this.TopFillPanel.Size = new System.Drawing.Size(141, 132);
             this.TopFillPanel.TabIndex = 13;
@@ -185,7 +185,7 @@
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.ItemSize = new System.Drawing.Size(120, 21);
             this.TabControl.Location = new System.Drawing.Point(141, 0);
-            this.TabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TabControl.Margin = new System.Windows.Forms.Padding(2);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
             this.TabControl.Size = new System.Drawing.Size(537, 417);
@@ -198,9 +198,9 @@
             this.MiCuenta.Controls.Add(this.InfoLabel);
             this.MiCuenta.Controls.Add(this.MiCuenta_TitleLabel);
             this.MiCuenta.Location = new System.Drawing.Point(4, 25);
-            this.MiCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MiCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.MiCuenta.Name = "MiCuenta";
-            this.MiCuenta.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MiCuenta.Padding = new System.Windows.Forms.Padding(2);
             this.MiCuenta.Size = new System.Drawing.Size(529, 388);
             this.MiCuenta.TabIndex = 0;
             this.MiCuenta.Text = "Mi Cuenta";
@@ -234,7 +234,7 @@
             this.MisCalificaciones.Controls.Add(this.TablaCalificaciones);
             this.MisCalificaciones.Controls.Add(this.label2);
             this.MisCalificaciones.Location = new System.Drawing.Point(4, 25);
-            this.MisCalificaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MisCalificaciones.Margin = new System.Windows.Forms.Padding(2);
             this.MisCalificaciones.Name = "MisCalificaciones";
             this.MisCalificaciones.Size = new System.Drawing.Size(529, 388);
             this.MisCalificaciones.TabIndex = 2;
@@ -243,7 +243,7 @@
             // NuevaCalificacion
             // 
             this.NuevaCalificacion.Location = new System.Drawing.Point(419, 11);
-            this.NuevaCalificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NuevaCalificacion.Margin = new System.Windows.Forms.Padding(2);
             this.NuevaCalificacion.Name = "NuevaCalificacion";
             this.NuevaCalificacion.Size = new System.Drawing.Size(106, 37);
             this.NuevaCalificacion.TabIndex = 18;
@@ -255,10 +255,12 @@
             // 
             this.TablaCalificaciones.AllowUserToAddRows = false;
             this.TablaCalificaciones.AllowUserToDeleteRows = false;
+            this.TablaCalificaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TablaCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaCalificaciones.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TablaCalificaciones.Location = new System.Drawing.Point(0, 52);
-            this.TablaCalificaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TablaCalificaciones.Margin = new System.Windows.Forms.Padding(2);
             this.TablaCalificaciones.Name = "TablaCalificaciones";
             this.TablaCalificaciones.ReadOnly = true;
             this.TablaCalificaciones.RowHeadersWidth = 51;
@@ -282,7 +284,7 @@
             this.Ranking.Controls.Add(this.TablaRanking);
             this.Ranking.Controls.Add(this.label3);
             this.Ranking.Location = new System.Drawing.Point(4, 25);
-            this.Ranking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ranking.Margin = new System.Windows.Forms.Padding(2);
             this.Ranking.Name = "Ranking";
             this.Ranking.Size = new System.Drawing.Size(529, 388);
             this.Ranking.TabIndex = 3;
@@ -292,15 +294,17 @@
             // 
             this.TablaRanking.AllowUserToAddRows = false;
             this.TablaRanking.AllowUserToDeleteRows = false;
+            this.TablaRanking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TablaRanking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaRanking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Estudiante,
             this.Estudiante,
             this.GPA,
             this.Honor});
-            this.TablaRanking.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TablaRanking.Location = new System.Drawing.Point(0, 52);
-            this.TablaRanking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TablaRanking.Margin = new System.Windows.Forms.Padding(2);
             this.TablaRanking.Name = "TablaRanking";
             this.TablaRanking.ReadOnly = true;
             this.TablaRanking.RowHeadersWidth = 51;
@@ -358,7 +362,8 @@
             this.ClientSize = new System.Drawing.Size(678, 417);
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.SubMenuPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(694, 456);
             this.Name = "TeachersMenu";
             this.Text = "Menu de los Profesores";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TeachersMenu_FormClosing);

@@ -85,8 +85,9 @@
             this.SubMenuPanel.Controls.Add(this.TopFillPanel);
             this.SubMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SubMenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.SubMenuPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SubMenuPanel.Name = "SubMenuPanel";
-            this.SubMenuPanel.Size = new System.Drawing.Size(188, 513);
+            this.SubMenuPanel.Size = new System.Drawing.Size(141, 417);
             this.SubMenuPanel.TabIndex = 0;
             // 
             // RankingButton
@@ -103,10 +104,9 @@
             this.RankingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.RankingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RankingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.RankingButton.Location = new System.Drawing.Point(0, 343);
-            this.RankingButton.Margin = new System.Windows.Forms.Padding(4);
+            this.RankingButton.Location = new System.Drawing.Point(0, 280);
             this.RankingButton.Name = "RankingButton";
-            this.RankingButton.Size = new System.Drawing.Size(188, 45);
+            this.RankingButton.Size = new System.Drawing.Size(141, 37);
             this.RankingButton.TabIndex = 12;
             this.RankingButton.Text = "Ranking";
             this.RankingButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,10 +127,9 @@
             this.ProfesoresButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ProfesoresButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProfesoresButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.ProfesoresButton.Location = new System.Drawing.Point(0, 298);
-            this.ProfesoresButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ProfesoresButton.Location = new System.Drawing.Point(0, 243);
             this.ProfesoresButton.Name = "ProfesoresButton";
-            this.ProfesoresButton.Size = new System.Drawing.Size(188, 45);
+            this.ProfesoresButton.Size = new System.Drawing.Size(141, 37);
             this.ProfesoresButton.TabIndex = 16;
             this.ProfesoresButton.Text = "Profesores";
             this.ProfesoresButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,9 +138,10 @@
             // 
             // CloseSystem
             // 
-            this.CloseSystem.Location = new System.Drawing.Point(3, 461);
+            this.CloseSystem.Location = new System.Drawing.Point(2, 375);
+            this.CloseSystem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CloseSystem.Name = "CloseSystem";
-            this.CloseSystem.Size = new System.Drawing.Size(182, 46);
+            this.CloseSystem.Size = new System.Drawing.Size(136, 37);
             this.CloseSystem.TabIndex = 15;
             this.CloseSystem.Text = "Cerrar Sistema";
             this.CloseSystem.UseVisualStyleBackColor = true;
@@ -149,9 +149,10 @@
             // 
             // LogOffButton
             // 
-            this.LogOffButton.Location = new System.Drawing.Point(3, 410);
+            this.LogOffButton.Location = new System.Drawing.Point(2, 333);
+            this.LogOffButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogOffButton.Name = "LogOffButton";
-            this.LogOffButton.Size = new System.Drawing.Size(182, 46);
+            this.LogOffButton.Size = new System.Drawing.Size(136, 37);
             this.LogOffButton.TabIndex = 14;
             this.LogOffButton.Text = "Cerrar Sesión";
             this.LogOffButton.UseVisualStyleBackColor = true;
@@ -170,10 +171,9 @@
             this.MisCalificacionesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.MisCalificacionesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MisCalificacionesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.MisCalificacionesButton.Location = new System.Drawing.Point(0, 253);
-            this.MisCalificacionesButton.Margin = new System.Windows.Forms.Padding(4);
+            this.MisCalificacionesButton.Location = new System.Drawing.Point(0, 206);
             this.MisCalificacionesButton.Name = "MisCalificacionesButton";
-            this.MisCalificacionesButton.Size = new System.Drawing.Size(188, 45);
+            this.MisCalificacionesButton.Size = new System.Drawing.Size(141, 37);
             this.MisCalificacionesButton.TabIndex = 11;
             this.MisCalificacionesButton.Text = "Asignaturas";
             this.MisCalificacionesButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -193,10 +193,9 @@
             this.SeleccionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.SeleccionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeleccionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.SeleccionButton.Location = new System.Drawing.Point(0, 208);
-            this.SeleccionButton.Margin = new System.Windows.Forms.Padding(4);
+            this.SeleccionButton.Location = new System.Drawing.Point(0, 169);
             this.SeleccionButton.Name = "SeleccionButton";
-            this.SeleccionButton.Size = new System.Drawing.Size(188, 45);
+            this.SeleccionButton.Size = new System.Drawing.Size(141, 37);
             this.SeleccionButton.TabIndex = 10;
             this.SeleccionButton.Text = "Estudiantes";
             this.SeleccionButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -217,10 +216,9 @@
             this.MiCuentaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.MiCuentaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MiCuentaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.MiCuentaButton.Location = new System.Drawing.Point(0, 163);
-            this.MiCuentaButton.Margin = new System.Windows.Forms.Padding(4);
+            this.MiCuentaButton.Location = new System.Drawing.Point(0, 132);
             this.MiCuentaButton.Name = "MiCuentaButton";
-            this.MiCuentaButton.Size = new System.Drawing.Size(188, 45);
+            this.MiCuentaButton.Size = new System.Drawing.Size(141, 37);
             this.MiCuentaButton.TabIndex = 9;
             this.MiCuentaButton.TabStop = true;
             this.MiCuentaButton.Text = "Mi Cuenta";
@@ -235,8 +233,9 @@
             this.TopFillPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.TopFillPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopFillPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopFillPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TopFillPanel.Name = "TopFillPanel";
-            this.TopFillPanel.Size = new System.Drawing.Size(188, 163);
+            this.TopFillPanel.Size = new System.Drawing.Size(141, 132);
             this.TopFillPanel.TabIndex = 13;
             // 
             // TabControl
@@ -248,10 +247,12 @@
             this.TabControl.Controls.Add(this.Ranking);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.ItemSize = new System.Drawing.Size(120, 21);
-            this.TabControl.Location = new System.Drawing.Point(188, 0);
+            this.TabControl.Location = new System.Drawing.Point(141, 0);
+            this.TabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TabControl.MinimumSize = new System.Drawing.Size(537, 417);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(716, 513);
+            this.TabControl.Size = new System.Drawing.Size(537, 417);
             this.TabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabControl.TabIndex = 3;
             // 
@@ -261,9 +262,10 @@
             this.MiCuenta.Controls.Add(this.InfoLabel);
             this.MiCuenta.Controls.Add(this.MiCuenta_TitleLabel);
             this.MiCuenta.Location = new System.Drawing.Point(4, 25);
+            this.MiCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MiCuenta.Name = "MiCuenta";
-            this.MiCuenta.Padding = new System.Windows.Forms.Padding(3);
-            this.MiCuenta.Size = new System.Drawing.Size(708, 484);
+            this.MiCuenta.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MiCuenta.Size = new System.Drawing.Size(529, 388);
             this.MiCuenta.TabIndex = 0;
             this.MiCuenta.Text = "Mi Cuenta";
             // 
@@ -271,9 +273,10 @@
             // 
             this.InfoLabel.AutoEllipsis = true;
             this.InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.InfoLabel.Location = new System.Drawing.Point(139, 155);
+            this.InfoLabel.Location = new System.Drawing.Point(104, 126);
+            this.InfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.InfoLabel.Name = "InfoLabel";
-            this.InfoLabel.Size = new System.Drawing.Size(431, 251);
+            this.InfoLabel.Size = new System.Drawing.Size(323, 204);
             this.InfoLabel.TabIndex = 16;
             this.InfoLabel.Text = "ID:\r\nasdf\r\n\r\nNombre:\r\nasdf";
             this.InfoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -282,10 +285,9 @@
             // 
             this.MiCuenta_TitleLabel.AutoSize = true;
             this.MiCuenta_TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(281, 79);
-            this.MiCuenta_TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MiCuenta_TitleLabel.Location = new System.Drawing.Point(211, 64);
             this.MiCuenta_TitleLabel.Name = "MiCuenta_TitleLabel";
-            this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(146, 31);
+            this.MiCuenta_TitleLabel.Size = new System.Drawing.Size(120, 26);
             this.MiCuenta_TitleLabel.TabIndex = 15;
             this.MiCuenta_TitleLabel.Text = "Mi Cuenta";
             // 
@@ -296,17 +298,19 @@
             this.Estudiantes.Controls.Add(this.TablaEstudiantes);
             this.Estudiantes.Controls.Add(this.label1);
             this.Estudiantes.Location = new System.Drawing.Point(4, 25);
+            this.Estudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Estudiantes.Name = "Estudiantes";
-            this.Estudiantes.Padding = new System.Windows.Forms.Padding(3);
-            this.Estudiantes.Size = new System.Drawing.Size(708, 484);
+            this.Estudiantes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Estudiantes.Size = new System.Drawing.Size(529, 388);
             this.Estudiantes.TabIndex = 1;
             this.Estudiantes.Text = "Estudiantes";
             // 
             // NuevoEstudiante
             // 
-            this.NuevoEstudiante.Location = new System.Drawing.Point(568, 11);
+            this.NuevoEstudiante.Location = new System.Drawing.Point(426, 9);
+            this.NuevoEstudiante.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NuevoEstudiante.Name = "NuevoEstudiante";
-            this.NuevoEstudiante.Size = new System.Drawing.Size(132, 46);
+            this.NuevoEstudiante.Size = new System.Drawing.Size(99, 37);
             this.NuevoEstudiante.TabIndex = 18;
             this.NuevoEstudiante.Text = "Crear Nuevo";
             this.NuevoEstudiante.UseVisualStyleBackColor = true;
@@ -316,23 +320,25 @@
             // 
             this.TablaEstudiantes.AllowUserToAddRows = false;
             this.TablaEstudiantes.AllowUserToDeleteRows = false;
+            this.TablaEstudiantes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TablaEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaEstudiantes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TablaEstudiantes.Location = new System.Drawing.Point(3, 63);
+            this.TablaEstudiantes.Location = new System.Drawing.Point(2, 51);
+            this.TablaEstudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TablaEstudiantes.Name = "TablaEstudiantes";
             this.TablaEstudiantes.RowHeadersWidth = 51;
             this.TablaEstudiantes.RowTemplate.Height = 24;
-            this.TablaEstudiantes.Size = new System.Drawing.Size(702, 418);
+            this.TablaEstudiantes.Size = new System.Drawing.Size(526, 336);
             this.TablaEstudiantes.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(259, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(194, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 31);
+            this.label1.Size = new System.Drawing.Size(137, 26);
             this.label1.TabIndex = 15;
             this.label1.Text = "Estudiantes";
             // 
@@ -343,16 +349,18 @@
             this.Asignaturas.Controls.Add(this.TablaAsignaturas);
             this.Asignaturas.Controls.Add(this.label2);
             this.Asignaturas.Location = new System.Drawing.Point(4, 25);
+            this.Asignaturas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Asignaturas.Name = "Asignaturas";
-            this.Asignaturas.Size = new System.Drawing.Size(708, 484);
+            this.Asignaturas.Size = new System.Drawing.Size(529, 388);
             this.Asignaturas.TabIndex = 2;
             this.Asignaturas.Text = "Asignaturas";
             // 
             // NuevaAsignatura
             // 
-            this.NuevaAsignatura.Location = new System.Drawing.Point(577, 13);
+            this.NuevaAsignatura.Location = new System.Drawing.Point(433, 11);
+            this.NuevaAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NuevaAsignatura.Name = "NuevaAsignatura";
-            this.NuevaAsignatura.Size = new System.Drawing.Size(123, 46);
+            this.NuevaAsignatura.Size = new System.Drawing.Size(92, 37);
             this.NuevaAsignatura.TabIndex = 17;
             this.NuevaAsignatura.Text = "Crear Nueva";
             this.NuevaAsignatura.UseVisualStyleBackColor = true;
@@ -360,23 +368,25 @@
             // 
             // TablaAsignaturas
             // 
+            this.TablaAsignaturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TablaAsignaturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaAsignaturas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TablaAsignaturas.Location = new System.Drawing.Point(0, 69);
+            this.TablaAsignaturas.Location = new System.Drawing.Point(0, 56);
+            this.TablaAsignaturas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TablaAsignaturas.Name = "TablaAsignaturas";
             this.TablaAsignaturas.RowHeadersWidth = 51;
             this.TablaAsignaturas.RowTemplate.Height = 24;
-            this.TablaAsignaturas.Size = new System.Drawing.Size(708, 415);
+            this.TablaAsignaturas.Size = new System.Drawing.Size(531, 337);
             this.TablaAsignaturas.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(261, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(196, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 31);
+            this.label2.Size = new System.Drawing.Size(138, 26);
             this.label2.TabIndex = 16;
             this.label2.Text = "Asignaturas";
             // 
@@ -387,17 +397,19 @@
             this.Profesores.Controls.Add(this.TablaProfesores);
             this.Profesores.Controls.Add(this.label4);
             this.Profesores.Location = new System.Drawing.Point(4, 25);
+            this.Profesores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Profesores.Name = "Profesores";
-            this.Profesores.Padding = new System.Windows.Forms.Padding(3);
-            this.Profesores.Size = new System.Drawing.Size(708, 484);
+            this.Profesores.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Profesores.Size = new System.Drawing.Size(529, 388);
             this.Profesores.TabIndex = 4;
             this.Profesores.Text = "Profesores";
             // 
             // NuevoProfesor
             // 
-            this.NuevoProfesor.Location = new System.Drawing.Point(566, 8);
+            this.NuevoProfesor.Location = new System.Drawing.Point(424, 6);
+            this.NuevoProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NuevoProfesor.Name = "NuevoProfesor";
-            this.NuevoProfesor.Size = new System.Drawing.Size(134, 46);
+            this.NuevoProfesor.Size = new System.Drawing.Size(100, 37);
             this.NuevoProfesor.TabIndex = 18;
             this.NuevoProfesor.Text = "Crear Nuevo";
             this.NuevoProfesor.UseVisualStyleBackColor = true;
@@ -405,23 +417,25 @@
             // 
             // TablaProfesores
             // 
+            this.TablaProfesores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TablaProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaProfesores.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TablaProfesores.Location = new System.Drawing.Point(3, 66);
+            this.TablaProfesores.Location = new System.Drawing.Point(2, 54);
+            this.TablaProfesores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TablaProfesores.Name = "TablaProfesores";
             this.TablaProfesores.RowHeadersWidth = 51;
             this.TablaProfesores.RowTemplate.Height = 24;
-            this.TablaProfesores.Size = new System.Drawing.Size(702, 415);
+            this.TablaProfesores.Size = new System.Drawing.Size(526, 337);
             this.TablaProfesores.TabIndex = 19;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(263, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(197, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 31);
+            this.label4.Size = new System.Drawing.Size(127, 26);
             this.label4.TabIndex = 17;
             this.label4.Text = "Profesores";
             // 
@@ -431,8 +445,9 @@
             this.Ranking.Controls.Add(this.TablaRanking);
             this.Ranking.Controls.Add(this.label3);
             this.Ranking.Location = new System.Drawing.Point(4, 25);
+            this.Ranking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Ranking.Name = "Ranking";
-            this.Ranking.Size = new System.Drawing.Size(708, 484);
+            this.Ranking.Size = new System.Drawing.Size(529, 388);
             this.Ranking.TabIndex = 3;
             this.Ranking.Text = "Ranking";
             // 
@@ -447,12 +462,13 @@
             this.GPA,
             this.Honor});
             this.TablaRanking.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TablaRanking.Location = new System.Drawing.Point(0, 67);
+            this.TablaRanking.Location = new System.Drawing.Point(0, 49);
+            this.TablaRanking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TablaRanking.Name = "TablaRanking";
             this.TablaRanking.ReadOnly = true;
             this.TablaRanking.RowHeadersWidth = 51;
             this.TablaRanking.RowTemplate.Height = 24;
-            this.TablaRanking.Size = new System.Drawing.Size(708, 417);
+            this.TablaRanking.Size = new System.Drawing.Size(529, 339);
             this.TablaRanking.TabIndex = 20;
             // 
             // ID_Estudiante
@@ -491,21 +507,21 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(271, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(203, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 31);
+            this.label3.Size = new System.Drawing.Size(99, 26);
             this.label3.TabIndex = 16;
             this.label3.Text = "Ranking";
             // 
             // AdminsMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(904, 513);
+            this.ClientSize = new System.Drawing.Size(678, 417);
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.SubMenuPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminsMenu";
             this.Text = "Menu del Administrador";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminsMenu_FormClosing);

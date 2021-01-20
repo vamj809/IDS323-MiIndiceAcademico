@@ -45,10 +45,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(479, 9);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(359, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 31);
+            this.label3.Size = new System.Drawing.Size(99, 26);
             this.label3.TabIndex = 17;
             this.label3.Text = "Ranking";
             // 
@@ -60,15 +59,17 @@
             this.SubMenuPanel.Controls.Add(this.TopFillPanel);
             this.SubMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SubMenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.SubMenuPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SubMenuPanel.Name = "SubMenuPanel";
-            this.SubMenuPanel.Size = new System.Drawing.Size(188, 456);
+            this.SubMenuPanel.Size = new System.Drawing.Size(141, 370);
             this.SubMenuPanel.TabIndex = 18;
             // 
             // CloseSystem
             // 
-            this.CloseSystem.Location = new System.Drawing.Point(3, 396);
+            this.CloseSystem.Location = new System.Drawing.Point(2, 322);
+            this.CloseSystem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CloseSystem.Name = "CloseSystem";
-            this.CloseSystem.Size = new System.Drawing.Size(182, 46);
+            this.CloseSystem.Size = new System.Drawing.Size(136, 37);
             this.CloseSystem.TabIndex = 15;
             this.CloseSystem.Text = "Cerrar Sistema";
             this.CloseSystem.UseVisualStyleBackColor = true;
@@ -76,9 +77,10 @@
             // 
             // LogOffButton
             // 
-            this.LogOffButton.Location = new System.Drawing.Point(3, 344);
+            this.LogOffButton.Location = new System.Drawing.Point(2, 280);
+            this.LogOffButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogOffButton.Name = "LogOffButton";
-            this.LogOffButton.Size = new System.Drawing.Size(182, 46);
+            this.LogOffButton.Size = new System.Drawing.Size(136, 37);
             this.LogOffButton.TabIndex = 14;
             this.LogOffButton.Text = "Volver al Menú";
             this.LogOffButton.UseVisualStyleBackColor = true;
@@ -91,27 +93,31 @@
             this.TopFillPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.TopFillPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopFillPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopFillPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TopFillPanel.Name = "TopFillPanel";
-            this.TopFillPanel.Size = new System.Drawing.Size(188, 163);
+            this.TopFillPanel.Size = new System.Drawing.Size(141, 132);
             this.TopFillPanel.TabIndex = 13;
             // 
             // TablaRanking
             // 
             this.TablaRanking.AllowUserToAddRows = false;
             this.TablaRanking.AllowUserToDeleteRows = false;
+            this.TablaRanking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TablaRanking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaRanking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Estudiante,
             this.Estudiante,
             this.GPA,
             this.Honor});
-            this.TablaRanking.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TablaRanking.Location = new System.Drawing.Point(188, 62);
+            this.TablaRanking.Location = new System.Drawing.Point(141, 50);
+            this.TablaRanking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TablaRanking.Name = "TablaRanking";
             this.TablaRanking.ReadOnly = true;
             this.TablaRanking.RowHeadersWidth = 51;
             this.TablaRanking.RowTemplate.Height = 24;
-            this.TablaRanking.Size = new System.Drawing.Size(710, 394);
+            this.TablaRanking.Size = new System.Drawing.Size(532, 320);
             this.TablaRanking.TabIndex = 19;
             // 
             // ID_Estudiante
@@ -148,13 +154,15 @@
             // 
             // GuestsMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(898, 456);
+            this.ClientSize = new System.Drawing.Size(674, 370);
             this.Controls.Add(this.TablaRanking);
             this.Controls.Add(this.SubMenuPanel);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(690, 409);
             this.Name = "GuestsMenu";
             this.Text = "Menú de Invitados";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GuestsMenu_FormClosing);
