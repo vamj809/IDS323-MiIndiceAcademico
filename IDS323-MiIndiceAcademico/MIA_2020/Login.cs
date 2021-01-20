@@ -104,6 +104,7 @@ namespace MIA_2020
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            Dispose();
             Application.Exit();
         }
 
@@ -160,6 +161,12 @@ namespace MIA_2020
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Dispose();
+            Application.Exit();
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e) {
+            Dispose();
             Application.Exit();
         }
     }

@@ -32,6 +32,7 @@
             this.TeachersButton = new System.Windows.Forms.RadioButton();
             this.AdminsButton = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.GuestsButton = new System.Windows.Forms.RadioButton();
             this.LabelUsuario = new System.Windows.Forms.Label();
             this.LabelClave = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.LogoMIA = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.GuestsAccessPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoMIA)).BeginInit();
@@ -136,6 +136,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(876, 80);
             this.panel1.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(12, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(47, 51);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // GuestsButton
             // 
@@ -305,20 +319,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(12, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(47, 51);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Login
             // 
             this.AcceptButton = this.OkButton;
@@ -345,6 +345,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesión";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

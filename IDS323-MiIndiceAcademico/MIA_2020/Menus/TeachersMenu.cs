@@ -46,6 +46,7 @@ namespace MIA_2020.Menus
 
         private void CloseSystem_Click(object sender, EventArgs e)
         {
+            Dispose();
             Application.Exit();
         }
 
