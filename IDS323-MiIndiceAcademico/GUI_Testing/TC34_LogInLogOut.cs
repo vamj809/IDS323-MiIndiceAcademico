@@ -37,5 +37,17 @@ namespace GUI_Testing
         public void TC34_UC01_LogInLogOutAsExistingAdministrador() {
             Assert.IsTrue(LogInLogOut("320001", "1234", 2));
         }
+        [TestMethod]
+        public void TC34_UC02_LogInLogOutAsExistingProfesor() {
+            Assert.IsTrue(LogInLogOut("220001", "1234", 1));
+        }
+        [TestMethod]
+        public void TC34_UC03_LogInLogOutAsExistingEstudiante() {
+            Assert.IsTrue(LogInLogOut("1201001", "1234", 0));
+        }
+        [TestMethod]
+        public void TC34_UC04_LogInLogOutAsInvitado() {
+            Assert.IsTrue(LogInLogOut("", "", -1));
+        }
     }
 }
