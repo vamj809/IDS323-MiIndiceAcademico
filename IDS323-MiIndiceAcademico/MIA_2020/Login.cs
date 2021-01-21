@@ -14,12 +14,15 @@ namespace MIA_2020
 {
     public partial class Login : Form
     {
+        Form Menu;
+        int intentos = 0;
         ColeccionCompleta datosBin;
         public Login(string ID = "")
         {
             InitializeComponent();
             datosBin = new ColeccionCompleta();
-            if(ID != "") {
+            if (ID != "")
+            {
                 UserTextBox.Text = ID;
             }
             //Debug Options:
@@ -32,47 +35,91 @@ namespace MIA_2020
 
         private void UserNotFound()
         {
-            MessageBox.Show("Usuario(ID) no encontrado.", "Credenciales Inválidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            UserTextBox.Focus();
+
+
+            intentos++;
+            if (intentos <= 3)
+            {
+                MessageBox.Show("Usuario(ID) o Contraseña incorrectos.", "Credenciales Inválidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UserTextBox.Focus();
+
+            }
+            else
+            {
+                if (intentos > 3)
+                {
+                    MessageBox.Show("Ha excedido el limites de intentos para acceder al sistema", "Sistema Bloqueado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Application.Exit();
+                }
+            }
         }
         private void WrongPassword()
         {
-            MessageBox.Show("Usuario(ID) encontrado.\nContraseña incorrecta.", "Credenciales Inválidos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            PasswordTextBox.Focus();
+
+
+            if (intentos <= 3)
+            {
+                MessageBox.Show("Usuario(ID) o Contraseña incorrectos.", "Credenciales Inválidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PasswordTextBox.Focus();
+
+            }
+            else
+            {
+                if (intentos > 3)
+                {
+                    MessageBox.Show("Ha excedido el limites de intentos para acceder al sistema", "Sistema Bloqueado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Application.Exit();
+                }
+            }
+
+
+
         }
+
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            Form Menu;
-            if (StudentsButton.Checked) { //Estudiantes
+
+            if (StudentsButton.Checked)
+            { //Estudiantes
                 var estudiantes = datosBin.Estudiantes.Where(x => x.ID_Estudiante.ToString() == UserTextBox.Text);
-                if (estudiantes.Count() < 1) {
+                if (estudiantes.Count() < 1)
+                {
                     UserNotFound();
+                    intentos++;
                     return;
                 }
                 estudiantes = estudiantes.Where(x => x.Clave_Estudiante.ToString() == PasswordTextBox.Text);
-                if (estudiantes.Count() < 1) {
+                if (estudiantes.Count() < 1)
+                {
                     WrongPassword();
+                    intentos++;
                     return;
                 }
                 //Contraseña correcta
                 Menu = new Menus.StudentsMenu(datosBin, estudiantes.First());
             }
-            else if (TeachersButton.Checked) { //Profesores
+            else if (TeachersButton.Checked)
+            { //Profesores
                 var profesores = datosBin.Profesores.Where(x => x.ID_Profesor.ToString() == UserTextBox.Text);
-                if (profesores.Count() < 1) {
+                if (profesores.Count() < 1)
+                {
                     UserNotFound();
+                    intentos++;
                     return;
                 }
                 profesores = profesores.Where(x => x.Clave_Profesor.ToString() == PasswordTextBox.Text);
-                if (profesores.Count() < 1) {
+                if (profesores.Count() < 1)
+                {
                     WrongPassword();
+                    intentos++;
                     return;
                 }
                 //Contraseña correcta
-                Menu = new Menus.TeachersMenu(datosBin, profesores.First()) ;
+                Menu = new Menus.TeachersMenu(datosBin, profesores.First());
             }
-            else if (AdminsButton.Checked) {//Administradores
+            else if (AdminsButton.Checked)
+            {//Administradores
                 /*if (UserTextBox.Text != PasswordTextBox.Text &&
                     PasswordTextBox.Text != "admin") {
                     WrongPassword();
@@ -80,26 +127,60 @@ namespace MIA_2020
                 }
                 */
 
+
                 var administradores = datosBin.Administradores.Where(x => x.Usuario.ToString() == UserTextBox.Text);
-                if (administradores.Count() < 1) {
+                if (administradores.Count() < 1)
+                {
                     UserNotFound();
+                    intentos++;
                     return;
+
                 }
+
                 administradores = administradores.Where(x => x.Clave.ToString() == PasswordTextBox.Text);
-                if (administradores.Count() < 1) {
+                if (administradores.Count() < 1)
+                {
                     WrongPassword();
+                    intentos++;
                     return;
+
                 }
+
+
                 //Contraseña correcta
                 Menu = new Menus.AdminsMenu(datosBin, administradores.First());
+
             }
-            else { //Invitados
+
+
+            else
+            { //Invitados
                 //Menu Invitados.
                 Menu = new Menus.GuestsMenu();
             }
 
             this.Hide();
             Menu.Show();
+            Timer();
+
+
+        }
+        private void Timer()
+        {
+            Timer mytimer = new Timer(); ;
+            mytimer.Interval = (1 * 60 * 1000); // 1 Minuto
+            mytimer.Tick += new EventHandler(MyTimer_Tick);
+            mytimer.Start();
+        }
+        private void MyTimer_Tick(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Ha excedido el limite de tiempo inactivo, la sesion se cerrara automaticamente.", "Time elapsed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            this.Close();
+            Menu.Hide();
+            Login login = new Login();
+            login.Show();
+
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -165,9 +246,15 @@ namespace MIA_2020
             Environment.Exit(0);
         }
 
-        private void Login_FormClosing(object sender, FormClosingEventArgs e) {
-            Dispose();
-            Environment.Exit(0);
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Dispose();
+            //Environment.Exit(0);
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
