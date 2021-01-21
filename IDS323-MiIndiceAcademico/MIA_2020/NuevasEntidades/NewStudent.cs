@@ -91,12 +91,12 @@ namespace MIA_2020
                     return;
                 }
             }
-            else if (progressState == 1) {
+            /*else if (progressState == 1) {
                 Menu = new Login(textID.Text);
-            }
+            }*/
             if (IsLogin) {
                 this.Hide();
-                Menu.Show();
+                //Menu.Show();
             }
         }
 
