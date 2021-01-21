@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using MIA_2020.Objetos;
 
@@ -168,6 +169,16 @@ namespace MIA_2020.Menus
         private void AdminsMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             LogOffButton.PerformClick();
+        }
+
+        private void TablaEstudiantes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Estudiante student = datosBin.Estudiantes.First(x => x.ID_Estudiante == (int)TablaEstudiantes.SelectedRows[0].Cells[0].Value);
+            EditStudent EditStudentForm = new EditStudent(datosBin, student, true);
+            EditStudentForm.ShowDialog();
+            datosBin.RecargarEstudiantes();
+            TablaEstudiantes.DataSource = datosBin.Estudiantes;
+            TablaEstudiantes.Refresh();
         }
     }
 }

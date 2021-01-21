@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using MIA_2020.Objetos;
 
@@ -71,6 +72,7 @@ namespace MIA_2020.Menus
         private void StudentsMenu_Load(object sender, EventArgs e)
         {
             //Aqui se carga la información del estudiante para mostrarla:
+            InfoLabel.Text = "";
             if (EstudianteActual != null) {
                 InfoLabel.Text = "ID:\n" +
                     $"{EstudianteActual.ID_Estudiante}\n\n" +
@@ -79,13 +81,11 @@ namespace MIA_2020.Menus
                     $"Carrera:\n" +
                     $"{EstudianteActual.Carrera_Estudiante}";
             }
-            else {
-                InfoLabel.Text = "";
-            }
 
             //Aqui se cargan las calificaciones disponibles:
             //TablaCalificaciones.DataSource = datosBin.Calificaciones.FindAll(x => x.ID_Estudiante == EstudianteActual.ID_Estudiante);
-
+            TablaCalificaciones.Rows.Clear(); 
+            C_GPA_Value.Text = "";
             int total_credito = 0, total_honor = 0;
             foreach (Calificacion item in datosBin.Calificaciones) {
                 if (item.ID_Estudiante == EstudianteActual.ID_Estudiante) {
@@ -118,6 +118,7 @@ namespace MIA_2020.Menus
             }
 
             //TablaRanking {ID,Estudiante,GPA,Honor)
+            TablaRanking.Rows.Clear();
             total_credito = 0;
             total_honor = 0;
             string gpa = "", honor = "";
@@ -154,6 +155,15 @@ namespace MIA_2020.Menus
         private void StudentsMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             LogOffButton.PerformClick();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EditStudent EditStudentForm = new EditStudent(datosBin, EstudianteActual);
+            EditStudentForm.ShowDialog();
+            datosBin.RecargarEstudiantes();
+            EstudianteActual = datosBin.Estudiantes.First(x => x.ID_Estudiante == EstudianteActual.ID_Estudiante);
+            StudentsMenu_Load(null,null);
         }
     }
 }
