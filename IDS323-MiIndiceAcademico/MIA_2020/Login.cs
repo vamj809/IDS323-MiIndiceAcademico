@@ -14,7 +14,6 @@ namespace MIA_2020
 {
     public partial class Login : Form
     {
-        Form Menu;
         int intentos = 0;
         ColeccionCompleta datosBin;
         public Login(string ID = "")
@@ -79,6 +78,7 @@ namespace MIA_2020
 
         private void OkButton_Click(object sender, EventArgs e)
         {
+            Form Menu;
 
             if (StudentsButton.Checked)
             { //Estudiantes
