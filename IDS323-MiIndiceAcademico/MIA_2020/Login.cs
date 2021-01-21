@@ -223,12 +223,6 @@ namespace MIA_2020
             datosBin.RecargarAdministradores();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Dispose();
-            Environment.Exit(0);
-        }
-
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Dispose();
@@ -239,5 +233,6 @@ namespace MIA_2020
         {
 
         }
+
     }
 }
