@@ -161,27 +161,10 @@ namespace MIA_2020
 
             this.Hide();
             Menu.Show();
-            Timer();
 
 
         }
-        private void Timer()
-        {
-            Timer mytimer = new Timer(); ;
-            mytimer.Interval = (1 * 60 * 1000); // 1 Minuto
-            mytimer.Tick += new EventHandler(MyTimer_Tick);
-            mytimer.Start();
-        }
-        private void MyTimer_Tick(object sender, EventArgs e)
-        {
-
-            MessageBox.Show("Ha excedido el limite de tiempo inactivo, la sesion se cerrara automaticamente.", "Time elapsed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            this.Close();
-            Menu.Hide();
-            Login login = new Login();
-            login.Show();
-
-        }
+        
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
