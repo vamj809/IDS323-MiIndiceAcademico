@@ -13,6 +13,55 @@ namespace MIA_2020.Menus
         private List<Asignatura> misMaterias;
         private List<Calificacion> misCalificaciones;
         private ModuloConsulta moduloConsulta = new ModuloConsulta();
+        private void LoadCalificaciones()
+        {
+            misCalificaciones = new List<Calificacion>();
+            //Carga calificaciones
+            foreach (var item in datosBin.Calificaciones) {
+                foreach (var materia in misMaterias) {
+                    if (item.Clave_Materia == materia.Clave_Materia) {
+                        misCalificaciones.Add(item);
+                        break;
+                    }
+                }
+            }
+            TablaCalificaciones.DataSource = misCalificaciones;
+        }
+        private void LoadRanking()
+        {
+            //TablaRanking {ID,Estudiante,GPA,Honor)
+            int total_credito = 0, total_honor = 0;
+            string gpa = "", honor = "";
+            foreach (Estudiante estudiante in datosBin.Estudiantes) {
+                total_credito = 0; total_honor = 0;
+                gpa = ""; honor = "";
+                foreach (Calificacion calificacion in datosBin.Calificaciones.FindAll(cal => cal.ID_Estudiante == estudiante.ID_Estudiante)) {
+                    foreach (Asignatura materia in datosBin.Asignaturas.FindAll(mat => mat.Clave_Materia == calificacion.Clave_Materia)) {
+                        object[] calculos = moduloConsulta.NotaALetra(materia.Credito, calificacion.Nota);
+                        if (calculos[0].ToString() != "R") {
+                            total_credito += materia.Credito;
+                        }
+                        total_honor += int.Parse(calculos[3].ToString()); // <- puntos de honor
+                    }
+                }
+
+                if (total_credito != 0) {
+                    honor = moduloConsulta.getHonor(Math.Round(total_honor * 1.0 / total_credito, 2));
+                    gpa = Math.Round(total_honor * 1.0 / total_credito, 2).ToString();
+                }
+                else {
+                    honor = "-";
+                    gpa = "-";
+                }
+                TablaRanking.Rows.Add(
+                            estudiante.ID_Estudiante,
+                            estudiante.Nombre_Estudiante,
+                            gpa,
+                            honor);
+            }
+
+            TablaRanking.Sort(TablaRanking.Columns[2], System.ComponentModel.ListSortDirection.Descending);
+        }
         public TeachersMenu(ColeccionCompleta _datos = null, Profesor _profesor = null)
         {
             InitializeComponent();
@@ -35,7 +84,6 @@ namespace MIA_2020.Menus
             }
 
             misMaterias = datosBin.Asignaturas.FindAll(x => x.ID_Profesor == ProfesorActual.ID_Profesor);
-            misCalificaciones = new List<Calificacion>();
         }
 
         private void LogOffButton_Click(object sender, EventArgs e)
@@ -79,7 +127,7 @@ namespace MIA_2020.Menus
 
         private void TeachersMenu_Load(object sender, EventArgs e)
         {
-            //Aqui se carga la información del estudiante para mostrarla:
+            //Aqui se carga la información del profesor para mostrarla:
             if (ProfesorActual != null) {
                 InfoLabel.Text = "ID:\n" +
                     $"{ProfesorActual.ID_Profesor}\n\n" +
@@ -90,57 +138,19 @@ namespace MIA_2020.Menus
                 InfoLabel.Text = "";
             }
 
-            //Carga calificaciones
-            foreach (var item in datosBin.Calificaciones) {
-                foreach (var materia in misMaterias) {
-                    if (item.Clave_Materia == materia.Clave_Materia) {
-                        misCalificaciones.Add(item);
-                        break;
-                    }
-                }
-            }
-            TablaCalificaciones.DataSource = misCalificaciones;
+            //Carga las Calificaciones
+            LoadCalificaciones();
 
-            //TablaRanking {ID,Estudiante,GPA,Honor)
-            int total_credito = 0, total_honor = 0;
-            string gpa = "", honor = "";
-            foreach (Estudiante estudiante in datosBin.Estudiantes) {
-                total_credito = 0; total_honor = 0;
-                gpa = ""; honor = "";
-                foreach (Calificacion calificacion in datosBin.Calificaciones.FindAll(cal => cal.ID_Estudiante == estudiante.ID_Estudiante)) {
-                    foreach (Asignatura materia in datosBin.Asignaturas.FindAll(mat => mat.Clave_Materia == calificacion.Clave_Materia)) {
-                        object[] calculos = moduloConsulta.NotaALetra(materia.Credito, calificacion.Nota);
-                        if (calculos[0].ToString() != "R") {
-                            total_credito += materia.Credito;
-                        }
-                        total_honor += int.Parse(calculos[3].ToString()); // <- puntos de honor
-                    }
-                }
-
-                if (total_credito != 0) {
-                    honor = moduloConsulta.getHonor(Math.Round(total_honor * 1.0 / total_credito, 2));
-                    gpa = Math.Round(total_honor * 1.0 / total_credito, 2).ToString();
-                }
-                else {
-                    honor = "-";
-                    gpa = "-";
-                }
-                TablaRanking.Rows.Add(
-                            estudiante.ID_Estudiante,
-                            estudiante.Nombre_Estudiante,
-                            gpa,
-                            honor);
-            }
-
-            TablaRanking.Sort(TablaRanking.Columns[2], System.ComponentModel.ListSortDirection.Descending);
+            //Carga el Ranking
+            LoadRanking();
         }
 
         private void NuevaCalificacion_Click(object sender, EventArgs e)
         {
             NewScore AddScoreForm = new NewScore(datosBin);
             AddScoreForm.ShowDialog();
-            datosBin.RecargarProfesores();
-            TablaCalificaciones.DataSource = datosBin.Profesores;
+            datosBin.RecargarCalificaciones();
+            TablaCalificaciones.DataSource = datosBin.Calificaciones;
             TablaCalificaciones.Refresh();
         }
 
