@@ -223,21 +223,10 @@ namespace MIA_2020
             datosBin.RecargarAdministradores();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Dispose();
             Environment.Exit(0);
-        }
-
-        private void Login_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //Dispose();
-            //Environment.Exit(0);
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
