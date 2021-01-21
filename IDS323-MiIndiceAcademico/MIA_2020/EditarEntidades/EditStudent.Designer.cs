@@ -176,7 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(348, 343);
+            this.ClientSize = new System.Drawing.Size(348, 368);
             this.ControlBox = false;
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.label6);
@@ -194,7 +194,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditStudent";
-            this.Text = "Nuevo Estudiante";
+            this.Text = "Editar Estudiante";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditStudent_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EditStudent_KeyDown);
             this.ResumeLayout(false);
