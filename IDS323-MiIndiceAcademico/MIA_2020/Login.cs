@@ -105,7 +105,7 @@ namespace MIA_2020
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Dispose();
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void GuestsButton_CheckedChanged(object sender, EventArgs e)
@@ -162,12 +162,12 @@ namespace MIA_2020
         private void button3_Click(object sender, EventArgs e)
         {
             Dispose();
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e) {
             Dispose();
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

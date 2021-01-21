@@ -33,7 +33,7 @@ namespace MIA_2020.Menus
         private void CloseSystem_Click(object sender, EventArgs e)
         {
             Dispose();
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void GuestsMenu_Load(object sender, EventArgs e)
