@@ -228,5 +228,11 @@ namespace MIA_2020
             Dispose();
             Environment.Exit(0);
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
