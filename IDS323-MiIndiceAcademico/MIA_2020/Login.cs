@@ -231,8 +231,8 @@ namespace MIA_2020
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Dispose();
-            //Environment.Exit(0);
+            Dispose();
+            Environment.Exit(0);
         }
 
         private void Login_Load(object sender, EventArgs e)
